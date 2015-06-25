@@ -3,7 +3,7 @@
 <ol>
     <li ng-repeat="post in ::vm.posts track by post.id">
         <h2 class="m0">
-            <a href ui-sref="main.blog.post({ id:post.id })">
+            <a href ui-sref="main.blog.post({ slug:post.slug })">
                 {{ post.title }}
             </a>
         </h2>

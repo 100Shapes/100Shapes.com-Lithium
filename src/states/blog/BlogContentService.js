@@ -6,11 +6,11 @@ export default ngModule => {
 
     function BlogContentService($http, API_BASE_URL) {
 
+        const POSTS_LIST_URL = url.resolve(API_BASE_URL, 'pages/');
+
         return {
 
             all() {
-
-                const POSTS_LIST_URL = url.resolve(API_BASE_URL, 'pages/');
 
                 return $http.get(POSTS_LIST_URL,
                     {
@@ -19,6 +19,7 @@ export default ngModule => {
                             fields: [
                                 'title',
                                 'thumbnail_url',
+                                'slug',
                                 'posted_at',
                                 'post_category'
                             ].join(','),
@@ -33,11 +34,24 @@ export default ngModule => {
 
             },
 
-            one(id) {
+            one(slug) {
 
-                const POSTS_ITEM_URL = url.resolve(API_BASE_URL, `pages/${id}/`);
+                return $http.get(POSTS_LIST_URL,
+                    {
+                        params: {
+                            type: 'blog.BlogPost',
+                            slug: slug,
+                            limit: 1
+                        }
+                    }
+                ).then(
+                    function (response) {
+                        let post_id = response.data.pages[0].id;
+                        const POSTS_DETAIL_URL = url.resolve(POSTS_LIST_URL, `${post_id}/`);
 
-                return $http.get(POSTS_ITEM_URL).then(
+                        return $http.get(POSTS_DETAIL_URL);
+                    }
+                ).then(
                     function (response) {
                         return response.data;
                     }

@@ -7,14 +7,14 @@ export default ngModule => {
 
             $stateProvider
                 .state('main.blog.post', {
-                    url: '/:id/',
+                    url: '/:slug/',
                     template: require('./blog.post.html'),
                     controller: 'BlogPostCtrl as vm',
                     resolve: {
 
                         post: function(BlogContentService, $stateParams) {
-                            let post_id = $stateParams.id;
-                            return BlogContentService.one(post_id);
+                            let slug = $stateParams.slug;
+                            return BlogContentService.one(slug);
                         }
 
                     }
