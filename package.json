@@ -1,0 +1,24 @@
+{
+  "name": "100shapes.com-lithium",
+  "private": true,
+  "version": "1.0.0",
+  "description": "\"Lithium\" release of the 100 Shapes website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/100Shapes/100Shapes.com-Lithium.git"
+  },
+  "keywords": [
+    "Angular.js",
+    "Webpack"
+  ],
+  "author": "Michele Memoli <michele@100shapes.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/100Shapes/100Shapes.com-Lithium/issues"
+  },
+  "homepage": "https://github.com/100Shapes/100Shapes.com-Lithium#readme"
+}
