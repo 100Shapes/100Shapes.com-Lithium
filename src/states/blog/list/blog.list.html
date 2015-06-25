@@ -1,1 +1,9 @@
 <h1>yo. Blog list</h1>
+
+<ol>
+    <li ng-repeat="post in ::vm.posts track by post.id">
+        <h2 class="m0">
+            {{ post.title }}
+        </h2>
+    </li>
+</ol>
