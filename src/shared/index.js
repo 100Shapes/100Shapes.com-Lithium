@@ -1,5 +1,5 @@
 export default ngModule => {
     
-    //require('./ContentService')(ngModule);
+    require('./ohs-content-renderer')(ngModule);
 
 }
