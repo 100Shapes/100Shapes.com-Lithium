@@ -31,6 +31,17 @@ export default ngModule => {
                     }
                 );
 
+            },
+
+            one(id) {
+
+                const POSTS_ITEM_URL = url.resolve(API_BASE_URL, `pages/${id}/`);
+
+                return $http.get(POSTS_ITEM_URL).then(
+                    function (response) {
+                        return response.data;
+                    }
+                );
             }
 
         };

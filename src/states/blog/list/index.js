@@ -12,8 +12,6 @@ export default ngModule => {
                     controller: 'BlogListCtrl as vm',
                     resolve: {
 
-                        BlogContentService: 'BlogContentService',
-
                         posts: function(BlogContentService) {
                             return BlogContentService.all();
                         }

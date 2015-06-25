@@ -16,6 +16,7 @@ export default ngModule => {
 
 
     require('./list')(ngModule);
+    require('./post')(ngModule);
     require('./BlogContentService')(ngModule);
     
 }
