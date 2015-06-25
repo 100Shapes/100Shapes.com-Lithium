@@ -1,0 +1,58 @@
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+[subtitle] {
+    hyphens: none;
+} 
+
+figcaption {
+    .to-rem(margin-left, @figcaption-margin-top);
+}
+
+h1, .h1 {
+    line-height: 76.35 / @font-size-heading-1;
+}
+
+h2, .h2 {
+    .to-rem(margin-top, @spacing-double);
+}
+
+h3, .h3 {
+    font-family: @font-family-serif;
+    font-style: italic;
+    color: @color-gray;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    p > & {
+        font-weight: bold;
+    }
+}
+
+.ffs {
+    font-family: @font-family-serif;
+    font-weight: normal;
+}
+
+.fsi {
+    font-style: italic;
+}
+
+.fwb {
+    font-weight: bold;
+}
+
+.screen-md-max({
+    p {
+        font-size: 115%;
+    }
+
+    blockquote {
+        font-size: 90%;    
+    }
+});

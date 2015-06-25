@@ -5,7 +5,8 @@
   "description": "\"Lithium\" release of the 100 Shapes website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./node_modules/.bin/webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/100Shapes/100Shapes.com-Lithium#readme",
   "devDependencies": {
+    "Cardinal": "git+https://github.com/cbracco/cardinal.git#eea6e3757cd8a0bf1bdfab6f96512ea05630b7da",
     "angular": "^1.4.1",
     "angular-ui-router": "^0.2.15",
     "autoprefixer-loader": "^2.0.0",
@@ -30,6 +32,7 @@
     "css-loader": "^0.15.1",
     "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.4",
+    "html-loader": "^0.3.0",
     "html-webpack-plugin": "^1.5.2",
     "image-webpack-loader": "^1.6.1",
     "imagemin": "^3.2.0",
