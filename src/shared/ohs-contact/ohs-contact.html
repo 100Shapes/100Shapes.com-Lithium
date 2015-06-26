@@ -1,0 +1,43 @@
+<div class="ohs-contact bg--blue tc pt-">
+    <div class="wrapper wrapper-flush">
+        <div class="grid gutter-0 grid-align-center">
+            <h2>Get in touch</h2>
+            <div class="grid-item 1/3">
+                <a href="{{meta.location.target}}"
+                   class="btn btn-block">
+                    <ohs-icon name="{{meta.location.icon}}"></ohs-icon>
+                    <div class='ohs-contact__label'>
+                        <h4 class="dn md-db mv--">{{meta.location.label}}</h4>
+                        <address class="ffs dn md-db mv--"
+                                 ng-bind-html="meta.location.address">
+                        </address>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item 1/3">
+                <a href="{{meta.phone.target}}"
+                   class="btn btn-block">
+                    <ohs-icon name="{{meta.phone.icon}}"></ohs-icon>
+                    <div class='ohs-contact__label'>
+                        <h4 class="dn md-db mv--">{{meta.phone.label}}</h4>
+                        <i class="ffs dn md-db mv--"
+                           ng-bind="meta.phone.number">
+                        </i>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item 1/3">
+                <a href="{{meta.email.target}}"
+                   class="btn btn-block">
+                    <ohs-icon name="{{meta.email.icon}}"></ohs-icon>
+                    <div class='ohs-contact__label'>
+                        <h4 class="dn md-db mv--">{{meta.email.label}}</h4>
+                        <i class="ffs dn md-db mv--"
+                           ng-bind="meta.email.address">
+                        </i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

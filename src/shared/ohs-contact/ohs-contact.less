@@ -1,0 +1,32 @@
+@import "~css/vars";
+@import "~Cardinal/base/mixins/to-rem.less";
+
+.ohs-contact .btn {
+    border: none;
+    .to-rem(padding-top, @spacing-base);
+    .to-rem(padding-bottom, @spacing-base);
+}
+
+.ohs-contact .ohs-icon {
+    .to-rem(width, 40);
+    .to-rem(height, 40);
+}
+
+.ohs-contact a {
+    color: @color-white !important;
+
+    &:hover {
+        color: @color-blue !important;
+    }
+}
+
+.ohs-contact--slim {
+	.btn {
+		.to-rem(padding, @spacing-fourth @spacing-half);
+	}
+	.ohs-contact__label {
+		display: none;
+	}
+}
+
+
