@@ -13,6 +13,7 @@ const ngModule = angular.module('app', [
 ]);
 
 require('./config')(ngModule);
+require('./run')(ngModule);
 require('./shared')(ngModule);
 require('./states')(ngModule);
 require('./constants')(ngModule);
