@@ -1,5 +1,10 @@
-<header class="bg--orange pv+">
+<header class="bg--orange pv+ tc">
     <div class="wrapper">
+
+        <span class="h4">
+            UX &amp; Design
+        </span>
+
         <a href
            ui-sref="main.blog.list"
            class="db">All posts</a>
@@ -9,6 +14,9 @@
 </header>
 
 
+<h4>{{ ::vm.post.author.name }}</h4>
+<img ng-src="{{ ::vm.post.author.profile }}"
+     alt="Profile picture of {{ ::vm.post.author.name }}"/>
 
 <ohs-content-renderer content="{{ ::vm.post.body }}">
 </ohs-content-renderer>

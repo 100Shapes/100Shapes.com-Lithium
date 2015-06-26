@@ -1,10 +1,11 @@
 export default ngModule => {
 
     const url = require('url');
+    const _ = require('lodash');
 
     ngModule.factory('BlogContentService', BlogContentService)
 
-    function BlogContentService($http, API_BASE_URL) {
+    function BlogContentService($http, API_BASE_URL, AUTHORS) {
 
         const POSTS_LIST_URL = url.resolve(API_BASE_URL, 'pages/');
 
@@ -39,7 +40,10 @@ export default ngModule => {
 
                 return $http.get(POSTS_DETAIL_URL).then(
                     (response) => {
-                        return response.data;
+                        let post = response.data;
+                        let author_email = post.author;
+                        post.author = this.find_author(author_email);
+                        return post;
                     }
                 );
             },
@@ -80,6 +84,10 @@ export default ngModule => {
                         return response.data.pages;
                     }
                 );
+            },
+
+            find_author(email) {
+                return _.find(AUTHORS, { email:email });
             }
         };
 

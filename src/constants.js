@@ -2,10 +2,109 @@ export default ngModule => {
 
     ngModule
 
-        // SMP settings
+        // API BASE
         .constant('API_BASE_URL', 'http://localhost:8000/api/v1/')
 
-        ;
+        // Content Types
+        .constant('CONTENT_TYPE_BLOG', 'blog')
+        .constant('CONTENT_TYPE_SERVICE', 'services')
+        .constant('CONTENT_TYPE_GALLERY', 'gallery')
 
-        
-}
+        // Number of blog posts shown on the homepage
+        .constant('NUMBER_OF_HOMEPAGE_POSTS', 4)
+
+        // Number of blog posts shown on a blog item page
+        .constant('NUMBER_OF_RECENT_POSTS', 6)
+
+        // Number of blog posts shown on the homepage
+        .constant('NUMBER_OF_ADDITIONAL_SERVICES', 3)
+
+        // Site name
+        .constant('SITE_NAME', '100 Shapes – UX & Design for broadcast media')
+
+        // Central store of Company meta inf
+        .constant('COMPANY_META', {
+            phone: {
+                number: '+44 (0) 203 7738175',
+                label: 'Call',
+                icon: 'line-phone',
+                icon_sm: 'line-sm-phone',
+                target: 'tel:+442037738175'
+            },
+            email: {
+                address: 'hello@100shapes.com',
+                label: 'Email',
+                icon: 'line-mail',
+                icon_sm: 'line-sm-mail',
+                target: 'mailto:hello@100shapes.com'
+            },
+            location: {
+                address: 'W1T 4EL, London UK',
+                label: 'Find us',
+                icon: 'line-map_marker',
+                target: 'https://goo.gl/maps/jVuhA'
+            },
+            social: {
+                'twitter': {
+                    icon: 'fill-twitter',
+                    target: 'https://twitter.com/100shapes',
+                    handle: '@100shapes'
+                },
+                'linkedin': {
+                    icon: 'fill-linkedin',
+                    target: 'https://www.linkedin.com/company/100-shapes',
+                    handle: '100shapes'
+                },
+                'medium': {
+                    icon: 'fill-medium',
+                    target: 'https://medium.com/@100shapes',
+                    handle: '@100shapes'
+                },
+                'dribbble': {
+                    icon: 'fill-dribbble',
+                    target: 'https://dribbble.com/100shapes',
+                    handle: '100shapes'
+                }
+            }
+        })
+
+        .constant('DEFAULT_SOCIAL_IMAGE', require('./img/shared-social-media-image.png'))
+
+        // Authors
+        .constant('AUTHORS', [
+            {
+                name: 'Michele Memoli',
+                email: 'michele@100shapes.com',
+                profile: require('./img/profiles/michele.jpg'),
+                description: "Michele Description text"
+            },
+
+            {
+                name: 'Chris Elphick',
+                email: 'chris@100shapes.com',
+                profile: require('./img/profiles/chris.jpg'),
+                description: "Chris Description text"
+            },
+
+            {
+                name: 'Paolo Memoli',
+                email: 'paolo@100shapes.com',
+                profile: require('./img/profiles/paolo.jpg'),
+                description: "Paolo Description text"
+            },
+
+            {
+                name: 'Trev Morris',
+                email: 'trevor@100shapes.com',
+                profile: require('./img/profiles/trevor.jpg'),
+                description: "Trevor Description text"
+            }
+        ])
+
+
+        .constant('DEFAULT_MAILINGLIST_SIGNUP_CONFIG', {
+            slim: false,
+            headline: '100 Shapes mailinglist',
+            intro: 'Join our subscribers for regular design &amp; UX updates.'
+        });
+};
