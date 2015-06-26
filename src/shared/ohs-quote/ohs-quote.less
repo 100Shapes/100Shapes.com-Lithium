@@ -1,0 +1,29 @@
+@import "~css/vars";
+@import "~Cardinal/base/mixins/to-rem.less";
+
+.ohs-quote--cited {
+    position: relative;
+    .to-rem(padding-top, @spacing-triple);
+
+    border-bottom: 1px solid @color-gray;
+
+    p:first-child {
+        &:before {
+            position: absolute;
+            content: "“";
+            top: 0;
+
+            color: @color-gray;
+            .to-rem(font-size, @spacing-double);
+        }
+
+        &:after {
+            content: "”";
+        }
+    }
+
+    cite:before {
+        content: "";
+        color: @color-gray;
+    }
+}

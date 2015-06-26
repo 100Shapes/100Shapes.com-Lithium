@@ -1,0 +1,19 @@
+<blockquote class="ohs-quote"
+            ng-class="{'ohs-quote--cited': name}">
+
+    <p class="ffs mb" ng-transclude></p>
+
+    <cite ng-if="name">
+        <ohs-icon name="{{icon}}"
+                  class="fr"
+                  ng-if="icon"></ohs-icon>
+
+        <img class="profile fl mr"
+           ng-if="profile"
+           ng-src="{{profile}}" />
+
+        <span class="h4 mv-- db" ng-bind="name"></span>
+        <span class="h5 mv-- db" ng-bind="role"></span>
+      
+    </cite>
+</blockquote>
