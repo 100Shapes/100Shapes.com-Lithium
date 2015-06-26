@@ -2,16 +2,15 @@
              vocab="http://schema.org/"
              typeof="NewsArticle">
 
-    <header class="bg--blue bg--overlay pv++ mb+" style="background-image: url({{ :: vm.service.banner_url }})">
+    <header class="bg--blue bg--overlay pt++ pb mb+" style="background-image: url({{ :: vm.service.banner_url }})">
         <div class="wrapper">
             <div class="grid">
-                <div class="grid-item 1/1 md-1/2 lg-2/3 pr+">
+                <div class="grid-item 1/1 lg-2/3 pr+">
 
                     <a href
                        ui-sref="main.services.list">&lt; Design services</a>
 
-                    <h1 view-title
-                        class="mv--">
+                    <h1 view-title>
                         {{ ::vm.service.seo_title }}
                     </h1>
 
@@ -24,14 +23,14 @@
                     </p>
 
                 </div>
-                <div class="grid-item md-1/2 lg-1/3">
+                <div class="grid-item 1/1 lg-1/3">
 
-                    <div class="box box-round box-white p0 mb tc">
+                    <div class="box box-round bg--white p0 mb tc">
 
                         <div class="mh mb pt">
 
-                            <h4 class="mb-- fz+">Get an interactive display</h4>
-                            <p>We're open right now, get in touch</p>
+                            <h4 class="mb-- fz+">Make an enquiry</h4>
+                            <p>We're open right now, get in touch.</p>
 
                             <a href="{{vm.company.phone.target}}"
                                class="btn db btn-primary btn-round btn-lg tl mb">
@@ -57,34 +56,20 @@
 
                         <hr class="1/1 blue dotted m0">
 
-                        <a href
-                           ui-sref="main.about"
-                           class="dib btn-block">
+                        <div class="dib ph">
 
                             <h4 class="mb-- mt fz+">About 100 Shapes</h4>
 
-                            <p>We're a UX &amp; Design agency that specialise in working with broadcasters and media organisations.</p>
+                            <p class="mb--">We're a UX &amp; Design agency that specialise in working with broadcasters and media organisations.</p>
 
-                            <ul class="list-inline ohs-service-sidebar__client-logos">
-                                <li class="m-"><ohs-icon name="fill-bbc"></ohs-icon></li>
-                                <li class="m-"><ohs-icon name="fill-itv"></ohs-icon></li>
-                                <li class="m-"><ohs-icon name="fill-londonlive"></ohs-icon></li>
-                            </ul>
-                        </a>
+                            <a href
+                               ui-sref="main.about"
+                               class="btn btn-link mb">Read about us</a>
 
-                        <hr class="1/1 blue dotted m0">
-
-                        <div class="mh pv">
-                            <h4 class="mb-- fz+">More services</h4>
-                            <ul class="tl">
-                                <li ng-repeat="service in vm.additional_services">
-                                    <a href
-                                       ui-sref="main.services.item({ slug:service.meta.path })">
-                                        {{ service.meta.title }}
-                                    </a>
-                                </li>
-                            </ul>
                         </div>
+
+
+
                     </div>
 
                 </div>

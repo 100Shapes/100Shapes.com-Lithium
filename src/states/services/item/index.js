@@ -26,10 +26,11 @@ export default ngModule => {
 
     ngModule.controller('ServicesItemCtrl', ServicesItemCtrl);
 
-    function ServicesItemCtrl(service) {
+    function ServicesItemCtrl(service, COMPANY_META) {
         let vm = this;
 
         vm.service = service;
+        vm.company = COMPANY_META;
     }
     
 }
