@@ -6,6 +6,10 @@
     background-color: @color-blue;
 }
 
+.bg--blue-dark {
+    background-color: @color-blue-dark;
+}
+
 .bg--white {
     background-color: @color-white;
 }
@@ -13,12 +17,16 @@
 h1, h2, h3,
 .h1, .h2, .h3 {
 
-    .bg--orange &, .bg--blue & {
+    .bg--orange &,
+    .bg--blue &,
+    .bg--blue-dark & {
         color: @color-white;    
     }
     
 }
 
-.bg--orange, .bg--blue {
+.bg--orange,
+.bg--blue,
+.bg--blue-dark  {
     color: @color-white;
 }

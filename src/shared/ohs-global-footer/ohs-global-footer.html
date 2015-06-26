@@ -1,0 +1,29 @@
+<div class="ohs-global-footer bg--blue-dark">
+
+	<ohs-contact></ohs-contact>
+
+	<div class="bbd">
+		<div class="wrapper">
+			<div class="grid grid-align-middle">
+				<div class="grid-item tc md-tl 1/1 md-1/2 vam">
+					<ul class="list-inline ohs-global-footer__social-links">
+						<li class="mh- md-mr"
+						    ng-repeat="network in ::vm.social">
+							<a href="{{ network.target }}"
+							   class="dib mv-">
+				    			<ohs-icon name="{{ network.icon }}"
+				    			          class="is-sm"></ohs-icon>
+				    		</a>
+						</li>
+					</ul>
+				</div>
+				<div class="grid-item 1/1 md-1/2 tc md-tr">
+					<small class="mv- md-mv db">
+						<ohs-logo class="cw vab"></ohs-logo>
+			        	&copy; {{ vm.today | date:'yyyy' }}. All rights reserved.
+			        </small>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
