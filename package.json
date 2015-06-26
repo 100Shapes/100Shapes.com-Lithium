@@ -25,6 +25,7 @@
   "devDependencies": {
     "Cardinal": "git+https://github.com/cbracco/cardinal.git#eea6e3757cd8a0bf1bdfab6f96512ea05630b7da",
     "angular": "^1.4.1",
+    "angular-sanitize": "^1.4.1",
     "angular-ui-router": "^0.2.15",
     "angularjs-viewhead": "apparentlymart/angularjs-viewhead#6d39f4a895624ff54cc7ba9a52aba7f93645fea6",
     "autoprefixer-loader": "^2.0.0",

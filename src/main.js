@@ -2,6 +2,7 @@
 const angular = require('angular');
 require('angular-ui-router');
 require('angularjs-viewhead');
+require('angular-sanitize');
 
 // Styles
 require('css/main.less');
@@ -9,7 +10,8 @@ require('css/main.less');
 
 const ngModule = angular.module('app', [
     'ui.router',
-    'viewhead'
+    'viewhead',
+    'ngSanitize'
 ]);
 
 require('./config')(ngModule);
