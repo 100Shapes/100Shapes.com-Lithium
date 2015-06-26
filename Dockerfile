@@ -14,34 +14,26 @@ RUN /pd_build/nodejs.sh
 
 RUN apt-get update && apt-get install -y -o Dpkg::Options::="--force-confold" passenger nginx-extras
 
-ADD . /home/app/
+ADD package.json /home/app/
 
 WORKDIR /home/app/
 
-RUN mkdir -p /home/app/public/
-RUN chmod -R 777 /home/app/public/
+RUN npm install -g npm
 
-ENV SECRET "TEMP"
+RUN npm install -g webpack
 
-RUN python manage.py collectstatic --noinput
+RUN npm install
 
-VOLUME /home/app/public
+ADD . /home/app/
 
-
-
-
+RUN webpack -p
 
 # Enable nginx
 RUN rm -f /etc/service/nginx/down
 RUN rm /etc/nginx/sites-enabled/default
-ADD env.conf /etc/nginx/main.d/env.conf
 ADD nginx.conf /etc/nginx/sites-enabled/nginx.conf
 
-
 # Clean up APT when done.
-
-# RUN python manage.py migrate
-
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 80
