@@ -12,8 +12,8 @@ module.exports = function(ngModule) {
             },
             link: function ($scope, elem) {
 
-                elem.html($scope.content);
-                $compile(elem.contents())($scope);
+                let e = $compile($scope.content)($scope);
+                elem.replaceWith(e);
 
             }
         };

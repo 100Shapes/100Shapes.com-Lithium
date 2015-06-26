@@ -12,24 +12,24 @@ module.exports = function(ngModule) {
             restrict: 'E',
             scope: {},
             replace: true,    
-            link(scope, elem, attrs) {
+            link($scope, elem, attrs) {
 
                 let default_config = angular.copy(DEFAULT_MAILINGLIST_SIGNUP_CONFIG);
                 let template = require('./ohs-mailinglist-signup.html');
 
                 if (!attrs.config) {
-                    scope.config = default_config
+                    $scope.config = default_config
                 } else {
                     const local_config = $parse(attrs.config)();
-                    scope.config = angular.extend(default_config, local_config);
+                    $scope.config = angular.extend(default_config, local_config);
                 }
 
-                if (scope.config.slim) {
+                if ($scope.config.slim) {
                     template = require('./ohs-mailinglist-signup--slim.html');
                 }
 
-                elem.html(template);
-                $compile(elem.contents())(scope);
+                let e = $compile(template)($scope);
+                elem.replaceWith(e);
             }
         };
     }
