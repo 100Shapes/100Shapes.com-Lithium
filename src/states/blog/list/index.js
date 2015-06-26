@@ -14,6 +14,10 @@ export default ngModule => {
 
                         posts: function(BlogContentService) {
                             return BlogContentService.all();
+                        },
+
+                        categories: function(BlogContentService) {
+                            return BlogContentService.categories();
                         }
 
                     }
@@ -25,10 +29,11 @@ export default ngModule => {
 
     ngModule.controller('BlogListCtrl', BlogListCtrl);
 
-    function BlogListCtrl(posts) {
+    function BlogListCtrl(posts, categories) {
         let vm = this;
 
         vm.posts = posts;
+        vm.categories = categories;
     }
     
 }

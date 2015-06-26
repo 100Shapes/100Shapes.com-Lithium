@@ -1,13 +1,32 @@
-<h1>yo. Blog list</h1>
+<div class="bg--blue pv+">
+    <div class="wrapper">
+        <h1>The UX broadcast media blog</h1>
 
-<ol>
-    <li ng-repeat="post in ::vm.posts track by post.id">
+        <ol class="list-inline">
+            <li ng-repeat="category in ::vm.categories track by category.title">
+                {{ ::category.title }}
+            </li>
+        </ol>
 
-        <a href ui-sref="main.blog.post({ slug:post.slug })">
+        <ol>
+            <li ng-repeat="post in ::vm.posts track by post.id">
 
-            <h2>{{ post.title }}</h2>
-            <img src="{{ post.thumbnail_url }}" alt=""/>
-        </a>
+                <a href ui-sref="main.blog.post({ slug:post.slug })">
 
-    </li>
-</ol>
+                    <h2>{{ post.title }}</h2>
+                    <img src="{{ post.thumbnail_url }}" alt=""/>
+                </a>
+
+            </li>
+        </ol>
+
+        <ol class="list-bare">
+            <li ng-repeat="category in ::vm.categories track by category.title">
+                <h3>{{ ::category.title }}</h3>
+                <p>{{ ::category.description }}</p>
+            </li>
+        </ol>
+
+
+    </div>
+</div>

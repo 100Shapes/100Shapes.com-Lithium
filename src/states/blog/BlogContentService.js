@@ -20,8 +20,7 @@ export default ngModule => {
                                 'title',
                                 'thumbnail_url',
                                 'slug',
-                                'posted_at',
-                                'post_category'
+                                'posted_at'
                             ].join(','),
                             order: 'posted_at'
                         }
@@ -61,6 +60,26 @@ export default ngModule => {
                     }
                 );
 
+            },
+
+            categories() {
+
+                return $http.get(POSTS_LIST_URL,
+                    {
+                        params: {
+                            type: 'blog.BlogCategory',
+                            fields: [
+                                'title',
+                                'description'
+                            ].join(','),
+                            order: 'title'
+                        }
+                    }
+                ).then(
+                    function (response) {
+                        return response.data.pages;
+                    }
+                );
             }
         };
 
