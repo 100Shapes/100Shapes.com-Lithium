@@ -6,5 +6,6 @@ export default ngModule => {
     require('./ohs-about-callout')(ngModule);
     require('./ohs-global-footer')(ngModule);
     require('./ohs-contact')(ngModule);
-
+    require('./ohs-meta')(ngModule);
+    require('./ohs-meta-group')(ngModule);
 }
