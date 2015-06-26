@@ -8,7 +8,7 @@ export default ngModule => {
 
         const POSTS_LIST_URL = url.resolve(API_BASE_URL, 'pages/');
 
-        return {
+        const blogContentService =  {
 
             all() {
 
@@ -34,8 +34,18 @@ export default ngModule => {
 
             },
 
-            one(slug) {
+            one(post_id) {
 
+                const POSTS_DETAIL_URL = url.resolve(POSTS_LIST_URL, `${post_id}/`);
+
+                return $http.get(POSTS_DETAIL_URL).then(
+                    (response) => {
+                        return response.data;
+                    }
+                );
+            },
+
+            slug(slug) {
                 return $http.get(POSTS_LIST_URL,
                     {
                         params: {
@@ -45,21 +55,16 @@ export default ngModule => {
                         }
                     }
                 ).then(
-                    function (response) {
+                    (response) => {
                         let post_id = response.data.pages[0].id;
-                        const POSTS_DETAIL_URL = url.resolve(POSTS_LIST_URL, `${post_id}/`);
-
-                        return $http.get(POSTS_DETAIL_URL);
-                    }
-                ).then(
-                    function (response) {
-                        return response.data;
+                        return this.one(post_id);
                     }
                 );
-            }
 
+            }
         };
 
+        return blogContentService;
     }
 
     
