@@ -1,11 +1,103 @@
 <article class="service-page"
-         vocab="http://schema.org/"
-         typeof="NewsArticle">
+             vocab="http://schema.org/"
+             typeof="NewsArticle">
+
+    <header class="bg--blue bg--overlay pv++ mb+" style="background-image: url({{ :: vm.service.banner_url }})">
+        <div class="wrapper">
+            <div class="grid">
+                <div class="grid-item 1/1 md-1/2 lg-2/3 pr+">
+
+                    <a href
+                       ui-sref="main.services.list">&lt; Design services</a>
+
+                    <h1 view-title
+                        class="mv--">
+                        {{ ::vm.service.seo_title }}
+                    </h1>
+
+                    <p subtitle class="fz++ ffs">
+                        {{ ::vm.service.lead }}
+                    </p>
+
+                    <p subtitle class="fz+">
+                        {{ ::vm.service.intro }}
+                    </p>
+
+                </div>
+                <div class="grid-item md-1/2 lg-1/3">
+
+                    <div class="box box-round box-white p0 mb tc">
+
+                        <div class="mh mb pt">
+
+                            <h4 class="mb-- fz+">Get an interactive display</h4>
+                            <p>We're open right now, get in touch</p>
+
+                            <a href="{{vm.company.phone.target}}"
+                               class="btn db btn-primary btn-round btn-lg tl mb">
+
+                                <ohs-icon name="{{vm.company.phone.icon_sm}}"
+                                          class="fl mr- is-sm"></ohs-icon>
+
+                                {{ vm.company.phone.number }}
+
+                            </a>
+
+                            <a href="{{vm.company.email.target}}"
+                               class="btn db btn-primary btn-round btn-lg tl mb">
+
+                                <ohs-icon name="{{vm.company.email.icon_sm}}"
+                                          class="fl mr- is-sm"></ohs-icon>
+
+                                {{ vm.company.email.address }}
+
+                            </a>
+
+                        </div>
+
+                        <hr class="1/1 blue dotted m0">
+
+                        <a href
+                           ui-sref="main.about"
+                           class="dib btn-block">
+
+                            <h4 class="mb-- mt fz+">About 100 Shapes</h4>
+
+                            <p>We're a UX &amp; Design agency that specialise in working with broadcasters and media organisations.</p>
+
+                            <ul class="list-inline ohs-service-sidebar__client-logos">
+                                <li class="m-"><ohs-icon name="fill-bbc"></ohs-icon></li>
+                                <li class="m-"><ohs-icon name="fill-itv"></ohs-icon></li>
+                                <li class="m-"><ohs-icon name="fill-londonlive"></ohs-icon></li>
+                            </ul>
+                        </a>
+
+                        <hr class="1/1 blue dotted m0">
+
+                        <div class="mh pv">
+                            <h4 class="mb-- fz+">More services</h4>
+                            <ul class="tl">
+                                <li ng-repeat="service in vm.additional_services">
+                                    <a href
+                                       ui-sref="main.services.item({ slug:service.meta.path })">
+                                        {{ service.meta.title }}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
 
 
     <ohs-content-renderer content="::vm.service.body">
     </ohs-content-renderer>
 
 
+    <ohs-gallery-promo gallery_items="vm.gallery_items">
+    </ohs-gallery-promo>
 
 </article>
