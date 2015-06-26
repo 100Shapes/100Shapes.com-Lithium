@@ -1,6 +1,17 @@
-<h1>{{ ::vm.post.title }}</h1>
+<header class="bg--orange pv+">
+    <div class="wrapper">
+        <a href
+           ui-sref="main.blog.list"
+           class="db">All posts</a>
 
-<img src="{{ ::vm.post.banner_url }}" alt=""/>
+        <h1>{{ ::vm.post.title }}</h1>
+    </div>
+</header>
+
+
 
 <ohs-content-renderer content="{{ ::vm.post.body }}">
 </ohs-content-renderer>
+
+
+<img src="{{ ::vm.post.banner_url }}" alt=""/>
