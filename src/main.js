@@ -1,13 +1,15 @@
 // Libs
 const angular = require('angular');
 require('angular-ui-router');
+require('angularjs-viewhead');
 
 // Styles
 require('css/main.less');
 
 
 const ngModule = angular.module('app', [
-    'ui.router'
+    'ui.router',
+    'viewhead'
 ]);
 
 require('./config')(ngModule);
