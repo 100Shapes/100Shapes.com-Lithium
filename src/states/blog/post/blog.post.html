@@ -1,53 +1,53 @@
-<article class="ohs-blog-post"
+<article class="blog-post"
          vocab="http://schema.org/"
          typeof="NewsArticle">
 
 
     <header class="pt++ mb++"
             style="background-image: url({{ ::vm.post.banner_url }})">
+
         <div class="wrapper">
             <div class="grid grid-align-center">
                 <div class="grid-item sm-1/1 lg-10/12">
-                    <div class="box box-round bg--orange box--squared-bottom pv posr md-ph+ lg-ph++ tc">
+                    <div class="box box-round bg--orange box--squared-bottom pt pb+ posr md-ph lg-ph+ xxl-ph++ tc">
 
-                        <span class="h4">
+                        <span class="h4 mb db">
                             UX &amp; Design
                         </span>
 
                         <hr class="short">
 
-                        <h1 class="ffs"
+                        <h1 class="ffs mt"
                             property="headline"
                             view-title>
                             {{ ::vm.post.seo_title }}
                         </h1>
 
                         <p subtitle
-                           property="alternativeHeadline">
+                           property="alternativeHeadline"
+                           class="fz++">
                             {{ ::vm.post.lead }}
                         </p>
 
 
-                        <div class="ohs-blog-post__meta posa 1/1">
+                        <div class="blog-post__meta posa mt-">
 
                             <img class="profile"
                                  ng-src="{{ ::vm.post.author.profile }}"
-                                 alt="Profile picture of {{ ::vm.post.author.name }}/>
+                                 alt="Profile picture of {{ ::vm.post.author.name }}"/>
 
-                            <div class=" db mv-- fz-">
+                            <div class="db mv-- fz-">
 
-                            <p itemprop="author"
-                               itemscope
-                               itemtype="http://schema.org/Person"
-                               class="m0">
-                                <small class="ffs">by</small>
-                                <a href="#" itemprop="name">{{ ::vm.post.author.name }}</a>
-                            </p>
+                                <p itemprop="author" itemscope itemtype="http://schema.org/Person" class="m0">
+                                    <small class="ffs">by</small>
+                                    <span itemprop="name">{{ ::vm.post.author.name }}</span>
+                                </p>
 
-                            <p itemprop="datePublished"
-                               content="{{ ::vm.post.posted_at | date: 'yyyy-mm-dd' }}">
-                                {{ ::vm.post.posted_at | date: 'd MMM yyyy' }}
-                            </p>
+                                <p itemprop="datePublished" content="{{ ::vm.post.posted_at | date: 'yyyy-mm-dd' }}">
+                                    {{ ::vm.post.posted_at | date: 'd MMM yyyy' }}
+                                </p>
+
+                            </div>
 
                         </div>
 
@@ -56,10 +56,11 @@
                 </div>
             </div>
         </div>
+
     </header>
 
 
-    <ohs-content-renderer content="{{ ::vm.post.body }}">
+    <ohs-content-renderer content="::vm.post.body">
     </ohs-content-renderer>
 
     <div class="wrapper">
