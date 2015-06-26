@@ -1,25 +1,73 @@
-<header class="bg--orange pv+ tc">
-    <div class="wrapper">
-
-        <span class="h4">
-            UX &amp; Design
-        </span>
-
-        <a href
-           ui-sref="main.blog.list"
-           class="db">All posts</a>
-
-        <h1>{{ ::vm.post.title }}</h1>
-    </div>
-</header>
+<article class="ohs-blog-post"
+         vocab="http://schema.org/"
+         typeof="NewsArticle">
 
 
-<h4>{{ ::vm.post.author.name }}</h4>
-<img ng-src="{{ ::vm.post.author.profile }}"
-     alt="Profile picture of {{ ::vm.post.author.name }}"/>
+    <header class="pt++ mb++">
+        <div class="wrapper">
+            <div class="grid grid-align-center">
+                <div class="grid-item sm-1/1 lg-10/12">
+                    <div class="box box-round bg--orange pv posr md-ph+ lg-ph++ tc">
 
-<ohs-content-renderer content="{{ ::vm.post.body }}">
-</ohs-content-renderer>
+                        <span class="h4">
+                            UX &amp; Design
+                        </span>
+
+                        <hr class="short">
+
+                        <h1 class="ffs"
+                            property="headline"
+                            view-title>
+                            {{ ::vm.post.seo_title }}
+                        </h1>
+
+                        <p subtitle
+                           property="alternativeHeadline">
+                            {{ ::vm.post.lead }}
+                        </p>
 
 
-<img src="{{ ::vm.post.banner_url }}" alt=""/>
+                        <div class="ohs-blog-post__meta posa 1/1">
+
+                            <img class="profile"
+                                 ng-src="{{ ::vm.post.author.profile }}"
+                                 alt="Profile picture of {{ ::vm.post.author.name }}/>
+
+                            <div class=" db mv-- fz-">
+
+                            <p itemprop="author"
+                               itemscope
+                               itemtype="http://schema.org/Person"
+                               class="m0">
+                                <small class="ffs">by</small>
+                                <a href="#" itemprop="name">{{ ::vm.post.author.name }}</a>
+                            </p>
+
+                            <p itemprop="datePublished"
+                               content="{{ ::vm.post.posted_at | date: 'yyyy-mm-dd' }}">
+                                {{ ::vm.post.posted_at | date: 'd MMM yyyy' }}
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <a href
+                       ui-sref="main.blog.list"
+                       class="db">All posts</a>
+
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+
+    <ohs-content-renderer content="{{ ::vm.post.body }}">
+    </ohs-content-renderer>
+
+
+    <img src="{{ ::vm.post.banner_url }}" alt=""/>
+
+</article>
