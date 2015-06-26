@@ -5,7 +5,7 @@
         
         <a href
            class="box box-round mb tc card card--blog"
-           style="background-image: url('{{ post.meta.promo_image }}');"
+           style="background-image: url('{{ ::post.thumbnail_url }}');"
            ui-sref="main.blog.post({ slug:post.slug })">
 
             <div class="card__content">
@@ -13,8 +13,6 @@
                 <span class="h6 cw">
                     {{ ::post.category}}
                 </span>
-
-                <hr>
 
                 <h2 class="card__label h3">
                     {{ ::post.title }}

@@ -5,11 +5,10 @@
         <a href
            class="box box-round mb tc card"
            ui-sref="main.services.item({ slug:service.slug })"
-           style="background-image:url('{{ service.meta.promo_image }}');">
+           style="background-image:url('{{ ::service.thumbnail_url }}');">
 
             <div class="card__content">
-                <h2 class="card__label fz++ m0">{{ service.title }}</h2>
-                <hr class="blue"> 
+                <h2 class="card__label fz++ m0">{{ ::service.title }}</h2>
             </div>
             
         </a>
