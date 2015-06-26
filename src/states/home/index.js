@@ -16,9 +16,8 @@ module.exports = function(ngModule) {
                     controller: 'HomeCtrl as vm',
                     resolve: {
 
-                        posts: function() {
-                            const NUM_OF_POSTS = 4;
-                            return 2;
+                        posts: function(BlogContentService) {
+                            return BlogContentService.featured();
                         },
 
                         services: function() {
@@ -38,6 +37,7 @@ module.exports = function(ngModule) {
     function HomeCtrl(posts, services) {
         var vm = this;
 
+        debugger;
         vm.posts = posts;
         vm.services = services;
     }

@@ -1,0 +1,28 @@
+<div class="grid">
+
+    <div class="grid-item xs-1/1 md-1/2"
+         ng-repeat="post in ::posts">
+        
+        <a href
+           class="box box-round mb tc card card--blog"
+           style="background-image: url('{{ post.meta.promo_image }}');"
+           ui-sref="main.blog.post({ slug:post.slug })">
+
+            <div class="card__content">
+
+                <span class="h6 cw">
+                    {{ ::post.category}}
+                </span>
+
+                <hr>
+
+                <h2 class="card__label h3">
+                    {{ ::post.title }}
+                </h2>
+            </div>
+            
+        </a>
+
+    </div>
+    
+</div>

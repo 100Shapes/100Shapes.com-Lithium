@@ -8,6 +8,7 @@ export default ngModule => {
     function BlogContentService($http, API_BASE_URL, AUTHORS) {
 
         const POSTS_LIST_URL = url.resolve(API_BASE_URL, 'pages/');
+        const POST_TYPE = 'blog.BlogPost';
 
         const blogContentService =  {
 
@@ -16,7 +17,7 @@ export default ngModule => {
                 return $http.get(POSTS_LIST_URL,
                     {
                         params: {
-                            type: 'blog.BlogPost',
+                            type: POST_TYPE,
                             fields: [
                                 'title',
                                 'thumbnail_url',
@@ -52,7 +53,7 @@ export default ngModule => {
                 return $http.get(POSTS_LIST_URL,
                     {
                         params: {
-                            type: 'blog.BlogPost',
+                            type: POST_TYPE,
                             slug: slug,
                             limit: 1
                         }
@@ -88,6 +89,28 @@ export default ngModule => {
 
             find_author(email) {
                 return _.find(AUTHORS, { email:email });
+            },
+
+            featured(quantity = 4) {
+
+                return $http.get(POSTS_LIST_URL,
+                    {
+                        params: {
+                            type: POST_TYPE,
+                            fields: [
+                                'title',
+                                'thumbnail_url',
+                                'slug'
+                            ].join(','),
+                            order: 'posted_at',
+                            is_featured: true
+                        }
+                    }
+                ).then(
+                    function (response) {
+                        return response.data.pages;
+                    }
+                );
             }
         };
 
