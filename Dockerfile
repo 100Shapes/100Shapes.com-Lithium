@@ -4,6 +4,7 @@ MAINTAINER 100 Shapes <paolo@100shapes.com>
 
 # ENV HOME /app
 ENV VIRTUAL_HOST proto.100shapes.com
+ENV PRODUCTION True
 
 # Use baseimage-docker's init process.
 CMD ["/sbin/my_init"]
