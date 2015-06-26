@@ -3,6 +3,7 @@ const angular = require('angular');
 require('angular-ui-router');
 require('angularjs-viewhead');
 require('angular-sanitize');
+require('angulartics');
 
 // Styles
 require('css/main.less');
@@ -11,7 +12,9 @@ require('css/main.less');
 const ngModule = angular.module('app', [
     'ui.router',
     'viewhead',
-    'ngSanitize'
+    'ngSanitize',
+    'angulartics',
+    'angulartics.google.analytics'
 ]);
 
 require('./config')(ngModule);

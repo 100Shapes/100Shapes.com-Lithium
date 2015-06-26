@@ -12,6 +12,10 @@ export default ngModule => {
             $locationProvider.hashPrefix('!');
         })
 
+        // Analytics
+        .config(function ($analyticsProvider) {
+            $analyticsProvider.withBase(true);
+        })
 
         ;
     
