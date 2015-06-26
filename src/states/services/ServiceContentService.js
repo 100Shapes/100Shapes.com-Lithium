@@ -7,14 +7,14 @@ export default ngModule => {
 
     function ServiceContentService($http, API_BASE_URL, AUTHORS) {
 
-        const POSTS_LIST_URL = url.resolve(API_BASE_URL, 'pages/');
+        const API_LIST_URL = url.resolve(API_BASE_URL, 'pages/');
         const CONTENT_TYPE = 'services.Service';
 
         const serviceContentService =  {
 
             all() {
 
-                return $http.get(POSTS_LIST_URL,
+                return $http.get(API_LIST_URL,
                     {
                         params: {
                             type: CONTENT_TYPE,
@@ -36,7 +36,7 @@ export default ngModule => {
 
             one(service_id) {
 
-                const POSTS_DETAIL_URL = url.resolve(POSTS_LIST_URL, `${service_id}/`);
+                const POSTS_DETAIL_URL = url.resolve(API_LIST_URL, `${service_id}/`);
 
                 return $http.get(POSTS_DETAIL_URL).then(
                     (response) => {
@@ -47,7 +47,7 @@ export default ngModule => {
 
             slug(slug) {
 
-                return $http.get(POSTS_LIST_URL,
+                return $http.get(API_LIST_URL,
                     {
                         params: {
                             type: CONTENT_TYPE,
@@ -65,18 +65,17 @@ export default ngModule => {
             },
 
             featured(quantity = 6) {
-                return $http.get(POSTS_LIST_URL,
+
+                return $http.get(API_LIST_URL,
                     {
                         params: {
                             type: CONTENT_TYPE,
                             fields: [
                                 'title',
                                 'thumbnail_url',
-                                'is_featured',
                                 'slug'
                             ].join(','),
-                            is_featured: true,
-                            limit: quantity
+                            is_featured: true
                         }
                     }
                 ).then(

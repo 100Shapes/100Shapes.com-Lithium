@@ -20,9 +20,8 @@ module.exports = function(ngModule) {
                             return BlogContentService.featured();
                         },
 
-                        services: function() {
-                            const NUM_OF_POSTS = 6;
-                            return 2;
+                        services: function(ServiceContentService) {
+                            return ServiceContentService.featured();
                         },
 
                     }
@@ -37,7 +36,6 @@ module.exports = function(ngModule) {
     function HomeCtrl(posts, services) {
         var vm = this;
 
-        debugger;
         vm.posts = posts;
         vm.services = services;
     }
