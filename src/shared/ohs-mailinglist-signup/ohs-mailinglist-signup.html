@@ -6,8 +6,9 @@
           target="_blank"
           novalidate>
 
-        <h1 class="h2"
-            ng-bind="config.headline"></h1>
+        <h1 class="h2">
+            {{ ::config.headline }}
+        </h1>
         
         <p ng-bind-html="config.intro">
         </p>
