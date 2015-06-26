@@ -1,0 +1,39 @@
+@import "~css/vars";
+@import "~Cardinal/base/mixins/to-rem.less";
+
+.ohs-global-masthead {
+  width: 100%;
+  height: auto;
+
+  color: @color-white;
+
+  a {
+    color: @color-white;
+  }
+
+  .btn {
+    border: none;
+
+    &:hover {
+      text-decoration: none;
+      background: @color-white;
+      color: @color-blue
+    }
+  }
+}
+
+.ohs-global-masthead--logo {
+  width: 9em;
+  height: 2.5em;
+
+  &:hover {
+    color: @color-blue-dark;
+  }
+
+}
+
+.ohs-global-masthead__ctas {
+  svg {
+    max-height: 2em;
+  }
+}

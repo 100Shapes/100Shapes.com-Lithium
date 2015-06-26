@@ -1,0 +1,32 @@
+<div headroom
+     class="ohs-global-masthead z10 posf">
+
+    <div class="wrapper">
+
+        <a href
+           ui-sref="main.home"
+           class="fl pv-- mr">
+            <ohs-logo class="ohs-global-masthead--logo"></ohs-logo>
+        </a>
+
+        <a href="{{ vm.company.phone.target }}"
+           class="btn pv- fr">
+            <ohs-icon name="{{vm.company.phone.icon_sm}}"
+                      class="is-sm mr-"></ohs-icon>
+            <span class="dn lg-di">
+              {{vm.company.phone.number}}
+            </span>
+        </a>
+
+        <a href="{{ vm.company.email.target }}"
+           class="btn pv- fr">
+            <ohs-icon name="{{vm.company.email.icon_sm}}"
+                      class="is-sm mr-"></ohs-icon>
+            <span class="dn lg-di">
+              {{vm.company.email.address}}
+            </span>
+        </a>
+
+    </div>
+
+</div>
