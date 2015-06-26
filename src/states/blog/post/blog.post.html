@@ -1,4 +1,4 @@
-<article class="ohs-blog-post"
+<article class="blog-post"
          vocab="http://schema.org/"
          typeof="NewsArticle">
 
@@ -28,7 +28,7 @@
                         </p>
 
 
-                        <div class="ohs-blog-post__meta posa 1/1">
+                        <div class="blog-post__meta posa">
 
                             <img class="profile"
                                  ng-src="{{ ::vm.post.author.profile }}"
@@ -41,7 +41,7 @@
                                itemtype="http://schema.org/Person"
                                class="m0">
                                 <small class="ffs">by</small>
-                                <a href="#" itemprop="name">{{ ::vm.post.author.name }}</a>
+                                <span itemprop="name">{{ ::vm.post.author.name }}</span>
                             </p>
 
                             <p itemprop="datePublished"
@@ -59,7 +59,7 @@
     </header>
 
 
-    <ohs-content-renderer content="{{ ::vm.post.body }}">
+    <ohs-content-renderer content="::vm.post.body">
     </ohs-content-renderer>
 
     <div class="wrapper">
