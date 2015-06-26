@@ -1,0 +1,21 @@
+<div class="bg--blue pv+">
+    <div class="wrapper">
+        <h1>100 Shapes design &amp; UX services</h1>
+
+
+        <ol>
+            <li ng-repeat="service in ::vm.service track by service.id">
+
+                <a href ui-sref="main.services.item({ slug:service.slug })">
+
+                    <h2>{{ ::service.title }}</h2>
+                    <img ng-src="{{ ::service.thumbnail_url }}" alt=""/>
+                </a>
+
+            </li>
+        </ol>
+
+
+
+    </div>
+</div>
