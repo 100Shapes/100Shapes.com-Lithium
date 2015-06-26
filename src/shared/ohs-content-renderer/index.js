@@ -5,7 +5,8 @@ module.exports = function(ngModule) {
 
     function ohsContentRenderer($compile) {
         return {
-            restrict: 'A',
+            restrict: 'E',
+            replace: true,
             scope: {
                 content: '@',
             },
