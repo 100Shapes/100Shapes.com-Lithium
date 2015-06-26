@@ -4,7 +4,7 @@
 
 
         <ol>
-            <li ng-repeat="service in ::vm.service track by service.id">
+            <li ng-repeat="service in ::vm.services track by service.id">
 
                 <a href ui-sref="main.services.item({ slug:service.slug })">
 
@@ -14,8 +14,6 @@
 
             </li>
         </ol>
-
-
 
     </div>
 </div>
