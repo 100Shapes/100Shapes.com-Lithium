@@ -15,17 +15,7 @@
                 </div>
             </div>
 
-            <ol>
-                <li ng-repeat="service in ::vm.services track by service.id">
-
-                    <a href ui-sref="main.services.item({ slug:service.slug })">
-
-                        <h2>{{ ::service.title }}</h2>
-                        <img ng-src="{{ ::service.thumbnail_url }}" alt=""/>
-                    </a>
-
-                </li>
-            </ol>
+            <ohs-services-grid services="::vm.services"></ohs-services-grid>
 
             <div class="grid grid-align-center mt">
                 <div class="grid-item sm-1/1 lg-8/12 tc">
