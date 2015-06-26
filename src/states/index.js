@@ -4,5 +4,6 @@ export default ngModule => {
     require('./blog')(ngModule);
     require('./services')(ngModule);
     require('./home')(ngModule);
+    require('./about')(ngModule);
 
 }
