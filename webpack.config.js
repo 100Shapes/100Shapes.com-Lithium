@@ -4,6 +4,7 @@ var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+
 module.exports = {
 
     cache: true,
@@ -54,6 +55,10 @@ module.exports = {
             inject: true,
             template: "src/index.html",
             favicon: "src/img/favicon.ico"
+        }),
+
+        new webpack.DefinePlugin({
+            __API_BASE_URL__: JSON.stringify(JSON.parse(process.env.API_BASE_URL || '"http://localhost:8000/api/v1/"'))
         })
 
         // new webpack.optimize.UglifyJsPlugin({

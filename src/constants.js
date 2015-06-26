@@ -3,7 +3,7 @@ export default ngModule => {
     ngModule
 
         // API BASE
-        .constant('API_BASE_URL', 'http://localhost:8000/api/v1/')
+        .constant('API_BASE_URL', __API_BASE_URL__)
 
         // Content Types
         .constant('CONTENT_TYPE_BLOG', 'blog')
