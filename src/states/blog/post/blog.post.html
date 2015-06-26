@@ -3,7 +3,8 @@
          typeof="NewsArticle">
 
 
-    <header class="pt++ mb++">
+    <header class="pt++ mb++"
+            style="background-image: url({{ ::vm.post.banner_url }})">
         <div class="wrapper">
             <div class="grid grid-align-center">
                 <div class="grid-item sm-1/1 lg-10/12">
@@ -56,10 +57,8 @@
                        ui-sref="main.blog.list"
                        class="db">All posts</a>
 
-
                 </div>
             </div>
-        </div>
         </div>
     </header>
 
@@ -67,7 +66,5 @@
     <ohs-content-renderer content="{{ ::vm.post.body }}">
     </ohs-content-renderer>
 
-
-    <img src="{{ ::vm.post.banner_url }}" alt=""/>
 
 </article>
