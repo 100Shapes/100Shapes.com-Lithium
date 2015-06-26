@@ -1,0 +1,44 @@
+@import "~css/vars";
+@import "~Cardinal/base/mixins/to-rem.less";
+
+.ohs-icon {
+    .to-rem(width, 60);
+    .to-rem(height, 60);
+}
+
+.ohs-icon.is-sm {
+	.to-rem(width, 30);
+	.to-rem(height, 30);
+}
+
+svg {
+	symbol { 
+		&[id|=line] { // seperate line and fills
+			stroke: currentColor;
+			fill: none;
+			path, g.path, g {
+				// stroke-dasharray: 250;
+				// stroke-dashoffset: 250;
+				stroke: currentColor;
+				stroke-linecap: round;
+				stroke-linejoin: round;
+				fill: none;
+				
+			}
+	    }
+
+	    &[id|=fill] { // seperate line and fills
+			fill: currentColor;
+			g {
+				fill: currentColor;
+
+			}
+	    }
+
+	    &[id|=pictogram] { // seperate line and fills
+	    	// dont change colour
+	    }
+
+
+	}
+}

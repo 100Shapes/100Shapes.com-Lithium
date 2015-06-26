@@ -9,4 +9,6 @@ export default ngModule => {
     require('./ohs-meta')(ngModule);
     require('./ohs-meta-group')(ngModule);
     require('./ohs-quote')(ngModule);
+    require('./ohs-icon')(ngModule);
+    require('./ohs-logo')(ngModule);
 }
