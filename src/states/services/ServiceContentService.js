@@ -64,6 +64,28 @@ export default ngModule => {
 
             },
 
+            featured(quantity = 6) {
+                return $http.get(POSTS_LIST_URL,
+                    {
+                        params: {
+                            type: CONTENT_TYPE,
+                            fields: [
+                                'title',
+                                'thumbnail_url',
+                                'is_featured',
+                                'slug'
+                            ].join(','),
+                            is_featured: true,
+                            limit: quantity
+                        }
+                    }
+                ).then(
+                    function (response) {
+                        return response.data.pages;
+                    }
+                );
+            }
+
 
         };
 

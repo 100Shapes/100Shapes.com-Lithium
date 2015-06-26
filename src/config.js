@@ -4,7 +4,7 @@ export default ngModule => {
 
         // Redirect to playlist.list
         .config(function($urlRouterProvider) {
-            $urlRouterProvider.otherwise('/blog/');
+            $urlRouterProvider.otherwise('/');
         })
 
         // Use HTML5 pushstate (nice URLs)

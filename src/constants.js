@@ -5,20 +5,6 @@ export default ngModule => {
         // API BASE
         .constant('API_BASE_URL', __API_BASE_URL__)
 
-        // Content Types
-        .constant('CONTENT_TYPE_BLOG', 'blog')
-        .constant('CONTENT_TYPE_SERVICE', 'services')
-        .constant('CONTENT_TYPE_GALLERY', 'gallery')
-
-        // Number of blog posts shown on the homepage
-        .constant('NUMBER_OF_HOMEPAGE_POSTS', 4)
-
-        // Number of blog posts shown on a blog item page
-        .constant('NUMBER_OF_RECENT_POSTS', 6)
-
-        // Number of blog posts shown on the homepage
-        .constant('NUMBER_OF_ADDITIONAL_SERVICES', 3)
-
         // Site name
         .constant('SITE_NAME', '100 Shapes – UX & Design for broadcast media')
 
