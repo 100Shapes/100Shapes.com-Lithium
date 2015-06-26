@@ -3,8 +3,6 @@ MAINTAINER 100 Shapes <paolo@100shapes.com>
 # Set correct environment variables.
 
 # ENV HOME /app
-ENV VIRTUAL_HOST proto.100shapes.com
-ENV PRODUCTION True
 
 # Use baseimage-docker's init process.
 CMD ["/sbin/my_init"]
@@ -27,7 +25,12 @@ RUN npm install
 
 ADD . /home/app/
 
+ENV PRODUCTION True
+ENV API_BASE_URL '"http://api.100shapes.com/api/v1/"'
+
 RUN webpack -p
+
+ENV VIRTUAL_HOST proto.100shapes.com
 
 # Enable nginx
 RUN rm -f /etc/service/nginx/down
