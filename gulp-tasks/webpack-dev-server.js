@@ -25,9 +25,9 @@ module.exports = function(callback) {
         res.sendFile(path.join(__dirname, '../src/index.html'));
     })
 
-    server.listen(8081, "0.0.0.0", function(err) {
+    server.listen(8080, "0.0.0.0", function(err) {
         if(err) throw new gutil.PluginError("webpack-dev-server", err);
-        gutil.log("[webpack-dev-server]", "http://0.0.0.0:8081/webpack-dev-server/index.html");
+        gutil.log("[webpack-dev-server]", "http://0.0.0.0:8080/webpack-dev-server/index.html");
     });
 
 };

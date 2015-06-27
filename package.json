@@ -25,10 +25,10 @@
   "devDependencies": {
     "Cardinal": "git+https://github.com/cbracco/cardinal.git#eea6e3757cd8a0bf1bdfab6f96512ea05630b7da",
     "angular": "^1.4.1",
+    "angular-google-analytics": "0.0.15",
     "angular-sanitize": "^1.4.1",
     "angular-ui-router": "^0.2.15",
     "angularjs-viewhead": "apparentlymart/angularjs-viewhead#6d39f4a895624ff54cc7ba9a52aba7f93645fea6",
-    "angulartics": "^0.18.0",
     "autoprefixer-loader": "^2.0.0",
     "babel-core": "^5.6.7",
     "babel-loader": "^5.2.1",

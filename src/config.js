@@ -13,8 +13,9 @@ export default ngModule => {
         })
 
         // Analytics
-        .config(function ($analyticsProvider) {
-            $analyticsProvider.withBase(true);
+        // Config options: https://github.com/revolunet/angular-google-analytics#example
+        .config(function (AnalyticsProvider) {
+            AnalyticsProvider.setAccount('UA-XXXXX-xx');
         })
 
         ;
