@@ -17,9 +17,10 @@ module.exports = function(ngModule) {
 
     ngModule.controller('OhsGlobalMastheadCtrl', OhsGlobalMastheadCtrl);
 
-    function OhsGlobalMastheadCtrl(COMPANY_META) {
+    function OhsGlobalMastheadCtrl(COMPANY_META, OffCanvas) {
         let vm = this;
 
         vm.company = COMPANY_META;
+        vm.toggleNav = OffCanvas.toggle;
     }
 };

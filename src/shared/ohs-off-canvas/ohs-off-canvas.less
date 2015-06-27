@@ -1,0 +1,35 @@
+@import "~css/vars";
+@import "~Cardinal/base/mixins/to-rem.less";
+
+html, body {
+  overflow-x: hidden;
+}
+
+.ohs-off-canvas {
+  transform: translate3d(0, 0, 0) translateX(~"@{spacing-macro}px");
+  transition: all 0.3s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+}
+
+.ohs-off-canvas__content {
+  transform: translate3d(0, 0, 0) translateX(0);
+  transition: all 0.3s cubic-bezier(0.16, 0.63, 0.45, 0.98);
+}
+
+.ohs-off-canvas--open .ohs-off-canvas {
+  transform: translate3d(0, 0, 0) translateX(0);
+}
+
+.ohs-off-canvas--open .ohs-off-canvas__content {
+  transform: translate3d(0, 0, 0) translate(~"-@{spacing-macro}px");
+}
+
+.ohs-off-canvas {
+  background-color: black;
+  color: white;
+  position: fixed;
+  right: 0;
+  top: 0;
+  .to-rem(width, @spacing-macro);
+  height: 100%;
+  -webkit-user-drag: none;
+}
