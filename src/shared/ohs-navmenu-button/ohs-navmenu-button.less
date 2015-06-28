@@ -1,0 +1,72 @@
+@import "~css/vars";
+@import "~Cardinal/base/mixins/to-rem.less";
+
+@ohs-burger-width: 30px;
+@ohs-burger-height: 20px;
+@ohs-burger-margin: 5px;
+@ohs-burger-bar-height: 4px;
+
+.ohs-burger-container:hover {
+	.ohs-navmenu-button__lines {
+		background-color: @color-blue;
+	}
+}
+
+.ohs-navmenu-button {
+    background: none;
+    border: none;
+    outline: none;
+
+	width: @ohs-burger-width;
+	height: @ohs-burger-height;
+	position: relative;
+	margin: @ohs-burger-margin auto;
+	
+	.ohs-navmenu-button__lines {
+		display: block;
+		position: absolute;
+		height: @ohs-burger-bar-height;
+		width: 100%;
+		
+		left: 0;
+
+		transform: rotate(0deg);
+		transition: .5s ease-in-out;
+		transition: color 0s ease-in-out, top .25s ease-in-out, width .25s ease-in-out, left .25s ease-in-out, transform-origin .25s ease-in-out, transform .25s ease-in-out
+	}
+
+	
+	.ohs-navmenu-button__lines:nth-child(1) {
+		top: 0px;
+		transform-origin: left center;
+	}
+
+	.ohs-navmenu-button__lines:nth-child(2) {
+		opacity: 1;
+		top: @ohs-burger-height/2.222;
+		transform-origin: left center;
+	}
+	.ohs-navmenu-button__lines:nth-child(3) {
+		top: @ohs-burger-height/1.1111;
+		transform-origin: left center;
+	}
+}
+
+.ohs-navmenu-button--open {
+		.ohs-navmenu-button__lines:nth-child(1) {
+			transform: rotate(45deg);
+			top: -1px;
+			left: 4px;
+		}
+
+		.ohs-navmenu-button__lines:nth-child(2) {
+			width: 0%;
+			opacity: 0;
+		}
+
+		.ohs-navmenu-button__lines:nth-child(3) {
+			transform: rotate(-45deg);
+			top: 20px;
+			left: 4px;
+		}
+	}
