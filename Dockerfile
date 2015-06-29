@@ -21,6 +21,8 @@ RUN npm install -g npm
 
 RUN npm install -g webpack
 
+RUN npm install imagemin@^3.2.0
+
 RUN npm install
 
 ADD . /home/app/

@@ -1,7 +1,6 @@
 web:
   build: .
   environment:
-    -
-    - API_BASE_URL='api.proto.100shapes.com'
+    - API_BASE_URL='api.100shapes.com'
   ports:
     - "80:80"
