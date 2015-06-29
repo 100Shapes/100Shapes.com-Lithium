@@ -58,7 +58,7 @@ module.exports = {
         }),
 
         new webpack.DefinePlugin({
-            __API_BASE_URL__: JSON.stringify(JSON.parse(process.env.API_BASE_URL || '"http://localhost:8000/api/v1/"'))
+            __API_BASE_URL__: JSON.stringify(JSON.parse(process.env.API_BASE_URL || '"http://192.168.0.32:8000/api/v1/"'))
         })
 
         // new webpack.optimize.UglifyJsPlugin({
