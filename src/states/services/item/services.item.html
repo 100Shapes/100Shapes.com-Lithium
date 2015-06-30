@@ -8,16 +8,6 @@
              vocab="http://schema.org/"
              typeof="NewsArticle">
 
-    <aside class="box box-round posf service-page__secondary-nav" role="navigation">
-        <ol class="list-bare">
-            <li ng-repeat="link in ::vm.service.content_sections track by $index">
-                <a href="#{{ ::link.slug}}">
-                    {{ ::link.label }}
-                </a>
-            </li>
-        </ol>
-    </aside>
-
     <header class="bg--blue bg--overlay pt++ pb mb+" style="background-image: url({{ :: vm.service.banner_url }})">
         <div class="wrapper">
             <div class="grid">
@@ -94,18 +84,23 @@
         </div>
     </header>
 
-    <div class="posr">
+    <div ng-repeat="section in ::vm.service.content_sections track by $index"
+         id="{{ ::section.slug }}">
 
-        <div ng-repeat="section in ::vm.service.content_sections track by $index"
-             id="{{ ::section.slug }}">
-
-            <ohs-content-renderer content="::section.body">
-            </ohs-content-renderer>
-        </div>
-
-
-
+        <ohs-content-renderer content="::section.body">
+        </ohs-content-renderer>
     </div>
+
+
+    <aside class="box box-round posf service-page__secondary-nav z2" role="navigation">
+        <ol class="list-bare">
+            <li ng-repeat="link in ::vm.service.content_sections track by $index">
+                <a href="#{{ ::link.slug}}">
+                    {{ ::link.label }}
+                </a>
+            </li>
+        </ol>
+    </aside>
 
 
 
