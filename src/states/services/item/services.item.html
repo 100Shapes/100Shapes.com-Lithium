@@ -92,11 +92,13 @@
     </div>
 
 
-    <aside class="box box-round posf service-page__secondary-nav z2" role="navigation">
+
+    <aside class="box box-round service-page__secondary-nav posf 1/5" role="navigation">
         <ol class="list-bare">
             <li ng-repeat="link in ::vm.service.content_sections track by $index">
-                <a href="#{{ ::link.slug}}">
-                    {{ ::link.label }}
+                <a href="#{{ ::link.slug }}"
+                   du-smooth-scroll>
+                   {{ ::link.label }}
                 </a>
             </li>
         </ol>

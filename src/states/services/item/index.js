@@ -1,6 +1,7 @@
 export default ngModule => {
 
-    require('./services.item.less')
+    require('./services.item.less');
+    const angular = require('angular');
 
     ngModule
         .config($stateProvider => {
@@ -31,6 +32,7 @@ export default ngModule => {
 
         vm.service = service;
         vm.company = COMPANY_META;
+
     }
     
 }

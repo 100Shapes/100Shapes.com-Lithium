@@ -92,5 +92,11 @@ export default ngModule => {
             slim: false,
             headline: '100 Shapes mailinglist',
             intro: 'Join our subscribers for regular design &amp; UX updates.'
-        });
+        })
+
+        //Scroll options
+        .value('duScrollDuration', 200)
+        .value('duScrollOffset', 30)
+
+    ;
 };

@@ -5,6 +5,7 @@ require('angularjs-viewhead');
 require('angular-sanitize');
 require('angular-google-analytics');
 require('angular-off-canvas');
+require('angular-scroll');
 
 // Styles
 require('css/main.less');
@@ -14,6 +15,7 @@ const ngModule = angular.module('app', [
     'ui.router',
     'viewhead',
     'ngSanitize',
+    'duScroll',
     'cn.offCanvas',
     'angular-google-analytics'
 ]);
