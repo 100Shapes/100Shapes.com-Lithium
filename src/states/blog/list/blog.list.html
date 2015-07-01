@@ -1,32 +1,170 @@
-<div class="bg--blue pv+">
+<ohs-meta-group title="UX Design and broadcast media Blog"
+                description="TODO page description">
+</ohs-meta-group>
+
+<article>
+
+
+    <div class="bg--blue pv++ mb++">
+        <div class="wrapper">
+            <div class="grid grid-align-center mb">
+                <div class="grid-item sm-1/1 lg-8/12 tc">
+                    <h1 view-title>The UX broadcast media blog</h1>
+
+                    <ol class="list-inline fz+ ohs-blog-list__category-links">
+                        <li ng-repeat="category in ::vm.categories track by category.title"
+                            class="dib mh-">
+
+                            <a href
+                               ng-click="vm.setCategoryFilter(category)"
+                               ng-class="{'ohs-blog-list__category-links--active': vm.filter.meta.category === category}">
+                                {{ ::category.title }}
+                            </a>
+
+                        </li>
+                        <li ng-if="vm.filter.meta.category">
+                            <a href ng-click="vm.clearFilter()">
+                                All
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="grid mb">
+
+                <div class="grid-item 1/1 lg-2/3">
+
+                    <a href
+                       ng-if="!vm.filter.meta.category"
+                       class="box box-round mb tc card card--2h card--blog"
+                       style="background-image: url('{{ vm.promoted_post.meta.promo_image }}');"
+                       ui-sref="main.blog.post({ slug:vm.promoted_post.meta.path })">
+
+                        <div class="card__content">
+
+                            <span class="h6 cw">
+                                {{ vm.promoted_post.meta.category }}
+                            </span>
+
+                            <hr>
+
+                            <h2 class="card__label h3">
+                                {{ vm.promoted_post.meta.title }}
+                            </h2>
+
+                        </div>
+
+                    </a>
+
+                    <ol>
+                        <li ng-repeat="post in ::vm.posts track by post.id">
+
+                            <a href ui-sref="main.blog.post({ slug:post.slug })">
+
+                                <h2>{{ ::post.title }}</h2>
+                                <img ng-src="{{ ::post.thumbnail_url }}" alt=""/>
+                            </a>
+
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="grid-item 1/1 lg-1/3">
+
+                    <ohs-mailinglist-signup class="mb card--2h bg--blue-dark"></ohs-mailinglist-signup>
+
+                    <div class="ml mt">
+                        <h5 class="h3">Categories</h5>
+
+                        <ul class="list-bare">
+                            <li ng-repeat="(slug, category) in vm.blog_categories track by $index">
+                                <h4 class="mb--">
+                                    <a href
+                                       ng-click="vm.setCategoryFilter( slug )">
+                                        {{ category.name }}
+                                    </a>
+                                </h4>
+
+                                <p class="mb">
+                                    {{ category.description }}
+                                </p>
+                            </li>
+                        </ul>
+
+                        <hr class="long dark-blue left">
+                    </div>
+
+
+                </div>
+            </div>
+
+            <ol class="list-bare">
+                <li ng-repeat="category in ::vm.categories track by category.title">
+                    <h3>{{ ::category.title }}</h3>
+
+                    <p>{{ ::category.description }}</p>
+                </li>
+            </ol>
+
+
+        </div>
+    </div>
+
     <div class="wrapper">
-        <h1>The UX broadcast media blog</h1>
 
-        <ol class="list-inline">
-            <li ng-repeat="category in ::vm.categories track by category.title">
-                {{ ::category.title }}
-            </li>
-        </ol>
-
-        <ol>
-            <li ng-repeat="post in ::vm.posts track by post.id">
-
-                <a href ui-sref="main.blog.post({ slug:post.slug })">
-
-                    <h2>{{ ::post.title }}</h2>
-                    <img ng-src="{{ ::post.thumbnail_url }}" alt=""/>
-                </a>
-
-            </li>
-        </ol>
-
-        <ol class="list-bare">
-            <li ng-repeat="category in ::vm.categories track by category.title">
-                <h3>{{ ::category.title }}</h3>
-                <p>{{ ::category.description }}</p>
-            </li>
-        </ol>
-
+        <ohs-mailinglist-signup class="dn lg-db mv"
+                                config="{ slim: true }">
+        </ohs-mailinglist-signup>
 
     </div>
-</div>
+
+    <div class="wrapper">
+
+        <div class="grid grid-align-center mb+">
+            <div class="grid-item sm-1/1 lg-8/12 tc">
+
+                <h2>Servicing digital content creators</h2>
+
+                <p class="fz+">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, it in culpa qui officia deserunt mollit anim
+                    id
+                    est laborum.</p>
+
+            </div>
+        </div>
+
+        <div class="grid grid-align-center mb">
+            <div class="grid-item sm-1/1 lg-4/12">
+                <h3>Something here</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco labeserunt mollit anim id est laborum.</p>
+
+                <h3>Something here</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco labeserunt mollit anim id est laborum.</p>
+            </div>
+
+            <div class="grid-item sm-1/1 lg-4/12">
+                <h3>Something here</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco labeserunt mollit anim id est laborum.</p>
+
+                <h3>Something here</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco labeserunt mollit anim id est laborum.</p>
+            </div>
+
+        </div>
+
+    </div>
+</article>

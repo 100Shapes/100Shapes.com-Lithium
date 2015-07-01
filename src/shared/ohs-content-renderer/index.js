@@ -13,6 +13,9 @@ module.exports = function(ngModule) {
             link: function ($scope, elem) {
 
                 let e = $compile($scope.content)($scope);
+                let classes = elem.attr('class');
+                e.addClass(classes);
+
                 elem.replaceWith(e);
 
             }

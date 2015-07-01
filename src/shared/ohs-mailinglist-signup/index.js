@@ -29,7 +29,11 @@ module.exports = function(ngModule) {
                 }
 
                 let e = $compile(template)($scope);
+                let classes = elem.attr('class');
+                e.addClass(classes);
+
                 elem.replaceWith(e);
+
             }
         };
     }
