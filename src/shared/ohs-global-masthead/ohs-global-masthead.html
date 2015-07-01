@@ -1,18 +1,18 @@
 <div headroom
      class="ohs-global-masthead z2 posf bg--blue">
 
-    <div class="wrapper">
+    <div class="wrapper wrapper-full-bleed">
 
         <a href
            ui-sref="main.home"
-           class="fl pv-- mr">
+           class="fl pv-- mr ml">
             <ohs-logo class="ohs-global-masthead--logo"></ohs-logo>
         </a>
 
-        <ohs-navmenu-button class="fr mt--"></ohs-navmenu-button>
+        <ohs-navmenu-button class="fr mt-- mr"></ohs-navmenu-button>
 
         <a href="{{ vm.company.phone.target }}"
-           class="btn pv- fr">
+           class="btn pv- fl dn sm-dib">
             <ohs-icon name="{{vm.company.phone.icon_sm}}"
                       class="is-sm mr-"></ohs-icon>
             <span class="dn lg-di">
@@ -21,7 +21,7 @@
         </a>
 
         <a href="{{ vm.company.email.target }}"
-           class="btn pv- fr">
+           class="btn pv- fl dn sm-dib">
             <ohs-icon name="{{vm.company.email.icon_sm}}"
                       class="is-sm mr-"></ohs-icon>
             <span class="dn lg-di">
