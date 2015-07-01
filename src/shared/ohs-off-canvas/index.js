@@ -21,11 +21,16 @@ module.exports = function(ngModule) {
 
     ngModule.controller('OffCanvasCtrl', OffCanvasCtrl);
 
-    function OffCanvasCtrl(OffCanvas) {
+    function OffCanvasCtrl(OffCanvas, $rootScope) {
         let vm = this;
 
         vm.toggle = OffCanvas.toggle;
 
+        $rootScope.$on('$stateChangeStart', () => {
+            if (OffCanvas.isOpened === true) {
+                OffCanvas.toggle();
+            }
+        });
     }
 
 };
