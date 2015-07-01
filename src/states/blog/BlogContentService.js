@@ -82,7 +82,8 @@ export default ngModule => {
                     }
                 ).then(
                     function (response) {
-                        return response.data.pages;
+                        let categories = response.data.pages;
+                        return categories;
                     }
                 );
             },
@@ -100,6 +101,7 @@ export default ngModule => {
                             fields: [
                                 'title',
                                 'thumbnail_url',
+                                'category',
                                 'slug'
                             ].join(','),
                             order: 'posted_at',
