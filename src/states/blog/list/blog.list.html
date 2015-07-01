@@ -38,19 +38,19 @@
                     <a href
                        ng-if="!vm.filter.meta.category"
                        class="box box-round mb tc card card--2h card--blog"
-                       style="background-image: url('{{ vm.promoted_post.meta.promo_image }}');"
-                       ui-sref="main.blog.post({ slug:vm.promoted_post.meta.path })">
+                       style="background-image: url('{{ ::vm.featured_post.thumbnail_url }}');"
+                       ui-sref="main.blog.post({ slug:vm.featured_post.slug })">
 
                         <div class="card__content">
 
                             <span class="h6 cw">
-                                {{ vm.promoted_post.meta.category }}
+                                {{ ::vm.featured_post.category.title }}
                             </span>
 
                             <hr>
 
                             <h2 class="card__label h3">
-                                {{ vm.promoted_post.meta.title }}
+                                {{ ::vm.featured_post.title }}
                             </h2>
 
                         </div>
@@ -77,20 +77,19 @@
                     <div class="ml mt">
                         <h5 class="h3">Categories</h5>
 
-                        <ul class="list-bare">
-                            <li ng-repeat="(slug, category) in vm.blog_categories track by $index">
+                        <ol class="list-bare">
+                            <li ng-repeat="category in ::vm.categories track by category.title">
                                 <h4 class="mb--">
                                     <a href
-                                       ng-click="vm.setCategoryFilter( slug )">
-                                        {{ category.name }}
+                                       ng-click="vm.setCategoryFilter(category.title)">
+                                        {{ ::category.title }}
                                     </a>
                                 </h4>
 
-                                <p class="mb">
-                                    {{ category.description }}
-                                </p>
+                                <p>{{ ::category.description }}</p>
                             </li>
-                        </ul>
+                        </ol>
+
 
                         <hr class="long dark-blue left">
                     </div>
@@ -98,14 +97,6 @@
 
                 </div>
             </div>
-
-            <ol class="list-bare">
-                <li ng-repeat="category in ::vm.categories track by category.title">
-                    <h3>{{ ::category.title }}</h3>
-
-                    <p>{{ ::category.description }}</p>
-                </li>
-            </ol>
 
 
         </div>

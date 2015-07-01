@@ -108,6 +108,9 @@ export default ngModule => {
                     }
                 ).then(
                     function (response) {
+                        if (quantity === 1) {
+                            return response.data.pages[0];
+                        }
                         return response.data.pages;
                     }
                 );

@@ -18,6 +18,10 @@ export default ngModule => {
 
                         categories: function(BlogContentService) {
                             return BlogContentService.categories();
+                        },
+
+                        featuredPost: function(BlogContentService) {
+                            return BlogContentService.featured(1);
                         }
 
                     }
@@ -29,11 +33,12 @@ export default ngModule => {
 
     ngModule.controller('BlogListCtrl', BlogListCtrl);
 
-    function BlogListCtrl(posts, categories) {
+    function BlogListCtrl(posts, categories, featuredPost) {
         let vm = this;
 
         vm.posts = posts;
         vm.categories = categories;
+        vm.featured_post = featuredPost;
     }
     
 }
