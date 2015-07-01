@@ -10,9 +10,7 @@ export default ngModule => {
             replace: true,
             template: require('./ohs-navmenu-button.html'),
             link: function($scope, elem, attrs) {
-                $scope.toggle = OffCanvas.toggle;
-
-                $scope.isOpen = OffCanvas.isOpened;
+                $scope.OffCanvas = OffCanvas;
             }
         };
     }
