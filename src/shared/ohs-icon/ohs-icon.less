@@ -12,7 +12,7 @@
 }
 
 svg {
-	symbol { 
+	symbol {
 		&[id|=line] { // seperate line and fills
 			stroke: currentColor;
 			fill: none;
@@ -23,13 +23,13 @@ svg {
 				stroke-linecap: round;
 				stroke-linejoin: round;
 				fill: none;
-				
+
 			}
 	    }
 
 	    &[id|=fill] { // seperate line and fills
 			fill: currentColor;
-			g {
+			path, g.path, g {
 				fill: currentColor;
 
 			}
