@@ -100,6 +100,7 @@ export default ngModule => {
                     {
                         params: {
                             type: POST_TYPE,
+                            limit: quantity,
                             fields: [
                                 'title',
                                 'thumbnail_url',

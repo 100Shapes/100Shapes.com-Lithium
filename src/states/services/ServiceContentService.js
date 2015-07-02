@@ -70,6 +70,7 @@ export default ngModule => {
                     {
                         params: {
                             type: CONTENT_TYPE,
+                            limit: quantity,
                             fields: [
                                 'title',
                                 'thumbnail_url',
@@ -80,6 +81,9 @@ export default ngModule => {
                     }
                 ).then(
                     function (response) {
+                        if (quantity === 1) {
+                            return response.data.pages[0];
+                        }
                         return response.data.pages;
                     }
                 );

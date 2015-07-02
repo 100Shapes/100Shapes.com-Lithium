@@ -22,7 +22,7 @@ module.exports = function(ngModule) {
 
                         services: function(ServiceContentService) {
                             return ServiceContentService.featured();
-                        },
+                        }
 
                     }
                 });
