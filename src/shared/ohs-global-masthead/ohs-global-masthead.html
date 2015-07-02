@@ -12,21 +12,19 @@
         <ohs-navmenu-button class="fr mt-- mr"></ohs-navmenu-button>
 
         <a href="{{ vm.company.phone.target }}"
-           class="btn pv- fl dn sm-dib vam">
+           class="btn pv- fl dn lg-dib vam">
             <ohs-icon name="{{vm.company.phone.icon_sm}}"
                       class="is-xs mr-"></ohs-icon>
-            <span class="dn lg-di">
-              {{vm.company.phone.number}}
-            </span>
+            {{vm.company.phone.number}}
+
         </a>
 
         <a href="{{ vm.company.email.target }}"
-           class="btn pv- fl dn sm-dib vam">
+           class="btn pv- fl dn lg-dib vam">
             <ohs-icon name="{{vm.company.email.icon_sm}}"
                       class="is-xs mr-"></ohs-icon>
-            <span class="dn lg-di">
-              {{vm.company.email.address}}
-            </span>
+            {{vm.company.email.address}}
+
         </a>
 
     </div>
