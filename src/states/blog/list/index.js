@@ -39,6 +39,16 @@ export default ngModule => {
         vm.posts = posts;
         vm.categories = categories;
         vm.featured_post = featuredPost;
+
+        vm.filter = {};
+
+        vm.setCategoryFilter = function(categoryId) {
+            vm.filter = { 'category': categoryId };
+        }
+
+        vm.clearFilter = function() {
+            vm.filter = {};
+        }
     }
     
 }

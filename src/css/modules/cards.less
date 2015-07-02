@@ -2,6 +2,7 @@
 @import "~css/mixins/transitions";
 
 @card-height: 240;
+@card-height-tall: 400;
 
 .card {
   .to-rem(height, @card-height);
@@ -89,7 +90,7 @@
 }
 
 .card--2h {
-  .to-rem(height, @card-height * 2 + @spacing-base);
+  .to-rem(height, @card-height-tall);
 }
 
 .card__content {

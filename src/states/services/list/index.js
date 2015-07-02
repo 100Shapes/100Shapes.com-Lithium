@@ -29,6 +29,7 @@ export default ngModule => {
         let vm = this;
 
         vm.services = services;
+
     }
     
 }

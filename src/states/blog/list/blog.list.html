@@ -13,18 +13,19 @@
 
                     <ol class="list-inline fz+ ohs-blog-list__category-links">
                         <li ng-repeat="category in ::vm.categories track by category.title"
-                            class="dib mh-">
+                            class="dib mh-"
+                            ng-class="{'ohs-blog-list__category-links--active': vm.filter.category === category.id}">
 
                             <a href
-                               ng-click="vm.setCategoryFilter(category)"
-                               ng-class="{'ohs-blog-list__category-links--active': vm.filter.meta.category === category}">
+                               ng-click="vm.setCategoryFilter(category.id)">
                                 {{ ::category.title }}
                             </a>
 
                         </li>
-                        <li ng-if="vm.filter.meta.category">
-                            <a href ng-click="vm.clearFilter()">
-                                All
+                        <li ng-if="vm.filter.category">
+                            <a href ng-click="vm.clearFilter()"
+                               class="fz-">
+                                show all
                             </a>
                         </li>
                     </ol>
@@ -36,8 +37,8 @@
                 <div class="grid-item 1/1 lg-2/3">
 
                     <a href
-                       ng-if="!vm.filter.meta.category"
-                       class="box box-round mb tc card card--2h card--blog fz++"
+                       ng-if="!vm.filter.category"
+                       class="box box-round p+ mb tc card card--2h card--blog"
                        style="background-image: url('{{ ::vm.featured_post.thumbnail_url }}');"
                        ui-sref="main.blog.post({ slug:vm.featured_post.slug })">
 
@@ -49,7 +50,7 @@
 
                             <hr class="2/5">
 
-                            <h2 class="card__title h3">
+                            <h2 class="card__title h3 fz++">
                                 {{ ::vm.featured_post.title }}
                             </h2>
 
@@ -72,7 +73,7 @@
                             <li ng-repeat="category in ::vm.categories track by category.title">
                                 <h4 class="mb--">
                                     <a href
-                                       ng-click="vm.setCategoryFilter(category.title)">
+                                       ng-click="vm.setCategoryFilter(category.id)">
                                         {{ ::category.title }}
                                     </a>
                                 </h4>

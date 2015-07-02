@@ -90,8 +90,8 @@ export default ngModule => {
 
         .constant('DEFAULT_MAILINGLIST_SIGNUP_CONFIG', {
             slim: false,
-            headline: '100 Shapes mailinglist',
-            intro: 'Join our subscribers for regular design &amp; UX updates.'
+            headline: 'Join our subscribers',
+            intro: 'For regular advice and news from our UX Strategists and Designers.'
         })
 
         //Scroll options
