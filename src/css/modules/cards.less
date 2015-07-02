@@ -1,75 +1,104 @@
 @import "~Cardinal/base/mixins/to-rem.less";
+@import "~css/mixins/transitions";
 
 @card-height: 240;
 
 .card {
-    .to-rem(height, @card-height);
-    position: relative;
+  .to-rem(height, @card-height);
+  position: relative;
+  overflow: hidden;
+
+  color: @color-blue;
+  background-color: @color-white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 50%;
+
+  text-decoration: none !important;
+
+  .card__label {
+    .transition();
+    height: 0;
     overflow: hidden;
+    display: block;
+    opacity: 0;
+  }
 
-    color: @color-blue;
-    background-color: @color-white;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: 50%;
-    background-position-y: 50%;
+  &:after {
+    .transition();
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    .to-rem(border-radius, @border-radius-base, ~"!important");
+  }
 
-    text-decoration: none !important;
+  hr {
+    .transition();
+    width: 0px !important;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: block;
+    border-color:  @color-white;
+    opacity: 0;
+  }
 
-    .card__label {
-        color: @color-blue;
+  &:hover {
+
+    hr {
+      width: 20% !important;
+      .to-rem(margin-top, @spacing-half);
+      .to-rem(margin-bottom, @spacing-half);
+      opacity: 1;
     }
 
     &:after {
-        content: " ";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-        .to-rem(border-radius, @border-radius-base, ~"!important");
+      background-color: fade(@color-orange, 75%);
     }
 
-    &:hover {
-
-        &:after {
-            background-color: fade(@color-orange, 75%);
-        }
-
-        .card__content {
-            hr {
-                border-color:  @color-white;
-            }
-        }
-        
-        .card__label {
-            color: @color-white;
-        }
+    .card__label {
+      .to-rem(height, @line-height);
+      opacity: 1;
     }
+
+    .card__title {
+      color: @color-white;
+    }
+  }
+}
+
+.card__title {
+  color: @color-blue;
+  .transition();
 }
 
 .card--blog {
-    .card__label {
-        color: @color-white;
-        margin: 0;
-    }
-    &:after {
-        background-color: fade(@color-black, 20%);
-    }
-} 
+
+  .card__title {
+    color: @color-white;
+    margin: 0;
+  }
+
+  &:after {
+    background-color: fade(@color-black, 20%);
+  }
+}
 
 .card--2h {
-    .to-rem(height, @card-height * 2 + @spacing-base);
+  .to-rem(height, @card-height * 2 + @spacing-base);
 }
 
 .card__content {
-    z-index: 3;
-    top: 50%;
-    transform: translateY(-50%);
-    position: relative;
+  z-index: 3;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
 }
 
-.card__label.h3 {
-    text-decoration: underline;
+.card__title.h3 {
+  text-decoration: underline;
 }

@@ -37,19 +37,19 @@
 
                     <a href
                        ng-if="!vm.filter.meta.category"
-                       class="box box-round mb tc card card--2h card--blog"
+                       class="box box-round mb tc card card--2h card--blog fz++"
                        style="background-image: url('{{ ::vm.featured_post.thumbnail_url }}');"
                        ui-sref="main.blog.post({ slug:vm.featured_post.slug })">
 
                         <div class="card__content">
 
-                            <span class="h6 cw">
+                            <span class="h6 card__label mb0 cw">
                                 {{ ::vm.featured_post.category_title }}
                             </span>
 
                             <hr class="2/5">
 
-                            <h2 class="card__label h3">
+                            <h2 class="card__title h3">
                                 {{ ::vm.featured_post.title }}
                             </h2>
 
