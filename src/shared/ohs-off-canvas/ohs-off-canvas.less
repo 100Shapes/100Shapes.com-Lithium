@@ -22,8 +22,8 @@ html, body {
   transition: all 0.3s cubic-bezier(0.16, 0.63, 0.45, 0.98);
 
   .screen-md-min({
-    .to-rem(width, @spacing-macro);
-    transform: translate3d(0, 0, 0) translateX(~"@{spacing-macro}px");
+    .to-rem(width, @spacing-base * 12);
+    transform: translate3d(0, 0, 0) translateX(~"@{spacing-base * 12}px");
   });
 
 }
