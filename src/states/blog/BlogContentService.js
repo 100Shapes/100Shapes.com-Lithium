@@ -21,6 +21,7 @@ export default ngModule => {
                             fields: [
                                 'title',
                                 'thumbnail_url',
+                                'category_title',
                                 'slug',
                                 'posted_at'
                             ].join(','),
@@ -102,6 +103,7 @@ export default ngModule => {
                                 'title',
                                 'thumbnail_url',
                                 'category',
+                                'category_title',
                                 'slug'
                             ].join(','),
                             order: 'posted_at',
