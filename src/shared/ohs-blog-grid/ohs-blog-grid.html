@@ -1,7 +1,7 @@
 <div class="grid">
 
     <div class="grid-item xs-1/1 md-1/2"
-         ng-repeat="post in ::posts track by post.id">
+         ng-repeat="post in posts | filter:filter track by post.id">
         
         <a href
            class="box box-round mb tc card card--blog"
@@ -22,6 +22,5 @@
         </a>
 
     </div>
-    
-</div>
 
+</div>

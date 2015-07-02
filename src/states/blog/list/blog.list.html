@@ -1,4 +1,4 @@
-<ohs-meta-group title="UX Design and broadcast media Blog"
+<ohs-meta-group title="Blog: UX &amp; design for broadcast media"
                 description="TODO page description">
 </ohs-meta-group>
 
@@ -9,26 +9,28 @@
         <div class="wrapper">
             <div class="grid grid-align-center mb">
                 <div class="grid-item sm-1/1 lg-8/12 tc">
-                    <h1 view-title>The UX broadcast media blog</h1>
+                    <h1 view-title>Blog: UX &amp; design for broadcast media</h1>
 
-                    <ol class="list-inline fz+ ohs-blog-list__category-links">
+                    <ol class="list-inline fz+ mb-">
                         <li ng-repeat="category in ::vm.categories track by category.title"
-                            class="dib mh-"
-                            ng-class="{'ohs-blog-list__category-links--active': vm.filter.category === category.id}">
+                            class="dib mh--">
 
-                            <a href
-                               ng-click="vm.setCategoryFilter(category.id)">
+                            <button class="btn btn-round btn-sm tag"
+                                    ng-click="vm.setCategoryFilter(category.id)"
+                                    ng-class="{'tag--active': vm.filter.category === category.id}">
                                 {{ ::category.title }}
-                            </a>
+                            </button>
 
-                        </li>
-                        <li ng-if="vm.filter.category">
-                            <a href ng-click="vm.clearFilter()"
-                               class="fz-">
-                                show all
-                            </a>
                         </li>
                     </ol>
+
+                    <a href ng-click="vm.clearFilter()"
+                       class="fz- dib"
+                       ng-if="vm.filter.category">
+                        show all
+                    </a>
+
+
                 </div>
             </div>
 
@@ -82,8 +84,14 @@
                             </li>
                         </ol>
 
+                        <hr class="dark-blue left 2/5">
 
-                        <hr class="long dark-blue left">
+                        <a href ng-click="vm.clearFilter()"
+                           class="fz- dib mt"
+                           ng-if="vm.filter.category">
+                            Show all posts
+                        </a>
+
                     </div>
 
 

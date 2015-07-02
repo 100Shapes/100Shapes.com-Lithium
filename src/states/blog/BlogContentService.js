@@ -22,6 +22,7 @@ export default ngModule => {
                                 'title',
                                 'thumbnail_url',
                                 'category_title',
+                                'category',
                                 'slug',
                                 'posted_at'
                             ].join(','),
@@ -106,7 +107,7 @@ export default ngModule => {
                                 'category_title',
                                 'slug'
                             ].join(','),
-                            order: 'posted_at',
+                            order: '-posted_at',
                             is_featured: true
                         }
                     }

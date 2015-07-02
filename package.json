@@ -29,6 +29,7 @@
     "angular-off-canvas": "git+https://github.com/cironunes/angular-off-canvas.git#42da3c69778928a21a1b0fec5a54a0633dcd1ad1",
     "angular-sanitize": "^1.4.1",
     "angular-scroll": "^0.7.1",
+    "angular-toarrayfilter": "^1.0.1",
     "angular-ui-router": "^0.2.15",
     "angularjs-viewhead": "git+https://github.com/apparentlymart/angularjs-viewhead.git#6d39f4a895624ff54cc7ba9a52aba7f93645fea6",
     "autoprefixer-loader": "^2.0.0",

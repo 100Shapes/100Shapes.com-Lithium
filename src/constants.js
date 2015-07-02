@@ -91,7 +91,7 @@ export default ngModule => {
         .constant('DEFAULT_MAILINGLIST_SIGNUP_CONFIG', {
             slim: false,
             headline: 'Join our subscribers',
-            intro: 'For regular advice and news from our UX Strategists and Designers.'
+            intro: 'Regular news from our UX Strategists and Designers.'
         })
 
         //Scroll options

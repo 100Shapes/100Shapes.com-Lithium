@@ -6,6 +6,7 @@ require('angular-sanitize');
 require('angular-google-analytics');
 require('angular-off-canvas');
 require('angular-scroll');
+require('angular-toarrayfilter');
 
 // Styles
 require('css/main.less');
@@ -17,7 +18,8 @@ const ngModule = angular.module('app', [
     'ngSanitize',
     'duScroll',
     'cn.offCanvas',
-    'angular-google-analytics'
+    'angular-google-analytics',
+    'angular-toArrayFilter'
 ]);
 
 require('./config')(ngModule);
