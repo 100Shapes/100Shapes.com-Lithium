@@ -91,7 +91,7 @@ export default ngModule => {
             },
 
             find_author(email) {
-                return _.find(AUTHORS, { email:email });
+                return _.find(AUTHORS, { email:email.toLowerCase() });
             },
 
             featured(quantity = 4) {

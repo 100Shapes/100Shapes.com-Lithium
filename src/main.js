@@ -3,10 +3,10 @@ const angular = require('angular');
 require('angular-ui-router');
 require('angularjs-viewhead');
 require('angular-sanitize');
+require('angular-animate');
 require('angular-google-analytics');
 require('angular-off-canvas');
 require('angular-scroll');
-require('angular-toarrayfilter');
 
 // Styles
 require('css/main.less');
@@ -19,7 +19,7 @@ const ngModule = angular.module('app', [
     'duScroll',
     'cn.offCanvas',
     'angular-google-analytics',
-    'angular-toArrayFilter'
+    'ngAnimate'
 ]);
 
 require('./config')(ngModule);
