@@ -84,7 +84,8 @@
     </header>
 
     <div ng-repeat="section in ::vm.service.content_sections track by $index"
-         id="{{ ::section.slug }}">
+         id="{{ ::section.slug }}"
+         class="service-page__content-section">
 
         <ohs-content-renderer content="::section.body">
         </ohs-content-renderer>
