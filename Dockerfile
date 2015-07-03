@@ -13,6 +13,8 @@ RUN /pd_build/nodejs.sh
 
 RUN apt-get update && apt-get install -y -o Dpkg::Options::="--force-confold" passenger nginx-extras
 
+RUN curl -sLo /usr/local/bin/ep https://github.com/kreuzwerker/envplate/releases/download/v0.0.7/ep-linux && chmod +x /usr/local/bin/ep
+
 ADD package.json /home/app/
 
 WORKDIR /home/app/
@@ -33,11 +35,14 @@ ENV API_BASE_URL '"http://api.100shapes.com/api/v1/"'
 RUN webpack -p
 
 ENV VIRTUAL_HOST proto.100shapes.com
+ENV PRERENDER_TOKEN 00000000000000
 
 # Enable nginx
 RUN rm -f /etc/service/nginx/down
 RUN rm /etc/nginx/sites-enabled/default
 ADD nginx.conf /etc/nginx/sites-enabled/nginx.conf
+
+RUN ep /etc/nginx/sites-enabled/nginx.conf
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
