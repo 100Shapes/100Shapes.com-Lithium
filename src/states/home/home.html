@@ -2,47 +2,60 @@
                 description="todo page description">
 </ohs-meta-group>
 
-<div class="pv++ tc home__header">
+<div class="pv++ tc bg--blue home__header">
 
     <div class="wrapper">
 
-        <h1 view-title class="ohs-page--home__section__heading">
+        <h1 view-title class="mv+">
             UX &amp; Design for broadcasters <br>media organisations
         </h1>
 
+        <p class="fz++">Stuff &amp; things here</p>
+
     </div>
 
-    <div class="wrapper">
+</div>
 
-        <div class="grid grid-align-center gutter-2 tc mt++">
-            <ul class="list-bare ohs-page--home__client-list">
-                <li class="grid-item xs-1/2 md-1/6">
-                    <ohs-icon name="fill-viacom"></ohs-icon>
-                </li>
-                <li class="grid-item xs-1/2 md-1/6">
-                    <ohs-icon name="fill-blinkbox"></ohs-icon>
-                </li>
-                <li class="grid-item xs-1/2 md-1/6">
-                    <ohs-icon name="fill-bbc"></ohs-icon>
-                </li>
-                <li class="grid-item xs-1/2 md-1/6">
-                    <ohs-icon name="fill-itv"></ohs-icon>
-                </li>
-                <li class="grid-item xs-1/2 md-1/6">
-                    <ohs-icon name="fill-mtv"></ohs-icon>
-                </li>
-                <li class="grid-item xs-1/2 md-1/6">
-                    <ohs-icon name="fill-radio3"></ohs-icon>
-                </li>
-                <li class="grid-item xs-1/2 md-1/6">
-                    <ohs-icon name="fill-londonlive"></ohs-icon>
-                </li>
-                <li class="grid-item xs-1/2 md-1/6">
-                    <ohs-icon name="fill-iplayer"></ohs-icon>
-                </li>
-            </ul>
+<div class="pv+">
+    <div class="wrapper">
+        <h2 class="mt0 mb-">What we do</h2>
+
+        <div class="grid">
+            <div class="grid-item 1/1 md-1/2">
+                <p class="fz+++">
+                    User experience (UX) and design services for broadcasters and media organisations.
+                </p>
+            </div>
         </div>
 
+        <ohs-services-grid services="::vm.services"></ohs-services-grid>
+
+        <p class="tc">
+            <a ui-sref="main.services.list" class="read-more">More of our design services</a>
+        </p>
+
+    </div>
+</div>
+
+<div class="pv+">
+    <div class="wrapper">
+        <h2 class="mt0 mb-">
+            UX &amp; design blog
+        </h2>
+
+        <div class="grid">
+            <div class="grid-item 1/1 md-1/2">
+                <p class="fz+++">
+                    We're often writing about projects, technology, process and findings.
+                </p>
+            </div>
+        </div>
+
+        <ohs-blog-grid posts="vm.posts"></ohs-blog-grid>
+
+        <p class="tc">
+            <a ui-sref="main.blog.list" class="read-more">More from our broadcast media blog</a>
+        </p>
 
     </div>
 
@@ -58,9 +71,7 @@
             We’ve been designing websites, apps, products and services within media organisations and on their behalf.
         </p>
 
-        <ohs-services-grid services="::vm.services"></ohs-services-grid>
 
-        <a ui-sref="main.services.list" class="read-more">More things we do</a>
 
     </div>
 </div>
@@ -87,25 +98,4 @@
     <ohs-cta destination="something">
         <p>Interesting in working with us?</p>
     </ohs-cta>
-</div>
-
-
-<div class="pv+ tc">
-
-    <div class="wrapper">
-        <h2 class="ohs-page--home__section__heading">
-            Blog
-        </h2>
-
-        <p>
-            We talk about design in a wider context.
-        </p>
-
-        <ohs-blog-grid posts="vm.posts"></ohs-blog-grid>
-
-    </div>
-
-    <div class="wrapper">
-        <a ui-sref="main.blog.list" class="read-more">More from our broadcast media blog ></a>
-    </div>
 </div>
