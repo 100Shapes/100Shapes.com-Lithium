@@ -5,6 +5,7 @@
 .ohs-global-masthead {
   width: 100%;
   height: auto;
+  position: fixed;
   box-shadow: inset 0px 25px 27px -2px rgba(33,92,255,0.25);
 
   color: @color-white;
@@ -23,9 +24,13 @@
       text-decoration: none;
     }
   }
+
+  .ohs-off-canvas--open & {
+    position: absolute;
+  }
 }
 
-.ohs-global-masthead--logo {
+.ohs-global-masthead__logo {
   width: 9em;
   height: 2.5em;
 
@@ -34,3 +39,4 @@
   }
 
 }
+

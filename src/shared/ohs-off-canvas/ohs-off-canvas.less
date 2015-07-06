@@ -2,28 +2,18 @@
 @import "~Cardinal/base/mixins/to-rem.less";
 @import "~Cardinal/base/mixins/media-queries.less";
 
-html, body {
-  overflow-x: hidden;
-}
-
 .ohs-off-canvas--open .ohs-off-canvas {
-  transform: translate3d(0, 0, 0) translateX(0);
+  transform: translate3d(0, 0, 0);
+  height: auto;
+  max-height: 500px;
 }
 
 .ohs-off-canvas {
-  background-color: @color-black;
-  color: @color-white;
-  right: 0;
   top: 0;
-  height: 100%;
+  max-height: 0;
   -webkit-user-drag: none;
   width: 100%;
-  transform: translate3d(0, 0, 0) translateX(100%);
+  transform: translate3d(0, 0, 0);
   transition: all 0.3s cubic-bezier(0.16, 0.63, 0.45, 0.98);
-
-  .screen-md-min({
-    .to-rem(width, @spacing-base * 12);
-    transform: translate3d(0, 0, 0) translateX(~"@{spacing-base * 12}px");
-  });
-
+  overflow: hidden;
 }
