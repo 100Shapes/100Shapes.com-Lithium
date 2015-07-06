@@ -13,10 +13,6 @@
             <div class="grid">
                 <div class="grid-item 1/1 lg-2/3 pr+">
 
-                    <a href
-                       ui-sref="main.services.list"
-                       class="btn-link">&lt; Design services</a>
-
                     <h1 view-title>
                         {{ ::vm.service.seo_title }}
                     </h1>
@@ -27,6 +23,11 @@
 
                     <p class="fz+" ng-bind-html="vm.service.intro">
                     </p>
+
+                    <a href
+                       ui-sref="main.services.list"
+                       class="btn-link">&lt; More design services</a>
+
 
                 </div>
                 <div class="grid-item 1/1 lg-1/3">
