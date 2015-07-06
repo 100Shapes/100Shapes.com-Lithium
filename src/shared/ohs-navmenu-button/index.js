@@ -7,10 +7,17 @@ export default ngModule => {
     function ohsNavmenuButton(OffCanvas) {
         return {
             restrict: 'E',
+            scope: {
+                shouldHide: '&?'
+            },
             replace: true,
             template: require('./ohs-navmenu-button.html'),
             link: function($scope, elem, attrs) {
                 $scope.OffCanvas = OffCanvas;
+
+                if (!attrs['should-hide']) {
+                    $scope.shouldHide = false;
+                }
             }
         };
     }

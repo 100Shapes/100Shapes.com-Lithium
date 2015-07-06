@@ -1,7 +1,8 @@
 <button class="ohs-navmenu-button btn pv- ph0"
         ng-click="OffCanvas.toggle()"
         ng-class="{ 'ohs-navmenu-button--open' : OffCanvas.isOpened,
-                    'ohs-navmenu-button--closed' : !OffCanvas.isOpened
+                    'ohs-navmenu-button--closed' : !OffCanvas.isOpened,
+                    'vh': shouldHide
                   }" >
     <span class="menu-icon"></span>
     <span class="vh">Toggle nav</span>
