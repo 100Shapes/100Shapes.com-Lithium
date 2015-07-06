@@ -21,6 +21,6 @@ module.exports = function(ngModule) {
         let vm = this;
 
         vm.company = COMPANY_META;
-        vm.toggleNav = OffCanvas.toggle;
+        vm.OffCanvas = OffCanvas;
     }
 };

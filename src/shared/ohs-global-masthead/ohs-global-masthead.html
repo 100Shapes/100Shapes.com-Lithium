@@ -12,7 +12,10 @@
         <ohs-navmenu-button class="fr mt-- mr"></ohs-navmenu-button>
 
         <a href="{{ vm.company.phone.target }}"
-           class="btn pv- fl dn lg-dib vam">
+           class="btn pv- fl dn lg-dib vam"
+           ng-class="{
+             'ohs-global-masthead__cta--hidden': vm.OffCanvas.isOpened
+           }">
             <ohs-icon name="{{vm.company.phone.icon_sm}}"
                       class="is-xs mr-"></ohs-icon>
             {{vm.company.phone.number}}
@@ -20,7 +23,10 @@
         </a>
 
         <a href="{{ vm.company.email.target }}"
-           class="btn pv- fl dn lg-dib vam">
+           class="btn pv- fl dn lg-dib vam"
+           ng-class="{
+             'ohs-global-masthead__cta--hidden': vm.OffCanvas.isOpened
+           }">
             <ohs-icon name="{{vm.company.email.icon_sm}}"
                       class="is-xs mr-"></ohs-icon>
             {{vm.company.email.address}}
