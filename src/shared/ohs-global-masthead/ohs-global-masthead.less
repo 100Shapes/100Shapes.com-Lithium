@@ -1,8 +1,9 @@
 @import "~css/vars";
 @import "~Cardinal/base/mixins/to-rem";
-@import "~css/mixins/transitions.less";
+@import "~css/mixins/transitions";
 
 .ohs-global-masthead {
+  .transition(background);
   width: 100%;
   height: auto;
   position: fixed;
@@ -28,6 +29,10 @@
   .ohs-off-canvas--open & {
     position: absolute;
   }
+}
+
+.ohs-global-masthead.active {
+  background-color: @color-blue;
 }
 
 .ohs-global-masthead__logo {

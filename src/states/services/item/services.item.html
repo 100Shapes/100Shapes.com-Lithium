@@ -5,8 +5,9 @@
 
 
 <article class="service-page"
-             vocab="http://schema.org/"
-             typeof="NewsArticle">
+         vocab="http://schema.org/"
+         typeof="NewsArticle"
+         id="main">
 
     <header class="bg--blue bg--overlay pt++ pb mb+" style="background-image: url({{ :: vm.service.banner_url }})">
         <div class="wrapper">
@@ -91,19 +92,5 @@
         <ohs-content-renderer content="::section.body">
         </ohs-content-renderer>
     </div>
-
-
-
-    <aside class="box box-round service-page__secondary-nav posf 1/5" role="navigation">
-        <ol class="list-bare">
-            <li ng-repeat="link in ::vm.service.content_sections track by $index">
-                <a href="#{{ ::link.slug }}"
-                   du-smooth-scroll>
-                   {{ ::link.label }}
-                </a>
-            </li>
-        </ol>
-    </aside>
-
 
 </article>

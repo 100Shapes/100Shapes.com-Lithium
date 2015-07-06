@@ -37,46 +37,50 @@
     </div>
 </div>
 
-<div class="pv+">
-    <div class="wrapper">
-        <h2 class="mt0 mb-">What we do</h2>
+<div id="main">
 
-        <div class="grid">
-            <div class="grid-item 1/1 md-1/2">
-                <p class="fz+++">
-                    User experience (UX) and design services for broadcasters and media organisations.
-                </p>
+    <div class="pv+">
+        <div class="wrapper">
+            <h2 class="mt0 mb-">What we do</h2>
+
+            <div class="grid">
+                <div class="grid-item 1/1 md-1/2">
+                    <p class="fz+++">
+                        User experience (UX) and design services for broadcasters and media organisations.
+                    </p>
+                </div>
             </div>
+
+            <ohs-services-grid services="::vm.services"></ohs-services-grid>
+
+            <p class="tc">
+                <a ui-sref="main.services.list" class="read-more">More of our design services</a>
+            </p>
+
         </div>
-
-        <ohs-services-grid services="::vm.services"></ohs-services-grid>
-
-        <p class="tc">
-            <a ui-sref="main.services.list" class="read-more">More of our design services</a>
-        </p>
-
     </div>
-</div>
 
-<div class="pv+">
-    <div class="wrapper">
-        <h2 class="mt0 mb-">
-            Latest blog posts
-        </h2>
+    <div class="pv+">
+        <div class="wrapper">
+            <h2 class="mt0 mb-">
+                Latest blog posts
+            </h2>
 
-        <div class="grid">
-            <div class="grid-item 1/1 md-1/2">
-                <p class="fz+++">
-                    We're often writing about projects, technology, process and findings.
-                </p>
+            <div class="grid">
+                <div class="grid-item 1/1 md-1/2">
+                    <p class="fz+++">
+                        We're often writing about projects, technology, process and findings.
+                    </p>
+                </div>
             </div>
+
+            <ohs-blog-grid posts="vm.posts"></ohs-blog-grid>
+
+            <p class="tc">
+                <a ui-sref="main.blog.list" class="read-more">More from our broadcast media blog</a>
+            </p>
+
         </div>
-
-        <ohs-blog-grid posts="vm.posts"></ohs-blog-grid>
-
-        <p class="tc">
-            <a ui-sref="main.blog.list" class="read-more">More from our broadcast media blog</a>
-        </p>
 
     </div>
 

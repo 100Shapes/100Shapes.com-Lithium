@@ -96,7 +96,7 @@ export default ngModule => {
 
         //Scroll options
         .value('duScrollDuration', 200)
-        .value('duScrollOffset', 30)
+        .value('duScrollOffset', 300)
 
     ;
 };
