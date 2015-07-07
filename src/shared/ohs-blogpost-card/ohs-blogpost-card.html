@@ -1,0 +1,17 @@
+<a href
+   class="box box-round mb tc card card--blog"
+   style="background-image: url('{{ ::thumbnailImageUrl }}');"
+   ui-sref="main.blog.post({ slug:slug })">
+
+    <div class="card__content">
+
+        <span class="card__label mb0 h6 cw">
+            {{ ::category }}
+         </span>
+
+        <h2 class="card__title h3">
+            {{ ::title }}
+        </h2>
+    </div>
+
+</a>

@@ -3,23 +3,12 @@
     <div class="grid-item xs-1/1 md-1/2"
          ng-repeat="post in posts | filter:filter track by post.id">
         
-        <a href
-           class="box box-round mb tc card card--blog"
-           style="background-image: url('{{ ::post.thumbnail_url }}');"
-           ui-sref="main.blog.post({ slug:post.slug })">
+       <ohs-blogpost-card slug="::post.slug"
+                          title="::post.title"
+                          category="::post.category.title"
+                          thumbnail-image-url="::post.thumbnailUrl">
 
-            <div class="card__content">
-
-                <span class="card__label mb0 h6 cw">
-                    {{ ::post.category_title }}
-                </span>
-
-                <h2 class="card__title h3">
-                    {{ ::post.title }}
-                </h2>
-            </div>
-            
-        </a>
+       </ohs-blogpost-card>
 
     </div>
 
