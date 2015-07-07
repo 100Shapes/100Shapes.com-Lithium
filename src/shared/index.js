@@ -11,7 +11,7 @@ export default ngModule => {
     require('./ohs-quote')(ngModule);
     require('./ohs-icon')(ngModule);
     require('./ohs-logo')(ngModule);
-    require('./ohs-services-grid')(ngModule);
+    require('./ohs-service-card')(ngModule);
     require('./ohs-off-canvas')(ngModule);
     require('./ohs-navmenu-button')(ngModule);
     require('./ohs-blogpost-card')(ngModule);
