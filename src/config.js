@@ -21,6 +21,9 @@ export default ngModule => {
         // Config options: https://github.com/revolunet/angular-google-analytics#example
         .config(function (AnalyticsProvider) {
             AnalyticsProvider.setAccount('UA-XXXXX-xx');
+
+            // Real analytics code #5
+            //AnalyticsProvider.setAccount('UA-27923958-13');
         })
 
         ;
