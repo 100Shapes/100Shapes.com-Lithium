@@ -8,9 +8,9 @@ export default ngModule => {
         })
 
         // Enable HTML5 mode
-        .config(function($locationProvider) {
-            $locationProvider.html5Mode(true);
-        })
+        //.config(function($locationProvider) {
+        //    $locationProvider.html5Mode(true);
+        //})
 
         // Use HTML5 pushstate (nice URLs)
         .config(function($locationProvider) {
