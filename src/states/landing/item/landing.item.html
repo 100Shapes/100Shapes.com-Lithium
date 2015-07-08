@@ -1,0 +1,34 @@
+<ohs-meta-group title="{{ ::vm.landing_page.title }} – {{ ::vm.landing_page.lead }}"
+                description="{{ ::vm.landing_page.search_description }}"
+                image="{{ ::vm.landing_page.thumbnail_url }}">
+</ohs-meta-group>
+
+
+<article class="landing-page"
+         vocab="http://schema.org/"
+         typeof="NewsArticle"
+         id="main">
+
+    <header class="bg--blue pt++ pb mb+" style="background-image: url({{ :: vm.landing_page.banner_url }})">
+        <div class="wrapper">
+            <div class="grid">
+                <div class="grid-item 1/1 lg-2/3 pr+">
+
+                    <h1 view-title>
+                        {{ ::vm.landing_page.title }}
+                    </h1>
+
+                    <p subtitle class="fz++ ffs">
+                        {{ ::vm.landing_page.lead }}
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <ohs-content-renderer content="::vm.landing_page.body">
+    </ohs-content-renderer>
+
+
+</article>
