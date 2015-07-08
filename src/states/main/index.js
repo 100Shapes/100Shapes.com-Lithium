@@ -16,8 +16,10 @@ export default ngModule => {
 
     ngModule.controller('MainCtrl', MainCtrl);
 
-    function MainCtrl($scope, $log) {
+    function MainCtrl($scope, $window) {
         let vm = this;
+
+        $window.prerenderReady = true;
 
     }
 
