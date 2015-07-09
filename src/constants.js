@@ -41,11 +41,11 @@ export default ngModule => {
                     target: 'https://www.linkedin.com/company/100-shapes',
                     handle: '100shapes'
                 },
-                //'medium': {
-                //    icon: 'fill-medium',
-                //    target: 'https://medium.com/@100shapes',
-                //    handle: '@100shapes'
-                //},
+                'medium': {
+                    icon: 'fill-medium',
+                    target: 'https://medium.com/@100shapes',
+                    handle: '@100shapes'
+                },
                 'dribbble': {
                     icon: 'fill-dribbble',
                     target: 'https://dribbble.com/100shapes',
