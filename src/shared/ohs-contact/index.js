@@ -9,7 +9,9 @@ module.exports = function(ngModule) {
         return {
             restrict: 'E',
             replace: true,
-            scope: true,
+            scope: {
+                location: '@?'
+            },
             template: require('./ohs-contact.html'),
             link: function(scope) {
                 scope.meta = COMPANY_META;

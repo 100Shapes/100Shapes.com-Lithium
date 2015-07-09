@@ -1,8 +1,13 @@
 <div class="ohs-contact tc mt+">
+
     <div class="wrapper wrapper-flush">
         <div class="grid gutter-0 grid-align-center">
             <div class="grid-item 1/3">
                 <a href="{{meta.location.target}}"
+                   analytics-on="click"
+                   analytics-event="contact"
+                   analytics-category="{{ location }}"
+                   analytics-label="location"
                    class="btn btn-block pv md-pv+">
                     <ohs-icon name="{{meta.location.icon}}"></ohs-icon>
                     <div class='ohs-contact__label'>
@@ -15,6 +20,10 @@
             </div>
             <div class="grid-item 1/3">
                 <a href="{{meta.phone.target}}"
+                   analytics-on="click"
+                   analytics-event="Contact"
+                   analytics-category="{{ location }}"
+                   analytics-label="phone"
                    class="btn btn-block pv md-pv+">
                     <ohs-icon name="{{meta.phone.icon}}"></ohs-icon>
                     <div class='ohs-contact__label'>
@@ -27,6 +36,10 @@
             </div>
             <div class="grid-item 1/3">
                 <a href="{{meta.email.target}}"
+                   analytics-on="click"
+                   analytics-event="Contact"
+                   analytics-category="{{ location }}"
+                   analytics-label="email"
                    class="btn btn-block pv md-pv+">
                     <ohs-icon name="{{meta.email.icon}}"></ohs-icon>
                     <div class='ohs-contact__label'>
