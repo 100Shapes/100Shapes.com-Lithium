@@ -16,7 +16,10 @@ export default ngModule => {
             }
         })
 
+        .run(function(Analytics, uuid) {
+            Analytics.set('&uid', uuid.v4());
+        })
+
     ;
 
 }
-

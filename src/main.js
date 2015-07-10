@@ -7,6 +7,7 @@ require('angular-animate');
 require('angular-google-analytics');
 require('angular-off-canvas');
 require('angular-scroll');
+require("angular-uuid");
 
 // Styles
 require('css/main.less');
@@ -19,6 +20,7 @@ const ngModule = angular.module('app', [
     'duScroll',
     'cn.offCanvas',
     'angular-google-analytics',
+    'angular-uuid',
     'ngAnimate'
 ]);
 

@@ -3,7 +3,8 @@
         ng-class="{ 'ohs-navmenu-button--open' : OffCanvas.isOpened,
                     'ohs-navmenu-button--closed' : !OffCanvas.isOpened,
                     'vh': shouldHide
-                  }" >
+                  }"
+        ga-track-event="['nav-icon','toggled', 'menu']">
     <span class="menu-icon"></span>
     <span class="vh">Toggle nav</span>
 </button>
