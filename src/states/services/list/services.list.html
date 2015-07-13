@@ -1,6 +1,6 @@
-<article id="main">
+<article>
 
-    <header class="bg--blue pt++ mb++">
+    <header class="bg--blue pt++ pb mb+">
 
         <div class="wrapper">
 
@@ -10,88 +10,28 @@
                     <h1 view-title>Design &amp; UX services <br>
                         for broadcast media</h1>
 
-                    <p class="fz+">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, it in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p class="fz+ m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, it in culpa qui officia deserunt mollit anim id est laborum.</p>
 
                 </div>
             </div>
-
-            <div class="grid">
-                <div class="grid-item xs-1/1 md-1/3"
-                     ng-repeat="service in ::vm.services track by service.id">
-
-                    <ohs-service-card slug="{{ ::service.slug }}"
-                                      title="{{ ::service.title }}"
-                                      thumbnail-image-url="{{ ::service.thumbnail_url }}">
-                    </ohs-service-card>
-
-                </div>
-
-            </div>
-
-            <div class="grid grid-align-center mt">
-                <div class="grid-item sm-1/1 lg-8/12 tc">
-                    <h2>Not sure what's right for you? No problem</h2>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
-                </div>
-
-            </div>
-
 
         </div>
-
 
     </header>
 
+    <div class="wrapper"
+         id="main">
+        <div class="grid">
+            <div class="grid-item xs-1/1 md-1/3"
+                 ng-repeat="service in ::vm.services track by service.id">
 
-    <div class="wrapper">
-
-        <div class="grid grid-align-center mb+">
-            <div class="grid-item sm-1/1 lg-8/12 tc">
-
-                <h2>Servicing digital content creators</h2>
-
-                <p class="fz+">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, it in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <ohs-service-card slug="{{ ::service.slug }}"
+                                  title="{{ ::service.title }}"
+                                  thumbnail-image-url="{{ ::service.thumbnail_url }}">
+                </ohs-service-card>
 
             </div>
         </div>
-
-        <div class="grid grid-align-center mb">
-            <div class="grid-item sm-1/1 lg-4/12">
-                <h3>Something here</h3>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco labeserunt mollit anim id est laborum.</p>
-
-                <h3>Something here</h3>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco labeserunt mollit anim id est laborum.</p>
-            </div>
-
-            <div class="grid-item sm-1/1 lg-4/12">
-                <h3>Something here</h3>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco labeserunt mollit anim id est laborum.</p>
-
-                <h3>Something here</h3>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco labeserunt mollit anim id est laborum.</p>
-            </div>
-
-        </div>
-
-        <ohs-quote name="Jon Block" role="Head ITV Commercial" logo="logo-itv">
-            Duis aute irure dolor in reprehenderit in vor incididunt.
-        </ohs-quote>
-
-
     </div>
 
 </article>
