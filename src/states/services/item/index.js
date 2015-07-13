@@ -20,19 +20,23 @@ export default ngModule => {
 
                     }
                 });
-            
+
         });
 
     //////////////////
 
     ngModule.controller('ServicesItemCtrl', ServicesItemCtrl);
 
-    function ServicesItemCtrl(service, COMPANY_META) {
+    function ServicesItemCtrl(service, COMPANY_META, $document) {
         let vm = this;
 
         vm.service = service;
         vm.company = COMPANY_META;
 
+        var aside = angular.element($document[0].querySelector('.service-page__secondary-nav'));
+        var wrapperFlush = angular.element($document[0].querySelector('.wrapper-flush'));
+
+        aside.css("left", wrapperFlush.prop('offsetLeft')+'px');
     }
-    
-}
+
+};

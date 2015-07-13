@@ -9,7 +9,7 @@
          typeof="NewsArticle"
          id="main">
 
-    <header class="bg--blue bg--overlay pt++ pb mb+" style="background-image: url({{ :: vm.service.banner_url }})">
+    <header class="bg--blue bg--overlay pt++ pb mb+ z1" style="background-image: url({{ :: vm.service.banner_url }})">
         <div class="wrapper">
             <div class="grid">
                 <div class="grid-item 1/1 lg-2/3 pr+">
@@ -73,7 +73,6 @@
                             <a href
                                ui-sref="main.about"
                                class="btn btn-link mb">Read about us</a>
-
                         </div>
 
 
@@ -84,6 +83,18 @@
             </div>
         </div>
     </header>
+    <aside class="dn lg-db service-page__secondary-nav posf wrapper" role="navigation">
+        <div class="grid-item 1/3">
+            <ol class="box box-round list-bare ml+ mr+">
+                <li ng-repeat="link in ::vm.service.content_sections track by $index">
+                    <a href="#{{ ::link.slug }}"
+                       du-smooth-scroll>
+                       {{ ::link.label }}
+                    </a>
+                </li>
+            </ol>
+        </div>
+    </aside>
 
     <div ng-repeat="section in ::vm.service.content_sections track by $index"
          id="{{ ::section.slug }}"
