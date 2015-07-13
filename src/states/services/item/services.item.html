@@ -6,8 +6,7 @@
 
 <article class="service-page"
          vocab="http://schema.org/"
-         typeof="NewsArticle"
-         id="main">
+         typeof="NewsArticle">
 
     <header class="bg--blue bg--overlay pt++ pb mb+ z1" style="background-image: url({{ :: vm.service.banner_url }})">
         <div class="wrapper">
@@ -86,10 +85,10 @@
     </header>
     <aside class="dn lg-db service-page__secondary-nav posf wrapper" role="navigation">
         <div class="grid-item 1/3">
-            <ol class="box box-round list-bare ml+ mr+">
+            <ol class="box box-round bg--white list-bare ml+ mr+">
                 <li ng-repeat="link in ::vm.service.content_sections track by $index">
-                    <a href="#{{ ::link.slug }}"
-                       du-smooth-scroll>
+                    <a class="fg--orange" href="#{{ ::link.slug }}"
+                    du-smooth-scroll offset="60">
                        {{ ::link.label }}
                     </a>
                 </li>
@@ -97,6 +96,8 @@
         </div>
     </aside>
 
+
+<div id="main">
     <div ng-repeat="section in ::vm.service.content_sections track by $index"
          id="{{ ::section.slug }}"
          class="service-page__content-section">
@@ -104,5 +105,6 @@
         <ohs-content-renderer content="::section.body">
         </ohs-content-renderer>
     </div>
+</div>
 
 </article>
