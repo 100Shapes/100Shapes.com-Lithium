@@ -15,4 +15,5 @@ export default ngModule => {
     require('./ohs-off-canvas')(ngModule);
     require('./ohs-navmenu-button')(ngModule);
     require('./ohs-blogpost-card')(ngModule);
+    require('./ohs-social-card')(ngModule);
 }
