@@ -19,16 +19,16 @@
 // Colors -> Grayscale
 //
 
-@color-black:         #272525;
+@color-black:         #525252;
 @color-black-lighter: #484646;
 
 @color-gray-darkest:  lighten(@color-black, 13.5%); 
 @color-gray-darker:   lighten(@color-black, 26.5%); 
 @color-gray-dark:     lighten(@color-black, 46.7%); 
-@color-gray:          #6A6A6A; 
-@color-gray-light:    lighten(@color-gray, 10%);
-@color-gray-lighter:  lighten(@color-gray, 30%);
-@color-gray-lightest: lighten(@color-gray, 50%);
+@color-gray:          #6A6A6A;
+@color-gray-light:    #9B9B9B;
+@color-gray-lighter:  lighten(@color-gray-light, 30%);
+@color-gray-lightest: lighten(@color-gray-light, 50%);
 @color-white:         #ffffff;
 
 //
@@ -53,7 +53,7 @@
 // Typography -> Font Sizes
 //
 
-@font-weight-regular: 300;
+@font-weight-light: 300;
 @font-weight-regular: 400;
 @font-weight-medium: 500;
 
@@ -77,9 +77,9 @@
 // Typography -> Font Sizes -> Larger
 
 @font-size-large: 21.38;
-@font-size-x-large: 21.38;
+@font-size-x-large: 24.05;
 @font-size-xx-large: 30.43;
-@font-size-xxx-large: 43;
+@font-size-xxx-large: 36.52;
 @font-size-xxxx-large: 60;
 
 
@@ -96,8 +96,8 @@
 //
 
 @font-size-heading-1: 69.41;
-@font-size-heading-2: 30.43;
-@font-size-heading-3: 21.38;
+@font-size-heading-2: @font-size-xx-large;
+@font-size-heading-3: @font-size-x-large;
 @font-size-heading-4: 22;
 @font-size-heading-5: 19;
 @font-size-heading-6: 17;
@@ -197,7 +197,7 @@
 @spacing-triple: (@spacing-base * 3);
 
 // Spacing -> Quadruple
-@spacing-quadruple: (@spacing-base * 6);
+@spacing-quadruple: (@spacing-base * 4);
 
 // Spacing -> Macro
 @spacing-macro: (@spacing-base * 8);
