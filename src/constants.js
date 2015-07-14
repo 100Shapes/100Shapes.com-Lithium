@@ -94,6 +94,8 @@ export default ngModule => {
             intro: 'Regular news from our UX Strategists and Designers.'
         })
 
+        .constant('CLIMB_FEED_ID', '55a4dac845284e58ac50ee1c')
+
         //Scroll options
         .value('duScrollDuration', 200)
         .value('duScrollOffset', 300)

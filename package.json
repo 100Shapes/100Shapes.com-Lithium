@@ -61,5 +61,8 @@
     "webpack": "^1.9.12",
     "angular-uuid": "0.0.2",
     "webpack-dev-server": "^1.9.0"
+  },
+  "dependencies": {
+    "angular-climb": "^1.0.0"
   }
 }

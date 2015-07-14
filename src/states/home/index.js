@@ -22,6 +22,10 @@ module.exports = function(ngModule) {
 
                         services: function(ServiceContentService) {
                             return ServiceContentService.featured();
+                        },
+
+                        social: function(ClimbFactory, CLIMB_FEED_ID) {
+                            return ClimbFactory.getFeed(CLIMB_FEED_ID);
                         }
 
                     }
@@ -33,11 +37,13 @@ module.exports = function(ngModule) {
     ngModule
         .controller('HomeCtrl', HomeCtrl);
     
-    function HomeCtrl(posts, services) {
+    function HomeCtrl(posts, services, social) {
         var vm = this;
 
         vm.posts = posts;
         vm.services = services;
+        vm.social = social;
+
     }
 
 };

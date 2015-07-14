@@ -7,7 +7,8 @@ require('angular-animate');
 require('angular-google-analytics');
 require('angular-off-canvas');
 require('angular-scroll');
-require("angular-uuid");
+require('angular-uuid');
+require('angular-climb');
 
 // Styles
 require('css/main.less');
@@ -21,6 +22,7 @@ const ngModule = angular.module('app', [
     'cn.offCanvas',
     'angular-google-analytics',
     'angular-uuid',
+    'climb',
     'ngAnimate'
 ]);
 

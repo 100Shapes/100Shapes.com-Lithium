@@ -129,23 +129,9 @@
                 </div>
             </div>
 
-            <div class="grid">
-                <div class="grid-item xs-1/1 md-1/3"
-                     ng-repeat="post in ::vm.posts track by post.id">
-
-                    <ohs-blogpost-card slug="{{ ::post.slug }}"
-                                       title="{{ ::post.title }}"
-                                       category="{{ ::post.category_title }}"
-                                       thumbnail-image-url="{{ ::post.thumbnail_url }}">
-
-                    </ohs-blogpost-card>
-
-                </div>
-            </div>
-
-            <p class="tc mt">
-                <a ui-sref="main.blog.list" class="fz++ fwr">More from our broadcast media blog</a>
-            </p>
+            <pre>
+                {{ vm.social }}
+            </pre>
 
         </div>
 
