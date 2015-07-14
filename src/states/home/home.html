@@ -129,9 +129,11 @@
                 </div>
             </div>
 
-            <pre>
-                {{ vm.social }}
-            </pre>
+            <ol class="list-bare">
+                <li ng-repeat="it in vm.social track by it.id">
+                    <p ng-bind-html="it.message"></p>
+                </li>
+            </ol>
 
         </div>
 
