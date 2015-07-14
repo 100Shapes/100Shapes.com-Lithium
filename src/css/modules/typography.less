@@ -22,6 +22,40 @@ h3, .h3 {
     color: @color-gray-light;
 }
 
+h1, h2, h4
+.h1, .h2, h4 {
+
+  .bg--orange &,
+  .bg--blue &,
+  .bg--blue-dark & {
+    color: @color-white;
+  }
+
+}
+
+h3, .h3 {
+  .bg--blue & {
+    color: #C0D1FF;
+  }
+}
+
+.bg--orange,
+.bg--blue,
+.bg--blue-dark  {
+  color: @color-white;
+}
+
+.bg--white {
+  color: @root-text-color;
+
+  h1, h2, h3, h4
+  .h1, .h2, .h3, h4 {
+    color: @root-text-color;
+  }
+}
+
+
+
 .ffs {
     font-family: @font-family-serif;
     font-weight: normal;
