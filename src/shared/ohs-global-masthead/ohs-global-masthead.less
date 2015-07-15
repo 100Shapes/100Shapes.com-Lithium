@@ -3,11 +3,12 @@
 @import "~css/mixins/transitions";
 
 .ohs-global-masthead {
-  .transition(background);
+  .transition();
   width: 100%;
   height: auto;
   position: fixed;
-  box-shadow: inset 0px 25px 27px -2px rgba(0,0,0,0.25);
+  .to-rem(padding-top, @spacing-base);
+  .to-rem(padding-bottom, @spacing-base);
 
   color: @color-white;
 
@@ -32,9 +33,13 @@
 }
 
 .ohs-global-masthead.active {
-  background-color: @color-blue;
   position: fixed;
   top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  background-color: @color-blue;
+
 }
 
 .ohs-global-masthead__logo {
@@ -57,3 +62,6 @@
   right: 0;
 }
 
+.ohs-global-masthead--transparent {
+  box-shadow: inset 0px 25px 27px -2px rgba(0,0,0,0.25);
+}
