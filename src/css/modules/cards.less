@@ -79,6 +79,12 @@
   }
 }
 
+.card--social {
+  a {
+    color: @color-yellow;
+  }
+}
+
 .card--service {
 
   &:hover {
@@ -98,6 +104,7 @@
     opacity: 0;
   }
 }
+
 
 .card__title {
   color: @color-white;
@@ -130,6 +137,10 @@
   .card--service & {
     top: 10%;
     height: 80%;
+  }
+
+  .card--social & {
+    color: @root-text-color;
   }
 }
 
