@@ -5,9 +5,9 @@
         <div class="wrapper">
 
             <div class="grid grid-align-center mb">
-                <div class="grid-item sm-1/1 lg-8/12 tc">
+                <div class="grid-item sm-1/1 md-10/12 tc">
 
-                    <h1 view-title class="fg--blue">Design &amp; UX services for broadcast media</h1>
+                    <h1 view-title class="fg--blue">Design &amp; UX services<br> for broadcast media</h1>
 
                     <p class="fz+ fwr">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, it in culpa qui officia deserunt mollit anim id est laborum.</p>
 
@@ -22,6 +22,36 @@
          id="main">
 
         <div class="grid">
+            <div class="grid-item xs-1/1 md-1/3"
+                 ng-repeat="service in ::vm.services track by service.id">
+
+                <ohs-service-card slug="{{ ::service.slug }}"
+                                  title="{{ ::service.title }}"
+                                  thumbnail-image-url="{{ ::service.thumbnail_url }}">
+                </ohs-service-card>
+
+            </div>
+
+            <div class="grid-item xs-1/1 md-1/3"
+                 ng-repeat="service in ::vm.services track by service.id">
+
+                <ohs-service-card slug="{{ ::service.slug }}"
+                                  title="{{ ::service.title }}"
+                                  thumbnail-image-url="{{ ::service.thumbnail_url }}">
+                </ohs-service-card>
+
+            </div>
+
+            <div class="grid-item xs-1/1 md-1/3"
+                 ng-repeat="service in ::vm.services track by service.id">
+
+                <ohs-service-card slug="{{ ::service.slug }}"
+                                  title="{{ ::service.title }}"
+                                  thumbnail-image-url="{{ ::service.thumbnail_url }}">
+                </ohs-service-card>
+
+            </div>
+
             <div class="grid-item xs-1/1 md-1/3"
                  ng-repeat="service in ::vm.services track by service.id">
 
