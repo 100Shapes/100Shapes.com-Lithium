@@ -4,6 +4,7 @@ export default ngModule => {
     require('./ohs-global-masthead')(ngModule);
     require('./ohs-mailinglist-signup')(ngModule);
     require('./ohs-about-callout')(ngModule);
+    require('./ohs-about-promo')(ngModule);
     require('./ohs-global-footer')(ngModule);
     require('./ohs-contact')(ngModule);
     require('./ohs-meta')(ngModule);

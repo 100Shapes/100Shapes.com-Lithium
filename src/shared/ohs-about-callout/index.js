@@ -1,7 +1,5 @@
 module.exports = function(ngModule) {
 
-    require('./ohs-about-callout.less');
-
     ngModule
         .directive('ohsAboutCallout', ohsAboutCallout);
 
