@@ -21,6 +21,7 @@ export default ngModule => {
                             fields: [
                                 'title',
                                 'thumbnail_url',
+                                'lead',
                                 'is_featured',
                                 'slug'
                             ].join(',')
@@ -74,6 +75,7 @@ export default ngModule => {
                             fields: [
                                 'title',
                                 'thumbnail_url',
+                                'lead',
                                 'slug'
                             ].join(','),
                             is_featured: true

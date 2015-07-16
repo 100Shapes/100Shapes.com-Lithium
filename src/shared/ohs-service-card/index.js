@@ -9,6 +9,7 @@ module.exports = function(ngModule) {
             scope: {
                 slug: '@',
                 title: '@',
+                description: '@',
                 thumbnailImageUrl: '@'
             },
             replace: true,
