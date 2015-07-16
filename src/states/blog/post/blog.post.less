@@ -1,4 +1,5 @@
 @import "~css/vars";
+@import "~Cardinal/base/mixins/to-rem.less";
 
 .blog-post__meta {
   left: 50%;
@@ -6,4 +7,8 @@
   margin-left: -100px;
 
   color: @root-text-color;
+}
+
+.blog-post header {
+  .to-rem(padding-top, @spacing-macro);
 }
