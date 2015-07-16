@@ -5,7 +5,9 @@
 @card-height-tall: 400;
 
 .card {
-  .to-rem(height, @card-height);
+  width: 100%;
+  padding-bottom: 100%;
+
   position: relative;
   overflow: hidden;
 
@@ -96,8 +98,9 @@
 .card__content {
   z-index: 3;
   top: 50%;
+  width: 100%;
   transform: translateY(-50%);
-  position: relative;
+  position: absolute;
 }
 
 .card__title.h3 {
