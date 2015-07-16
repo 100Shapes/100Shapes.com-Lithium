@@ -4,6 +4,7 @@ var webpackConfig = require("../webpack.config.js");
 var webpack = require("webpack");
 var gutil = require("gulp-util");
 var path = require("path");
+var open = require('open');
 
 module.exports = function(callback) {
 
@@ -28,6 +29,7 @@ module.exports = function(callback) {
     server.listen(8080, "0.0.0.0", function(err) {
         if(err) throw new gutil.PluginError("webpack-dev-server", err);
         gutil.log("[webpack-dev-server]", "http://0.0.0.0:8080/webpack-dev-server/index.html");
+        open('http://localhost:8080/webpack-dev-server/');
     });
 
 };

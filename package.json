@@ -63,6 +63,7 @@
     "webpack-dev-server": "^1.9.0"
   },
   "dependencies": {
-    "angular-climb": "^1.0.0"
+    "angular-climb": "^1.0.0",
+    "open": "0.0.5"
   }
 }
