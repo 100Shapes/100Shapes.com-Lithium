@@ -85,11 +85,13 @@ module.exports = {
     },
 
     externals: {
+        headroom: 'Headroom'
     },
 
     resolve: {
         alias: {
-            'css': path.join(__dirname, 'src/css')
+            'css': path.join(__dirname, 'src/css'),
+            'headroom': path.join(__dirname, 'node_modules/headroom.js/dist/headroom.js')
         }
 
     }

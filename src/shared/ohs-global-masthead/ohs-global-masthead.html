@@ -1,5 +1,16 @@
-<div du-scrollspy="main"
-     class="ohs-global-masthead z2 ohs-global-masthead--fat">
+<div headroom
+     classes="{
+        pinned:    'ohs-global-masthead--pinned',
+        unpinned:  'ohs-global-masthead--unpinned',
+        initial:   'ohs-global-masthead',
+        top:       'ohs-global-masthead--fat',
+        notTop:    'ohs-global-masthead--thin'
+     }"
+     tolerance="{
+        up: 0,
+        down: 0
+     }"
+     class="z2">
 
     <div class="wrapper">
 
@@ -9,24 +20,24 @@
             <ohs-logo class="ohs-global-masthead__logo"></ohs-logo>
         </a>
 
-        <ohs-navmenu-button class="fr mt--"></ohs-navmenu-button>
+        <ohs-navmenu-button class="fr mt-- p- pr0"></ohs-navmenu-button>
 
         <a href="{{ vm.company.phone.target }}"
-            ga-track-event="['header-closed','make-contact', 'phone']"
-            class="btn pv- fl dn lg-dib vam"
-            ng-class="{
+           ga-track-event="['header-closed','make-contact', 'phone']"
+           class="btn pv- fl dn lg-dib vam"
+           ng-class="{
                 'vh': vm.OffCanvas.isOpened
             }">
             <ohs-icon name="{{vm.company.phone.icon_sm}}"
-                class="is-xs mr-"></ohs-icon>
+                      class="is-xs mr-"></ohs-icon>
             {{vm.company.phone.number}}
 
         </a>
 
         <a href="{{ vm.company.email.target }}"
-            ga-track-event="['header-closed','make-contact', 'email']"
-            class="btn pv- fl dn lg-dib vam"
-            ng-class="{
+           ga-track-event="['header-closed','make-contact', 'email']"
+           class="btn pv- fl dn lg-dib vam"
+           ng-class="{
                 'vh': vm.OffCanvas.isOpened
             }">
             <ohs-icon name="{{vm.company.email.icon_sm}}"

@@ -9,6 +9,10 @@ require('angular-off-canvas');
 require('angular-scroll');
 require('angular-uuid');
 require('angular-climb');
+require('exports?window.Headroom!headroom');
+require('headroom.js/dist/angular.headroom');
+
+
 
 // Styles
 require('css/main.less');
@@ -22,6 +26,7 @@ const ngModule = angular.module('app', [
     'cn.offCanvas',
     'angular-google-analytics',
     'angular-uuid',
+    'headroom',
     'climb',
     'ngAnimate'
 ]);

@@ -9,7 +9,6 @@ module.exports = function(ngModule) {
         return {
             restrict: 'E',
             replace: true,
-            scope: true,
             controller: 'OhsGlobalMastheadCtrl as vm',
             template: require('./ohs-global-masthead.html')
         };

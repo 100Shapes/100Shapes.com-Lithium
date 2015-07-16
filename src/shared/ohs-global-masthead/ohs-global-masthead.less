@@ -7,9 +7,8 @@
   width: 100%;
   height: auto;
   position: fixed;
-  .to-rem(padding-top, @spacing-base);
-  .to-rem(padding-bottom, @spacing-base);
 
+  background-color: @color-blue;
   color: @color-white;
 
   a {
@@ -20,6 +19,7 @@
     .transition(opacity);
     border: none;
     opacity: 0.75;
+    margin-top: 3px;
 
     &:hover {
       opacity: 1;
@@ -32,18 +32,23 @@
   }
 }
 
-.ohs-global-masthead.active {
-  position: fixed;
-  top: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-
-  background-color: @color-blue;
-
+.ohs-global-masthead--fat {
+  .to-rem(padding-top, @spacing-base);
+  .to-rem(padding-bottom, @spacing-base);
 }
 
+.ohs-global-masthead--transparent {
+  background-color: transparent !important;
+}
+
+.ohs-global-masthead--thin {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
 .ohs-global-masthead__logo {
-  width: 9em;
+  width: 12em;
   height: 2.5em;
 
   &:hover {
