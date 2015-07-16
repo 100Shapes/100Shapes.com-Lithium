@@ -25,9 +25,10 @@ module.exports = function(ngModule) {
                         },
 
                         social: function(ClimbFactory, CLIMB_FEED_ID) {
-                            return ClimbFactory.getFeed(CLIMB_FEED_ID).then(function(items) {
-                                return items.slice(0, 3);
-                            });
+                            return null;
+                            //return ClimbFactory.getFeed(CLIMB_FEED_ID).then(function(items) {
+                            //    return items.slice(0, 3);
+                            //});
                         }
 
                     }
