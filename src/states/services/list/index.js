@@ -25,10 +25,11 @@ export default ngModule => {
 
     ngModule.controller('ServiceListCtrl', ServiceListCtrl);
 
-    function ServiceListCtrl(services) {
+    function ServiceListCtrl(services, GlobalMastheadService, GLOBAL_MASTHEAD_THEMES) {
         let vm = this;
 
         vm.services = services;
+        GlobalMastheadService.theme = GLOBAL_MASTHEAD_THEMES.BLUE;
 
     }
     

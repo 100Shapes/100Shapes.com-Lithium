@@ -33,12 +33,13 @@ export default ngModule => {
 
     ngModule.controller('BlogListCtrl', BlogListCtrl);
 
-    function BlogListCtrl(posts, categories, featuredPost) {
+    function BlogListCtrl(posts, categories, featuredPost, GlobalMastheadService, GLOBAL_MASTHEAD_THEMES) {
         let vm = this;
 
         vm.posts = posts;
         vm.categories = categories;
         vm.featured_post = featuredPost;
+        GlobalMastheadService.theme = GLOBAL_MASTHEAD_THEMES.ORANGE;
 
         vm.filter = {};
 

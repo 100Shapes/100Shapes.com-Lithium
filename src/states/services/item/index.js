@@ -27,7 +27,7 @@ export default ngModule => {
 
     ngModule.controller('ServicesItemCtrl', ServicesItemCtrl);
 
-    function ServicesItemCtrl(service, COMPANY_META, $document) {
+    function ServicesItemCtrl(service, COMPANY_META, $document, GlobalMastheadService, GLOBAL_MASTHEAD_THEMES) {
         let vm = this;
 
         vm.service = service;
@@ -37,6 +37,8 @@ export default ngModule => {
         var wrapperFlush = angular.element($document[0].querySelector('.wrapper-flush'));
 
         aside.css("left", wrapperFlush.prop('offsetLeft')+'px');
+
+        GlobalMastheadService.theme = `${GLOBAL_MASTHEAD_THEMES.TRANSPARENT} ${GLOBAL_MASTHEAD_THEMES.BLUE}`;
     }
 
 };

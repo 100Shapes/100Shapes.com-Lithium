@@ -39,12 +39,14 @@ module.exports = function(ngModule) {
     ngModule
         .controller('HomeCtrl', HomeCtrl);
     
-    function HomeCtrl(posts, services, social) {
+    function HomeCtrl(posts, services, social, GlobalMastheadService, GLOBAL_MASTHEAD_THEMES) {
         var vm = this;
 
         vm.posts = posts;
         vm.services = services;
         vm.social = social;
+
+        GlobalMastheadService.theme = `${GLOBAL_MASTHEAD_THEMES.BLUE} ${GLOBAL_MASTHEAD_THEMES.TRANSPARENT}`;
 
     }
 

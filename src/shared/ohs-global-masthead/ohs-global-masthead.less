@@ -6,9 +6,9 @@
   .transition();
   width: 100%;
   height: auto;
+  top: 0;
   position: fixed;
 
-  background-color: @color-blue;
   color: @color-white;
 
   a {
@@ -27,9 +27,22 @@
     }
   }
 
-  .ohs-off-canvas--open & {
-    top: 0;
-  }
+}
+
+//////////////////////////////////////
+// Themes
+
+.ohs-global-masthead--blue {
+  background-color: @color-blue;
+}
+
+.ohs-global-masthead--orange {
+  background-color: @color-orange;
+}
+
+.ohs-global-masthead--fat.ohs-global-masthead--transparent {
+  background-color: transparent !important;
+  box-shadow: inset 0px 25px 27px -2px rgba(0,0,0,0.15);
 }
 
 .ohs-global-masthead--fat {
@@ -37,15 +50,13 @@
   .to-rem(padding-bottom, @spacing-base);
 }
 
-.ohs-global-masthead--transparent {
-  background-color: transparent !important;
-}
-
 .ohs-global-masthead--thin {
   padding-top: 0;
   padding-bottom: 0;
 }
 
+//////////////////////////////////////
+// Components
 
 .ohs-global-masthead__logo {
   width: 12em;
@@ -67,6 +78,4 @@
   right: 0;
 }
 
-.ohs-global-masthead--transparent {
-  box-shadow: inset 0px 25px 27px -2px rgba(0,0,0,0.25);
-}
+

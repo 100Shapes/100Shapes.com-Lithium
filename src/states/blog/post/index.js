@@ -26,10 +26,11 @@ export default ngModule => {
 
     ngModule.controller('BlogPostCtrl', BlogPostCtrl);
 
-    function BlogPostCtrl(post) {
+    function BlogPostCtrl(post, GlobalMastheadService, GLOBAL_MASTHEAD_THEMES) {
         let vm = this;
 
         vm.post = post;
+        GlobalMastheadService.theme = `${GLOBAL_MASTHEAD_THEMES.TRANSPARENT} ${GLOBAL_MASTHEAD_THEMES.ORANGE}`;
     }
     
 }

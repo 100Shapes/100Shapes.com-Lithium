@@ -5,6 +5,13 @@ export default ngModule => {
         // API BASE
         .constant('API_BASE_URL', __API_BASE_URL__)
 
+        // Global Masthead theme
+        .constant('GLOBAL_MASTHEAD_THEMES', {
+            BLUE: 'ohs-global-masthead--blue',
+            TRANSPARENT: 'ohs-global-masthead--transparent',
+            ORANGE: 'ohs-global-masthead--orange'
+        })
+
         // Site name
         .constant('SITE_NAME', '100 Shapes – UX & Design for broadcast media')
 
