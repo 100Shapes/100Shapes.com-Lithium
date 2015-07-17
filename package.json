@@ -26,7 +26,7 @@
     "Cardinal": "git+https://github.com/cbracco/cardinal.git#eea6e3757cd8a0bf1bdfab6f96512ea05630b7da",
     "angular": "^1.4.1",
     "angular-animate": "^1.4.1",
-    "angular-climb": "^1.0.0",
+    "angular-climb": "^1.0.2",
     "angular-google-analytics": "0.0.15",
     "angular-off-canvas": "git+https://github.com/cironunes/angular-off-canvas.git#42da3c69778928a21a1b0fec5a54a0633dcd1ad1",
     "angular-sanitize": "^1.4.1",

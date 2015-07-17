@@ -27,7 +27,7 @@ const ngModule = angular.module('app', [
     'angular-google-analytics',
     'angular-uuid',
     'headroom',
-    'climb',
+    'angular-climb',
     'ngAnimate'
 ]);
 
