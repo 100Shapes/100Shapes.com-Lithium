@@ -1,9 +1,3 @@
-@import "~Cardinal/base/mixins/to-rem.less";
-@import "~css/mixins/transitions";
-
-@card-height: 240;
-@card-height-tall: 400;
-
 .card {
   width: 100%;
   padding-bottom: 100%;
@@ -71,6 +65,10 @@
   }
 }
 
+.card--2h {
+  padding-bottom: 50% !important;
+}
+
 .card--blog {
   &:hover {
     &:after {
@@ -114,10 +112,6 @@
     color: @color-white;
     margin: 0;
   }
-}
-
-.card--2h {
-  .to-rem(height, @card-height-tall);
 }
 
 .card__content {
