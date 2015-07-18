@@ -52,7 +52,38 @@
     color: @color-yellow;
   }
 
+  &:hover {
+    .card__description {
+      opacity: 1;
+      color: @color-white;
+    }
 
+    .card--social__profile {
+      color: @color-white;
+    }
+
+    &:after {
+      background-color: @color-blue-dark;
+    }
+  }
+
+}
+
+.card--social--with-img {
+  .card__description {
+    opacity: 0;
+  }
+
+  &:hover {
+    .card__description {
+      opacity: 1;
+      color: @color-white;
+    }
+
+    &:after {
+      background-color: fade(@color-blue-dark, 75%);
+    }
+  }
 }
 
 .card--social__profile {

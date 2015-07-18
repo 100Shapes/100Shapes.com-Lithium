@@ -1,8 +1,11 @@
 <a href="{{ ::url }}"
    class="box-round box-border card card--social"
+   ng-class="{
+       'card--social--with-img': thumbnailImageUrl
+   }"
    style="background-image: url('{{ ::thumbnailImageUrl }}');">
 
-    <p class="fsi ffs"
+    <p class="fsi ffs card__description"
        ng-bind-html="message">
     </p>
 
