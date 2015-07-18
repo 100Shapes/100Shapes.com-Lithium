@@ -34,14 +34,22 @@
 
 .ohs-global-masthead--blue {
   background-color: @color-blue;
+
+  &.ohs-off-canvas--open {
+    background-color: @color-blue-dark !important;
+  }
 }
 
 .ohs-global-masthead--orange {
   background-color: @color-orange;
+
+  &.ohs-off-canvas--open {
+    background-color: @color-orange-lighter !important;
+  }
 }
 
 .ohs-global-masthead--fat.ohs-global-masthead--transparent {
-  background-color: transparent !important;
+  background-color: transparent;
   box-shadow: inset 0px 25px 27px -2px rgba(0,0,0,0.15);
 }
 

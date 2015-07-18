@@ -8,7 +8,7 @@ module.exports = function(ngModule) {
 
     function OffCanvas(cnOffCanvas, $document) {
 
-        const nav = angular.element($document[0].querySelector('.ohs-global-masthead__off-canvas'));
+        const nav = angular.element($document[0].querySelector('.ohs-global-masthead'));
 
         const offCanvas = cnOffCanvas({
             controller: 'OffCanvasCtrl',
