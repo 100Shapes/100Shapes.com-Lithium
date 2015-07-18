@@ -2,6 +2,7 @@
 @import "~Cardinal/base/mixins/to-rem.less";
 
 .ohs-contact .btn {
+  color: @color-blue;
     border: none;
     .to-rem(padding-top, @spacing-base);
     .to-rem(padding-bottom, @spacing-base);
@@ -13,11 +14,20 @@
 }
 
 .ohs-contact a:hover {
-  background: @color-white;
-  color: @color-blue !important;
-  h4 {
-      color: @color-blue !important;
+  background: @color-blue;
+  color: @color-white !important;
+
+  h4,
+  .ohs-contact__label__detail {
+      color: @color-white !important;
   }
+
+}
+
+.ohs-contact__label__detail {
+  color: @color-gray-light;
+  font-style: normal;
+  font-weight: @font-weight-light;
 }
 
 .ohs-contact--slim {
