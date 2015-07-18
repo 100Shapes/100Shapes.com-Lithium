@@ -1,14 +1,12 @@
 <a href
-   class="box-round tc card card--service db"
+   class="box-round tc card card--service"
    ui-sref="main.services.item({ slug:slug })"
    style="background-image:url('{{ ::thumbnailImageUrl }}');">
 
-    <div class="card__content">
-        <h2 class="card__title fz++ m0">{{ ::title }}</h2>
+    <h2 class="card__title fz++ m0">{{ ::title }}</h2>
 
-        <p class="card__description m0 posa">
-            {{ ::description }}
-        </p>
-    </div>
+    <p class="card__description m0">
+        {{ ::description }}
+    </p>
 
 </a>

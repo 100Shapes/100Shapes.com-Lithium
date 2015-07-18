@@ -1,12 +1,11 @@
 .card {
-  width: 100%;
-  padding-bottom: 100%;
-  .to-rem(margin-bottom, @grid-gutter-base);
-
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   position: relative;
-  overflow: hidden;
 
-  color: @color-blue;
+  height: 380px;
+  color: @root-text-color;
   background-color: @color-white;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,14 +13,8 @@
   background-position-y: 50%;
 
   text-decoration: none !important;
-
-  .card__label {
-    .transition();
-    height: 0;
-    overflow: hidden;
-    display: block;
-    opacity: 0;
-  }
+  margin-bottom: 20px;
+  padding: 10%;
 
   &:after {
     .transition();
@@ -35,35 +28,12 @@
     .to-rem(border-radius, @border-radius-base, ~"!important");
   }
 
-  hr {
-    .transition();
-    width: 0px !important;
-    margin-top: 0;
-    margin-bottom: 0;
-    display: block;
-    border-color:  @color-white;
-    opacity: 0;
-  }
-
-  &:hover {
-
-    hr {
-      width: 20% !important;
-      .to-rem(margin-top, @spacing-half);
-      .to-rem(margin-bottom, @spacing-half);
-      opacity: 1;
-    }
-
-    .card__label {
-      .to-rem(height, @line-height);
-      opacity: 1;
-    }
-
-    .card__title {
-      color: @color-white;
-    }
+  > * {
+    z-index: 3;
   }
 }
+
+
 
 .card--2h {
   padding-bottom: 50% !important;
@@ -85,6 +55,14 @@
 
 .card--service {
 
+  justify-content: space-between;
+
+  .card__description {
+   .transition(opacity);
+    color: @color-white;
+    opacity: 0;
+  }
+
   &:hover {
     .card__description {
       opacity: 1;
@@ -95,14 +73,8 @@
     }
   }
 
-  .card__description {
-    bottom: 0;
-
-    .transition(opacity);
-    opacity: 0;
-  }
+  
 }
-
 
 .card__title {
   color: @color-white;
@@ -116,22 +88,8 @@
 
 .card__content {
   z-index: 3;
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-  position: absolute;
 
   color: @color-white;
-
-  .card--blog & {
-    transform: translateY(-50%);
-    top: 50%;
-  }
-
-  .card--service & {
-    top: 10%;
-    height: 80%;
-  }
 
   .card--social & {
     color: @root-text-color;
