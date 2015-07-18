@@ -1,25 +1,43 @@
 @import "~css/vars";
 @import "~Cardinal/base/mixins/to-rem.less";
+@import "~Cardinal/base/mixins/clearing.less";
 
 
 .ohs-global-footer {
-    color: @color-blue;
-}
-
-.ohs-global-footer__social-links {
-    margin-bottom: 0 !important;
-
-    a {
-        text-decoration: none;
-        color: @color-blue;
-    
-        &:hover {
-            color:@color-white;    
-        }
-    }
+  .clearfix();
 }
 
 .ohs-global-footer .ohs-logo {
-    height: 22px;
-    width: 90px;
+  height: 28px;
+  width: 111px;
+
+  &:hover {
+    color: @color-blue;
+  }
+}
+
+.global-footer__content {
+
+  color: @color-gray-light;
+
+  a {
+    text-decoration: none;
+    color: @color-blue;
+
+    &:hover {
+      color:@color-yellow;
+    }
+  }
+}
+
+.global-footer__content > * {
+  display: inline-block;
+}
+
+.global-footer__content.fr > * {
+  margin-left: 20px;
+}
+
+.global-footer__content.fl > * {
+  margin-right: 20px;
 }
