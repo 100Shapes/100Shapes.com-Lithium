@@ -26,7 +26,7 @@ module.exports = function(ngModule) {
 
                         social: function(ClimbFactory, CLIMB_FEED_ID) {
                             return ClimbFactory.getFeed(CLIMB_FEED_ID).then(function(items) {
-                                return items.slice(0, 3);
+                                return items.slice(0, 5);
                             });
                         }
 
@@ -39,12 +39,13 @@ module.exports = function(ngModule) {
     ngModule
         .controller('HomeCtrl', HomeCtrl);
     
-    function HomeCtrl(posts, services, social, GlobalMastheadService, GLOBAL_MASTHEAD_THEMES) {
+    function HomeCtrl(posts, services, social, GlobalMastheadService, GLOBAL_MASTHEAD_THEMES, COMPANY_META) {
         var vm = this;
 
         vm.posts = posts;
         vm.services = services;
         vm.social = social;
+        vm.company = COMPANY_META;
 
         GlobalMastheadService.theme = `${GLOBAL_MASTHEAD_THEMES.BLUE} ${GLOBAL_MASTHEAD_THEMES.TRANSPARENT}`;
 
