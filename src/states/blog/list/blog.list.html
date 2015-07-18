@@ -30,28 +30,24 @@
 
                 <a href
                    ng-if="!vm.filter.category"
-                   class="box-round mb tc card card--2h card--blog db"
+                   class="box-round mb tc card card--blog"
                    style="background-image: url('{{ ::vm.featured_post.thumbnail_url }}');"
                    ui-sref="main.blog.post({ slug:vm.featured_post.slug })">
 
-                    <div class="card__content">
 
-                        <span class="card__label mb0 h6 cw">
-                            {{ ::vm.featured_post.category_title }}
-                        </span>
+                    <span class="card__label mb0 h6 cw">
+                        {{ ::vm.featured_post.category_title }}
+                    </span>
 
-                        <hr class="2/5">
 
-                        <h2 class="card__title h3 fz++">
-                            {{ ::vm.featured_post.title }}
-                        </h2>
-
-                    </div>
+                    <h2 class="card__title h3 fz++">
+                        {{ ::vm.featured_post.title }}
+                    </h2>
 
                 </a>
 
                 <div class="grid">
-                    <div class="grid-item xs-1/1 md-1/2"
+                    <div class="grid-item 1/1 sm-1/2"
                          ng-repeat="post in vm.posts | filter:vm.filter.category track by post.id">
 
                         <ohs-blogpost-card slug="{{ ::post.slug }}"
@@ -91,10 +87,6 @@
                        ng-if="vm.filter.category">
                         Show all posts
                     </a>
-
-                    <pre>
-                        {{ vm.filter }}
-                    </pre>
 
                     <ohs-mailinglist-signup class="mt+">
 

@@ -1,6 +1,7 @@
 .card {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   position: relative;
 
@@ -34,12 +35,8 @@
 }
 
 
-
-.card--2h {
-  padding-bottom: 50% !important;
-}
-
 .card--blog {
+
   &:hover {
     &:after {
       background-color: fade(@color-orange, 75%);
@@ -48,6 +45,9 @@
 }
 
 .card--social {
+
+  justify-content: space-between;
+
   a {
     color: @color-yellow;
   }
@@ -83,16 +83,6 @@
   .card--blog & {
     color: @color-white;
     margin: 0;
-  }
-}
-
-.card__content {
-  z-index: 3;
-
-  color: @color-white;
-
-  .card--social & {
-    color: @root-text-color;
   }
 }
 
