@@ -8,7 +8,8 @@ module.exports = function(ngModule) {
             restrict: 'E',
             scope: {
                 message: '@',
-                author: '@',
+                username: '@',
+                profileImageUrl: '@',
                 url: '@',
                 thumbnailImageUrl: '@'
             },

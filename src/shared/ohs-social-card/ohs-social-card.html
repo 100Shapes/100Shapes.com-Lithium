@@ -2,10 +2,18 @@
    class="box-round box-border card card--social"
    style="background-image: url('{{ ::thumbnailImageUrl }}');">
 
-    <div class="card__content">
+    <p class="fsi ffs"
+       ng-bind-html="message">
+    </p>
 
-        <p class="fsi ffs" ng-bind-html="message">
-        </p>
-    </div>
+    <span class="card--social__profile">
+
+        <img class="profile profile--sm mr--"
+             ng-src="{{ ::profileImageUrl }}"
+             alt="Profile picture of {{ ::username }}"/>
+
+        {{ ::username }}
+    </span>
+
 
 </a>
