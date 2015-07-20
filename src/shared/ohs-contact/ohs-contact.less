@@ -3,9 +3,17 @@
 
 .ohs-contact .btn {
   color: @color-blue;
-    border: none;
-    .to-rem(padding-top, @spacing-base);
-    .to-rem(padding-bottom, @spacing-base);
+  border: none;
+  .to-rem(padding-top, @spacing-base);
+  .to-rem(padding-bottom, @spacing-base);
+
+  .bg--blue-dark & {
+    color: @color-white;
+  }
+
+  .bg--orange & {
+    color: @color-orange;
+  }
 }
 
 .ohs-contact .ohs-icon {

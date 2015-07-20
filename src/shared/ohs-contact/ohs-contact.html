@@ -1,43 +1,42 @@
 <div class="ohs-contact tc mt+">
 
     <div class="wrapper wrapper-flush">
-        <hr />
         <div class="grid gutter-0 grid-align-center">
             <div class="grid-item 1/3">
-                <a href="{{meta.location.target}}"
-                    ga-track-event="['{{ location }}','make-contact', 'location']"
+                <a href="{{ ::meta.location.target }}"
+                    ga-track-event="['{{ ::location }}','make-contact', 'location']"
                     class="btn btn-block pv md-pv+">
-                    <ohs-icon name="{{meta.location.icon}}"></ohs-icon>
+                    <ohs-icon name="{{ ::meta.location.icon}}"></ohs-icon>
                     <div class="ohs-contact__label">
-                        <span class="h4 fz+ fwr dn md-db mv--">{{meta.location.label}}</span>
+                        <span class="h4 fz+ fwr dn md-db mv--">{{ ::meta.location.label }}</span>
                         <address class="ohs-contact__label__detail dn md-db mv--"
-                                 ng-bind-html="meta.location.address">
+                                 ng-bind-html="::meta.location.address">
                         </address>
                     </div>
                 </a>
             </div>
             <div class="grid-item 1/3">
-                <a href="{{meta.phone.target}}"
-                   ga-track-event="['{{ location }}','make-contact', 'phone']"
+                <a href="{{ ::meta.phone.target }}"
+                   ga-track-event="['{{ ::location }}','make-contact', 'phone']"
                    class="btn btn-block pv md-pv+">
-                    <ohs-icon name="{{meta.phone.icon}}"></ohs-icon>
+                    <ohs-icon name="{{ ::meta.phone.icon }}"></ohs-icon>
                     <div class="ohs-contact__label">
-                        <span class="h4 fz+ fwr dn md-db mv--">{{meta.phone.label}}</span>
+                        <span class="h4 fz+ fwr dn md-db mv--">{{ ::meta.phone.label }}</span>
                         <i class="ohs-contact__label__detail dn md-db mv--"
-                           ng-bind="meta.phone.number">
+                           ng-bind="::meta.phone.number">
                         </i>
                     </div>
                 </a>
             </div>
             <div class="grid-item 1/3">
-                <a href="{{meta.email.target}}"
-                   ga-track-event="['{{ location }}','make-contact', 'email']"
+                <a href="{{ ::meta.email.target }}"
+                   ga-track-event="['{{ ::location }}','make-contact', 'email']"
                    class="btn btn-block pv md-pv+">
-                    <ohs-icon name="{{meta.email.icon}}"></ohs-icon>
+                    <ohs-icon name="{{ ::meta.email.icon }}"></ohs-icon>
                     <div class="ohs-contact__label">
-                        <span class="h4 fz+ fwr dn md-db mv--">{{meta.email.label}}</span>
+                        <span class="h4 fz+ fwr dn md-db mv--">{{ ::meta.email.label }}</span>
                         <i class="ohs-contact__label__detail dn md-db mv--"
-                           ng-bind="meta.email.address">
+                           ng-bind="::meta.email.address">
                         </i>
                     </div>
                 </a>
