@@ -1,7 +1,7 @@
 <button class="ohs-navmenu-button btn"
-        ng-click="OffCanvas.toggle()"
-        ng-class="{ 'ohs-navmenu-button--open' : OffCanvas.isOpened,
-                    'ohs-navmenu-button--closed' : !OffCanvas.isOpened,
+        ng-click="GlobalMastheadService.toggleNav()"
+        ng-class="{ 'ohs-navmenu-button--open' : GlobalMastheadService.isOpen,
+                    'ohs-navmenu-button--closed' : !GlobalMastheadService.isOpen,
                     'vh': shouldHide
                   }"
         ga-track-event="['nav-icon','toggled', 'menu']">

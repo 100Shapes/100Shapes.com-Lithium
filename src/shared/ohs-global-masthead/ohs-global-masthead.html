@@ -5,7 +5,14 @@
         top:       'ohs-global-masthead--fat',
         notTop:    'ohs-global-masthead--thin'
      }"
-     class="z2 ohs-global-masthead {{ vm.GlobalMastheadService.theme }}">
+     ng-class="[
+        vm.GlobalMastheadService.theme,
+        {
+            'ohs-global-masthead--open': vm.GlobalMastheadService.isOpen
+        }
+     ]"
+     class="z2 ohs-global-masthead">
+
 
     <div class="wrapper">
 
@@ -21,7 +28,7 @@
            ga-track-event="['header-closed','make-contact', 'phone']"
            class="btn pv- fl dn lg-dib vam"
            ng-class="{
-                'vh': vm.OffCanvas.isOpened
+                'vh': vm.GlobalMastheadService.isOpen
             }">
             <ohs-icon name="{{vm.company.phone.icon_sm}}"
                       class="is-xs mr-"></ohs-icon>
@@ -33,7 +40,7 @@
            ga-track-event="['header-closed','make-contact', 'email']"
            class="btn pv- fl dn lg-dib vam"
            ng-class="{
-                'vh': vm.OffCanvas.isOpened
+                'vh': vm.GlobalMastheadService.isOpen
             }">
             <ohs-icon name="{{vm.company.email.icon_sm}}"
                       class="is-xs mr-"></ohs-icon>
@@ -42,5 +49,40 @@
         </a>
 
     </div>
+
+    <nav class="ohs-global-masthead__nav"
+         ng-if="vm.GlobalMastheadService.isOpen">
+
+        <ol class="list-reset pt++ md-pt fz++ p lg-mv+">
+
+            <li class="m">
+                <a href
+                   ui-sref="main.home"
+                   ui-sref-active="ohs-global-masthead__nav__list--active"
+                   class="db lg-di h2 m0">Home</a>
+            </li>
+
+            <li class="m">
+                <a href
+                   ui-sref="main.services.list"
+                   ui-sref-active="ohs-global-masthead__nav__list--active"
+                   class="db lg-di h2 m0">Services</a>
+            </li>
+
+            <li class="m">
+                <a href
+                   ui-sref="main.blog.list"
+                   ui-sref-active="ohs-global-masthead__nav__list--active"
+                   class="db lg-di h2 m0">Blog</a>
+            </li>
+
+        </ol>
+
+        <div class="wrapper wrapper-flush">
+            <ohs-contact location="off-canvas"></ohs-contact>
+        </div>
+
+    </nav>
+
 
 </div>

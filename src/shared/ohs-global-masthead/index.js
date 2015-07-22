@@ -17,12 +17,18 @@ module.exports = function(ngModule) {
 
     ngModule.controller('OhsGlobalMastheadCtrl', OhsGlobalMastheadCtrl);
 
-    function OhsGlobalMastheadCtrl(COMPANY_META, OffCanvas, GlobalMastheadService, GLOBAL_MASTHEAD_THEMES) {
+    function OhsGlobalMastheadCtrl(COMPANY_META, GlobalMastheadService, $rootScope, GLOBAL_MASTHEAD_THEMES) {
         let vm = this;
 
         vm.company = COMPANY_META;
-        vm.OffCanvas = OffCanvas;
         vm.GlobalMastheadService = GlobalMastheadService;
         vm.themes = GLOBAL_MASTHEAD_THEMES;
+
+        $rootScope.$on('$stateChangeSuccess', () => {
+            if (GlobalMastheadService.isOpen === true) {
+                GlobalMastheadService.toggleNav();
+            }
+        });
     }
+
 };

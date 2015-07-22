@@ -4,7 +4,7 @@ export default ngModule => {
 
     ngModule.directive('ohsNavmenuButton', ohsNavmenuButton);
 
-    function ohsNavmenuButton(OffCanvas) {
+    function ohsNavmenuButton(GlobalMastheadService) {
         return {
             restrict: 'E',
             scope: {
@@ -13,7 +13,7 @@ export default ngModule => {
             replace: true,
             template: require('./ohs-navmenu-button.html'),
             link: function($scope, elem, attrs) {
-                $scope.OffCanvas = OffCanvas;
+                $scope.GlobalMastheadService = GlobalMastheadService;
 
                 if (!attrs['should-hide']) {
                     $scope.shouldHide = false;
