@@ -1,36 +1,39 @@
-<div class="ohs-global-footer pb">
+<div class="ohs-global-footer pb bg--grey-light fg--grey mt">
 
     <ohs-contact location="global-footer"></ohs-contact>
 
+    <hr class="white"/>
+
     <div class="wrapper">
 
-        <hr class="mb" />
+        <div class="grid grid-align-center pv">
 
-        <div class="global-footer__content fl">
+            <div class="grid-item 2/3 tc mb">
+                <p class="fz- m0">
+                    Approved Design & UX Supplier for the BBC, ITV and the Crown.
+                </p>
+            </div>
 
-            <a href="{{ network.target }}"
-               ga-track-event="['social','lookup', '{{ name }}']"
-               class="dib mv-"
-               ng-repeat="(name,network) in ::vm.social">
-                <ohs-icon name="{{ network.icon }}"
-                          class="is-sm"></ohs-icon>
-            </a>
-
-            <small class="dib fz">
-                &copy;
-                <a href ui-sref="main.home">
-                    <ohs-logo class="fg--grey vab"></ohs-logo>
+            <div class="grid-item 2/3 tc mb">
+                <a href="{{ network.target }}"
+                   ga-track-event="['social','lookup', '{{ name }}']"
+                   class="dib mv- mh"
+                   ng-repeat="(name,network) in ::vm.social">
+                    <ohs-icon name="{{ network.icon }}"
+                              class="is-sm"></ohs-icon>
                 </a>
-                {{ vm.today | date:'yyyy' }}. All rights reserved.
-            </small>
+            </div>
 
-        </div>
+            <div class="grid-item 1/1 tc">
+                <small class="dib fz-">
+                    &copy;
+                    <a href ui-sref="main.home">
+                        <ohs-logo class="fg--grey vab"></ohs-logo>
+                    </a>
+                    {{ vm.today | date:'yyyy' }}. All rights reserved.
+                </small>
+            </div>
 
-        <div class="global-footer__content fr tr">
-            Approved Design & UX supplier
-
-            <ohs-icon name="fill-bbc"></ohs-icon>
-            <ohs-icon name="fill-itv"></ohs-icon>
         </div>
 
     </div>

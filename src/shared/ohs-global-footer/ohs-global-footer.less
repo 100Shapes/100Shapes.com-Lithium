@@ -5,39 +5,24 @@
 
 .ohs-global-footer {
   .clearfix();
-}
-
-.ohs-global-footer .ohs-logo {
-  height: 28px;
-  width: 111px;
-
-  &:hover {
-    color: @color-blue;
-  }
-}
-
-.global-footer__content {
-
-  color: @color-gray-light;
+  line-height: 22.8px;
 
   a {
     text-decoration: none;
     color: @color-blue;
 
-    &:hover {
+    .no-touch &:hover {
       color:@color-yellow;
     }
   }
 }
 
-.global-footer__content > * {
-  display: inline-block;
-}
+.ohs-global-footer .ohs-logo {
+  height: 28px;
+  width: 111px;
+  margin-bottom: -1px;
 
-.global-footer__content.fr > * {
-  margin-left: 20px;
-}
-
-.global-footer__content.fl > * {
-  margin-right: 20px;
+  .no-touch &:hover {
+    color: @color-blue;
+  }
 }
