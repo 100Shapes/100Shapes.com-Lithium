@@ -20,6 +20,7 @@
   .screen-md-max({
     height: 151px;
     margin-bottom: 10px;
+    padding: 5%;
   });
 
 
@@ -43,7 +44,7 @@
 
 .card--blog {
 
-  &:hover {
+  .no-touch &:hover {
     &:after {
       background-color: fade(@color-orange, 75%);
     }
@@ -53,12 +54,13 @@
 .card--social {
 
   justify-content: space-between;
+  height: 198px;
 
   a {
     color: @color-yellow;
   }
 
-  &:hover {
+  .no-touch &:hover {
     .card__description {
       opacity: 1;
       color: @color-white;
@@ -84,7 +86,7 @@
     opacity: 0;
   }
 
-  &:hover {
+  .no-touch &:hover {
     .card__description {
       opacity: 1;
       color: @color-white;
@@ -111,7 +113,7 @@
     opacity: 0;
   }
 
-  &:hover {
+  .no-touch &:hover {
     .card__description {
       opacity: 1;
     }
