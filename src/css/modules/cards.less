@@ -129,12 +129,14 @@
 }
 
 .card__title {
-  color: @color-white;
+  .to-rem(font-size, @font-size-large);
   .transition();
+  color: @color-white;
 
   .card--blog & {
     color: @color-white;
     margin: 0;
   }
+
 }
 
