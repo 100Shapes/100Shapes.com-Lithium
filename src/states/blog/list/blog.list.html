@@ -9,7 +9,7 @@
         <div class="wrapper">
             <div class="grid grid-align-center mb+">
                 <div class="grid-item sm-1/1 lg-8/12 tc">
-                    <h1 view-title class="hv mt+ fg--orange">Blog: UX &amp; design for broadcast media</h1>
+                    <h1 view-title class="hv mt++ fg--orange">Blog: UX &amp; design for broadcast media</h1>
                 </div>
             </div>
         </div>
@@ -30,19 +30,18 @@
 
                 <a href
                    ng-if="!vm.filter.category"
-                   class="box-round mb tc card card--blog"
+                   class="box-round mb- tc card card--blog"
                    style="background-image: url('{{ ::vm.featured_post.thumbnail_url }}');"
                    ui-sref="main.blog.post({ slug:vm.featured_post.slug })">
 
-
-                    <span class="card__label mb0 h6 cw">
+                    <span class="card__label mb- mt0 h2 fz+ cw dn lg-db">
                         {{ ::vm.featured_post.category_title }}
                     </span>
-
 
                     <h2 class="card__title h3 fz++">
                         {{ ::vm.featured_post.title }}
                     </h2>
+
 
                 </a>
 
