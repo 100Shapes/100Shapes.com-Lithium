@@ -4,10 +4,15 @@
 @import "~Cardinal/base/mixins/media-queries.less";
 
 .ohs-global-masthead {
-  .transition();
+  .transition(background-color);
+  .transition(padding);
   width: 100%;
   top: 0;
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
 
   color: @color-white;
 
@@ -29,6 +34,7 @@
 
   &.ohs-global-masthead--open {
     height: 100%;
+    padding-bottom: 0 !important;
   }
 
 }
@@ -95,6 +101,10 @@
 
 .ohs-global-masthead__nav {
   clear: both;
+
+  li {
+    .to-rem(font-size, @font-size-xx-large);
+  }
 }
 
 
@@ -103,6 +113,14 @@
 .ohs-global-masthead__nav__list--active {
   pointer-events: none;
   cursor: default;
-  color: @color-blue !important;
+
+  .ohs-global-masthead--blue & {
+    color: @color-blue !important;
+  }
+
+  .ohs-global-masthead--orange & {
+    color: @color-orange !important;
+  }
 }
+
 

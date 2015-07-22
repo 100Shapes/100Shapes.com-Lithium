@@ -22,7 +22,7 @@
             <ohs-logo class="ohs-global-masthead__logo"></ohs-logo>
         </a>
 
-        <ohs-navmenu-button class="fr mt-- p- pr0"></ohs-navmenu-button>
+        <ohs-navmenu-button class="fr p- pr0"></ohs-navmenu-button>
 
         <a href="{{ vm.company.phone.target }}"
            ga-track-event="['header-closed','make-contact', 'phone']"
@@ -53,36 +53,34 @@
     <nav class="ohs-global-masthead__nav"
          ng-if="vm.GlobalMastheadService.isOpen">
 
-        <ol class="list-reset pt++ md-pt fz++ p lg-mv+">
+        <ol class="list-reset tc">
 
-            <li class="m">
+            <li class="m+">
                 <a href
                    ui-sref="main.home"
                    ui-sref-active="ohs-global-masthead__nav__list--active"
-                   class="db lg-di h2 m0">Home</a>
+                   class="db lg-di">Home</a>
             </li>
 
-            <li class="m">
+            <li class="m+">
                 <a href
                    ui-sref="main.services.list"
                    ui-sref-active="ohs-global-masthead__nav__list--active"
-                   class="db lg-di h2 m0">Services</a>
+                   class="db lg-di">Services</a>
             </li>
 
-            <li class="m">
+            <li class="m+">
                 <a href
                    ui-sref="main.blog.list"
                    ui-sref-active="ohs-global-masthead__nav__list--active"
-                   class="db lg-di h2 m0">Blog</a>
+                   class="db lg-di">Blog</a>
             </li>
 
         </ol>
 
-        <div class="wrapper wrapper-flush">
-            <ohs-contact location="off-canvas"></ohs-contact>
-        </div>
-
     </nav>
 
+    <ohs-contact location="off-canvas"
+                 ng-if="vm.GlobalMastheadService.isOpen"></ohs-contact>
 
 </div>
