@@ -7,13 +7,11 @@
   .to-rem(padding-top, @spacing-base);
   .to-rem(padding-bottom, @spacing-base);
 
-  .ohs-global-masthead--blue & {
+  .ohs-global-masthead--blue &,
+  .ohs-global-masthead--orange &{
     color: @color-white;
   }
 
-  .ohs-global-masthead--orange & {
-    color: @color-orange;
-  }
 }
 
 .ohs-contact .ohs-icon {
@@ -23,14 +21,15 @@
 
 .ohs-contact a:hover {
   background: @color-blue;
-  color: @color-white !important;
 
   .ohs-global-masthead--blue & {
     background: @color-blue;
+    color: @color-white !important;
   }
 
   .ohs-global-masthead--orange & {
     background: @color-orange;
+    color: @color-white !important;
   }
 
   h4,
@@ -44,6 +43,14 @@
   color: @color-gray-light;
   font-style: normal;
   font-weight: @font-weight-light;
+
+  .ohs-global-masthead--blue & {
+    color: @color-gray-lighter;
+  }
+
+  .ohs-global-masthead--orange & {
+    color: @color-orange-lighter;
+  }
 }
 
 .ohs-contact--slim {
