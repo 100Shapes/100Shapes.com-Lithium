@@ -17,6 +17,12 @@
   margin-bottom: 20px;
   padding: 10%;
 
+  .screen-md-max({
+    height: 151px;
+    margin-bottom: 10px;
+  });
+
+
   &:after {
     .transition();
     content: " ";
@@ -99,8 +105,6 @@
 
 .card--service {
 
-  justify-content: space-between;
-
   .card__description {
    .transition(opacity);
     color: @color-white;
@@ -116,6 +120,10 @@
       background-color: fade(@color-blue-dark, 75%);
     }
   }
+
+  .screen-md-min({
+    justify-content: space-between;
+  });
 
   
 }
