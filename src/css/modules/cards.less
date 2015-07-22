@@ -54,7 +54,10 @@
 .card--social {
 
   justify-content: space-between;
-  height: 198px;
+
+  .screen-md-max({
+    height: 198px;
+  });
 
   a {
     color: @color-yellow;
@@ -123,7 +126,7 @@
     }
   }
 
-  .screen-md-min({
+  .screen-lg-min({
     justify-content: space-between;
   });
 
