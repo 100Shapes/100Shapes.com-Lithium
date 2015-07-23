@@ -30,7 +30,7 @@ export default ngModule => {
         let vm = this;
 
         vm.post = post;
-        GlobalMastheadService.theme = `${GLOBAL_MASTHEAD_THEMES.TRANSPARENT} ${GLOBAL_MASTHEAD_THEMES.ORANGE}`;
+        GlobalMastheadService.theme = `${GLOBAL_MASTHEAD_THEMES.ORANGE}`;
     }
     
 }

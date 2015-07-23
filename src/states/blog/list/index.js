@@ -1,7 +1,5 @@
 export default ngModule => {
 
-    require('./blog.list.less')
-
     ngModule
         .config($stateProvider => {
 

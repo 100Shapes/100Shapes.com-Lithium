@@ -7,64 +7,65 @@
          vocab="http://schema.org/"
          typeof="NewsArticle">
 
+    <header class="wrapper">
 
-    <header class="mb++"
-            style="background-image: url({{ ::vm.post.banner_url }})">
+        <div class="grid grid-align-center">
+            <div class="grid-item 1/1 md-5/6 lg-4/5 tc mb">
 
-        <div class="wrapper">
-            <div class="grid grid-align-center">
-                <div class="grid-item 1/1">
-                    <div class="box box-round bg--orange box--squared-bottom pt pb+ posr md-ph lg-ph+ xxl-ph++ tc">
+                <span class="h4 mb">
+                   <a href
+                      ui-sref="main.blog.list"
+                      class="fg--orange sm-dn">/blog/</a>
+                    {{ ::vm.post.category_title }}
+                </span>
 
-                        <span class="h4 mb db">
-                            UX &amp; Design
-                        </span>
+                <h1 class="ffs mt"
+                    property="headline"
+                    view-title>
+                    {{ ::vm.post.seo_title }}
+                </h1>
 
-                        <hr class="1/6">
+                <p subtitle
+                   property="alternativeHeadline"
+                   class="fz++ fg--grey">
+                    {{ ::vm.post.lead }}
+                </p>
+            </div>
 
-                        <h1 class="ffs mt"
-                            property="headline"
-                            view-title>
-                            {{ ::vm.post.seo_title }}
-                        </h1>
+            <div class="grid-item 1/1">
 
-                        <p subtitle
-                           property="alternativeHeadline"
-                           class="fz++">
-                            {{ ::vm.post.lead }}
+                <img ng-src="{{ ::vm.post.banner_url }}"
+                     alt=""
+                     class="box-round"/>
+
+                <div class="blog-post__meta tc posr">
+
+                    <img class="profile dib"
+                         ng-src="{{ ::vm.post.author.profile }}"
+                         alt="Profile picture of {{ ::vm.post.author.name }}"/>
+
+                    <div class="db mv-- fz-">
+
+                        <p itemprop="author" itemscope itemtype="http://schema.org/Person" class="m0">
+                            <small class="ffs">by</small>
+                            <span itemprop="name">{{ ::vm.post.author.name }}</span>
                         </p>
 
-
-                        <div class="blog-post__meta posa mt-">
-
-                            <img class="profile"
-                                 ng-src="{{ ::vm.post.author.profile }}"
-                                 alt="Profile picture of {{ ::vm.post.author.name }}"/>
-
-                            <div class="db mv-- fz-">
-
-                                <p itemprop="author" itemscope itemtype="http://schema.org/Person" class="m0">
-                                    <small class="ffs">by</small>
-                                    <span itemprop="name">{{ ::vm.post.author.name }}</span>
-                                </p>
-
-                                <p itemprop="datePublished" content="{{ ::vm.post.posted_at | date: 'yyyy-mm-dd' }}">
-                                    {{ ::vm.post.posted_at | date: 'd MMM yyyy' }}
-                                </p>
-
-                            </div>
-
-                        </div>
+                        <p itemprop="datePublished" content="{{ ::vm.post.posted_at | date: 'yyyy-mm-dd' }}">
+                            {{ ::vm.post.posted_at | date: 'd MMM yyyy' }}
+                        </p>
 
                     </div>
 
                 </div>
+
+
             </div>
         </div>
 
     </header>
 
-    <div id="main" class="mb++">
+    <div id="main">
         <ohs-content-renderer content="::vm.post.body">
         </ohs-content-renderer>
     </div>
