@@ -47,7 +47,7 @@
 
                 <div class="grid">
                     <div class="grid-item 1/1 sm-1/2"
-                         ng-repeat="post in vm.posts | filter:vm.filter.category track by post.id">
+                         ng-repeat="post in vm.posts | filter:vm.filter track by post.id">
 
                         <ohs-blogpost-card slug="{{ ::post.slug }}"
                                            title="{{ ::post.title }}"
