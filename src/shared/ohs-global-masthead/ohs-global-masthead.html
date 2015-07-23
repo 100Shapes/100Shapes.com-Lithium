@@ -18,33 +18,33 @@
 
         <a href
            ui-sref="main.home"
-           class="fl pv-- mr">
+           class="fl pv--">
             <ohs-logo class="ohs-global-masthead__logo"></ohs-logo>
         </a>
 
-        <ohs-navmenu-button class="fr p- pr0"></ohs-navmenu-button>
-
-        <a href="{{ vm.company.phone.target }}"
-           ga-track-event="['header-closed','make-contact', 'phone']"
-           class="btn pv- fl dn lg-dib vam fwl"
-           ng-class="{
-                'vh': vm.GlobalMastheadService.isOpen
-            }">
-            <ohs-icon name="{{vm.company.phone.icon_sm}}"
-                      class="is-xs mr-"></ohs-icon>
-            {{vm.company.phone.number}}
-
-        </a>
+        <ohs-navmenu-button class="fr p- pr0 ml+"></ohs-navmenu-button>
 
         <a href="{{ vm.company.email.target }}"
            ga-track-event="['header-closed','make-contact', 'email']"
-           class="btn pv- fl dn lg-dib vam fwl"
+           class="btn pv- fr dn lg-dib vam fwl"
            ng-class="{
                 'vh': vm.GlobalMastheadService.isOpen
             }">
             <ohs-icon name="{{vm.company.email.icon_sm}}"
                       class="is-xs mr-"></ohs-icon>
             {{vm.company.email.address}}
+
+        </a>
+
+        <a href="{{ vm.company.phone.target }}"
+           ga-track-event="['header-closed','make-contact', 'phone']"
+           class="btn pv- fr dn lg-dib vam fwl"
+           ng-class="{
+                'vh': vm.GlobalMastheadService.isOpen
+            }">
+            <ohs-icon name="{{vm.company.phone.icon_sm}}"
+                      class="is-xs mr-"></ohs-icon>
+            {{vm.company.phone.number}}
 
         </a>
 
