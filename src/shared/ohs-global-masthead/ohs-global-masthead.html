@@ -24,8 +24,16 @@
 
         <a href
            ui-sref="main.blog.list"
+           ng-if="vm.$state.includes('main.blog')"
            class="ohs-global-masthead__section-link fg--yellow ffs fsi dib pv-- ph-">
             /blog
+        </a>
+
+        <a href
+           ui-sref="main.services.list"
+           ng-if="vm.$state.includes('main.services')"
+           class="ohs-global-masthead__section-link fg--yellow ffs fsi dib pv-- ph-">
+            /services
         </a>
 
         <ohs-navmenu-button class="fr p- pr0 ml+"></ohs-navmenu-button>

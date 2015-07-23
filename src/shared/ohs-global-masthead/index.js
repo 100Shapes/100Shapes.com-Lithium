@@ -17,12 +17,14 @@ module.exports = function(ngModule) {
 
     ngModule.controller('OhsGlobalMastheadCtrl', OhsGlobalMastheadCtrl);
 
-    function OhsGlobalMastheadCtrl(COMPANY_META, GlobalMastheadService, $rootScope, GLOBAL_MASTHEAD_THEMES) {
+    function OhsGlobalMastheadCtrl(COMPANY_META, GlobalMastheadService, $rootScope, GLOBAL_MASTHEAD_THEMES, $state) {
         let vm = this;
 
         vm.company = COMPANY_META;
         vm.GlobalMastheadService = GlobalMastheadService;
         vm.themes = GLOBAL_MASTHEAD_THEMES;
+
+        vm.$state = $state;
 
         $rootScope.$on('$stateChangeSuccess', () => {
             if (GlobalMastheadService.isOpen === true) {
