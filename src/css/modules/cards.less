@@ -39,6 +39,27 @@
   > * {
     z-index: 3;
   }
+
+  &.ng-move,
+  &.ng-enter,
+  &.ng-leave {
+    .transition();
+  }
+
+  &.ng-leave.ng-leave-active,
+  &.ng-move,
+  &.ng-enter {
+    opacity:0;
+    transform: translateY(-20px);
+  }
+
+  &.ng-leave,
+  &.ng-move.ng-move-active,
+  &.ng-enter.ng-enter-active {
+    opacity:1;
+    transform: translateY(0);
+  }
+
 }
 
 
