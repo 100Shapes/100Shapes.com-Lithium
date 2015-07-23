@@ -26,7 +26,7 @@ export default ngModule => {
                                 'slug',
                                 'posted_at'
                             ].join(','),
-                            order: 'posted_at'
+                            order: '-posted_at'
                         }
                     }
                 ).then(
