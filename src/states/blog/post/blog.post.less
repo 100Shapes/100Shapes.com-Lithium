@@ -1,5 +1,6 @@
 @import "~css/vars";
 @import "~Cardinal/base/mixins/to-rem.less";
+@import "~Cardinal/base/mixins/media-queries.less";
 
 .blog-post__meta {
   top: -34px;
@@ -8,4 +9,11 @@
 
 .blog-post header {
   .to-rem(padding-top, @spacing-base * 6);
+}
+
+.blog-post p {
+  .screen-lg-min({
+    font-size: unit(@font-size * 1.266, px) !important;
+    line-height: 1.2;
+  })
 }

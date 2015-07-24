@@ -5,7 +5,7 @@ export default ngModule => {
 
             $stateProvider
                 .state('main.blog.list', {
-                    url: '/',
+                    url: '/?category',
                     template: require('./blog.list.html'),
                     controller: 'BlogListCtrl as vm',
                     resolve: {
@@ -31,7 +31,7 @@ export default ngModule => {
 
     ngModule.controller('BlogListCtrl', BlogListCtrl);
 
-    function BlogListCtrl(posts, categories, featuredPost, GlobalMastheadService, GLOBAL_MASTHEAD_THEMES) {
+    function BlogListCtrl(posts, categories, featuredPost, GlobalMastheadService, GLOBAL_MASTHEAD_THEMES, $stateParams) {
         let vm = this;
 
         vm.posts = posts;
@@ -43,10 +43,12 @@ export default ngModule => {
 
         vm.setCategoryFilter = function(categoryId) {
             vm.filter = { 'category': categoryId };
+            $stateParams.category = categoryId;
         }
 
         vm.clearFilter = function() {
             vm.filter = {};
+            $stateParams.category = null;
         }
     }
     
