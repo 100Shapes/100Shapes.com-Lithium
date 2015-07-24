@@ -7,7 +7,7 @@ export default ngModule => {
                 .state('main.services', {
                     url: '/services',
                     abstract: true,
-                    template: `<ui-view></ui-view>`
+                    template: `<ui-view autoscroll></ui-view>`
                 });
             
         });

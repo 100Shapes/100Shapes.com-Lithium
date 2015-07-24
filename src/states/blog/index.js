@@ -7,7 +7,7 @@ export default ngModule => {
                 .state('main.blog', {
                     url: '/blog',
                     abstract: true,
-                    template: `<ui-view></ui-view>`
+                    template: `<ui-view autoscroll></ui-view>`
                 });
             
         });
