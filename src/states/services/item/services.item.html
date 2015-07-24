@@ -82,26 +82,6 @@
         </div>
     </header>
 
-
-    <aside class="dn mt++ lg-db service-page__secondary-nav posf wrapper"
-           role="navigation">
-        <div class="grid">
-            <div class="grid-item 1/3">
-                <ol class="box box-round box-border bg--white list-bare mh+ fz+">
-                    <li ng-repeat="link in ::vm.service.content_sections track by $index">
-                        <a class="fg--orange mv-- dib"
-                           href="#{{ ::link.slug }}"
-                           du-smooth-scroll
-                           offset="60">
-                            {{ ::link.label }}
-                        </a>
-                    </li>
-                </ol>
-            </div>
-        </div>
-    </aside>
-
-
     <div id="main">
         <div ng-repeat="section in ::vm.service.content_sections track by $index"
              id="{{ ::section.slug }}"
