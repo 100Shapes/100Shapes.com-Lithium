@@ -1,7 +1,6 @@
 var path = require('path');
 var webpack = require("webpack");
 var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
@@ -21,8 +20,8 @@ module.exports = {
     module:  {
         loaders: [
             {test: /\.js$/,           loader: 'babel', exclude: /node_modules/},
-            {test: /\.css$/,          loader: ExtractTextPlugin.extract('style-loader', 'css!autoprefixer-loader?browsers=last 2 version'), exclude: /node_modules/ },
-            {test: /\.less$/,         loader: ExtractTextPlugin.extract('style-loader', 'css!autoprefixer-loader?browsers=last 2 version!less'), exclude: /node_modules/ },
+            {test: /\.css$/,          loader: 'style!css!autoprefixer-loader?browsers=last 2 version', exclude: /node_modules/ },
+            {test: /\.less$/,         loader: 'style!css!autoprefixer-loader?browsers=last 2 version!less', exclude: /node_modules/ },
             {test: /\.html$/,         loader: 'html?attrs=img:src source:src', exclude: /node_modules/},
             {test: /\.json$/,         loader: 'json', exclude: /node_modules/},
             {
@@ -45,8 +44,6 @@ module.exports = {
     },
 
     plugins: [
-        new ExtractTextPlugin('main.css'),
-
         new ngAnnotatePlugin({
             add: true
         }),
@@ -62,11 +59,11 @@ module.exports = {
             __DEV__: JSON.parse(process.env.DEV || true)
         })
 
-        // new webpack.optimize.UglifyJsPlugin({
-        //   output: {
-        //     comments: false
-        //   }
-        // })
+        //new webpack.optimize.UglifyJsPlugin({
+        //    output: {
+        //        comments: false
+        //    }
+        //})
 
         // new webpack.ProvidePlugin({
         //   $: 'jquery',
@@ -77,7 +74,7 @@ module.exports = {
 
     ],
 
-    devtool: 'eval',
+    devtool: 'source-map',
 
     devServer: {
         contentBase: "./src",
