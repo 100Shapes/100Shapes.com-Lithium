@@ -2,16 +2,27 @@ module.exports = function(ngModule) {
 
     require('./ohs-global-masthead.less');
     require('./GlobalMastheadService')(ngModule);
+    const angular = require('angular');
+    const ESCAPE_KEY = 27;
 
     ngModule
         .directive('ohsGlobalMasthead', ohsGlobalMasthead);
 
-    function ohsGlobalMasthead() {
+    function ohsGlobalMasthead(GlobalMastheadService, $document, $log) {
         return {
             restrict: 'E',
             replace: true,
             controller: 'OhsGlobalMastheadCtrl as vm',
-            template: require('./ohs-global-masthead.html')
+            template: require('./ohs-global-masthead.html'),
+            link ($scope) {
+                $document.on('keyup', (event) => {
+                    if (event.keyCode === ESCAPE_KEY) {
+                        $scope.$apply(() => {
+                            GlobalMastheadService.closeNav();
+                        });
+                    }
+                });
+            }
         };
     }
 
@@ -27,9 +38,7 @@ module.exports = function(ngModule) {
         vm.$state = $state;
 
         $rootScope.$on('$stateChangeSuccess', () => {
-            if (GlobalMastheadService.isOpen === true) {
-                GlobalMastheadService.toggleNav();
-            }
+            GlobalMastheadService.closeNav();
         });
     }
 
