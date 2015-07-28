@@ -1,14 +1,13 @@
 <a href
    class="box-round tc card card--blog"
-   style="background-image: url('{{ ::thumbnailImageUrl }}');"
-   ui-sref="main.blog.post({ slug:slug })">
+   style="background-image: url('{{ ::model.square_image }}');"
+   ui-sref="main.blog.post({ slug:model.slug })">
 
     <span class="card__label mb- mt0 h2 fz+ cw dn lg-db">
-        {{ ::category }}
+        {{ ::model.category }}
     </span>
 
     <h2 class="card__title h3 m0">
-        {{ ::title }}
+        {{ ::model.title }}
     </h2>
-
 </a>

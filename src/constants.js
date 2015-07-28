@@ -38,17 +38,17 @@ export default ngModule => {
                 target: 'https://goo.gl/maps/jVuhA'
             },
             social: {
-                'twitter': {
+                twitter: {
                     icon: 'fill-twitter',
                     target: 'https://twitter.com/100shapes',
                     handle: '@100shapes'
                 },
-                'linkedin': {
+                linkedin: {
                     icon: 'fill-linkedin',
                     target: 'https://www.linkedin.com/company/100-shapes',
                     handle: '100shapes'
                 },
-                'dribbble': {
+                dribbble: {
                     icon: 'fill-dribbble',
                     target: 'https://dribbble.com/100shapes',
                     handle: '100shapes'
@@ -59,35 +59,32 @@ export default ngModule => {
         .constant('DEFAULT_SOCIAL_IMAGE', require('./img/shared-social-media-image.png'))
 
         // Authors
-        .constant('AUTHORS', [
-            {
+        .constant('AUTHORS', {
+            michele: {
                 name: 'Michele Memoli',
                 email: 'michele@100shapes.com',
-                profile: require('./img/profiles/michele.jpg'),
-                description: "Michele Description text"
+                profile: require('./img/profiles/michele.jpg')
             },
-
-            {
+            chris: {
                 name: 'Chris Elphick',
                 email: 'chris@100shapes.com',
-                profile: require('./img/profiles/chris.jpg'),
-                description: "Chris Description text"
+                profile: require('./img/profiles/chris.jpg')
             },
-
-            {
+            paolo: {
                 name: 'Paolo Memoli',
                 email: 'paolo@100shapes.com',
-                profile: require('./img/profiles/paolo.jpg'),
-                description: "Paolo Description text"
+                profile: require('./img/profiles/paolo.jpg')
             },
-
-            {
+            trev: {
                 name: 'Trev Morris',
                 email: 'trevor@100shapes.com',
-                profile: require('./img/profiles/trevor.jpg'),
-                description: "Trevor Description text"
+                profile: require('./img/profiles/trevor.jpg')
+            },
+            guest: {
+                name: 'Guest author',
+                profile: require('./img/profiles/guest.jpg')
             }
-        ])
+        })
 
 
         .constant('DEFAULT_MAILINGLIST_SIGNUP_CONFIG', {

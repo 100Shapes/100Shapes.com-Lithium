@@ -15,11 +15,14 @@ export default ngModule => {
                         },
 
                         categories: function(BlogContentService) {
+                            return {};
                             return BlogContentService.categories();
                         },
 
                         featuredPost: function(BlogContentService) {
-                            return BlogContentService.featured(1);
+                            return BlogContentService.featured(1).then(function(items) {
+                                return items[0];
+                            });
                         }
 
                     }

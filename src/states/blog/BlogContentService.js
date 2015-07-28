@@ -7,117 +7,51 @@ export default ngModule => {
 
     function BlogContentService($http, API_BASE_URL, AUTHORS) {
 
-        const POSTS_LIST_URL = url.resolve(API_BASE_URL, 'pages/');
-        const POST_TYPE = 'blog.BlogPost';
+        const POSTS_LIST_URL = url.resolve(API_BASE_URL, 'blogs');
 
         const blogContentService =  {
 
             all() {
 
-                return $http.get(POSTS_LIST_URL,
-                    {
-                        params: {
-                            type: POST_TYPE,
-                            fields: [
-                                'title',
-                                'thumbnail_url',
-                                'category_title',
-                                'category',
-                                'slug',
-                                'posted_at'
-                            ].join(','),
-                            order: '-posted_at'
-                        }
-                    }
-                ).then(
+                return $http.get(POSTS_LIST_URL).then(
                     function (response) {
-                        return response.data.pages;
+                        return response.data.blogs;
                     }
                 );
 
             },
 
-            one(post_id) {
+            one(slug) {
 
-                const POSTS_DETAIL_URL = url.resolve(POSTS_LIST_URL, `${post_id}/`);
+                const POSTS_DETAIL_URL = url.resolve(POSTS_LIST_URL, `${slug}`);
 
                 return $http.get(POSTS_DETAIL_URL).then(
                     (response) => {
                         let post = response.data;
-                        let author_email = post.author;
-                        post.author = this.find_author(author_email);
+                        let author_slug = post.author;
+                        post.author = this.find_author(author_slug);
                         return post;
                     }
                 );
             },
 
-            slug(slug) {
-                return $http.get(POSTS_LIST_URL,
-                    {
-                        params: {
-                            type: POST_TYPE,
-                            slug: slug,
-                            limit: 1
-                        }
-                    }
-                ).then(
-                    (response) => {
-                        let post_id = response.data.pages[0].id;
-                        return this.one(post_id);
-                    }
-                );
-
-            },
-
             categories() {
-
-                return $http.get(POSTS_LIST_URL,
-                    {
-                        params: {
-                            type: 'blog.BlogCategory',
-                            fields: [
-                                'title',
-                                'description'
-                            ].join(','),
-                            order: 'title'
-                        }
-                    }
-                ).then(
-                    function (response) {
-                        let categories = response.data.pages;
-                        return categories;
-                    }
-                );
+                return {};
             },
 
-            find_author(email) {
-                return _.find(AUTHORS, { email:email.toLowerCase() });
+            find_author(slug) {
+                return AUTHORS[slug];
             },
 
-            featured(quantity = 4) {
-
-                return $http.get(POSTS_LIST_URL,
-                    {
-                        params: {
-                            type: POST_TYPE,
-                            limit: quantity,
-                            fields: [
-                                'title',
-                                'thumbnail_url',
-                                'category',
-                                'category_title',
-                                'slug'
-                            ].join(','),
-                            order: '-posted_at',
-                            is_featured: true
-                        }
+            featured(QUANTITY = 4) {
+                return $http.get(POSTS_LIST_URL, {
+                    params: {
+                        featured: true,
+                        limit: QUANTITY
                     }
-                ).then(
+                }).then(
                     function (response) {
-                        if (quantity === 1) {
-                            return response.data.pages[0];
-                        }
-                        return response.data.pages;
+                        return response.data.blogs;
                     }
                 );
             }
