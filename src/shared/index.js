@@ -16,4 +16,6 @@ export default ngModule => {
     require('./ohs-navmenu-button')(ngModule);
     require('./ohs-blogpost-card')(ngModule);
     require('./ohs-social-card')(ngModule);
+    require('./ohs-filter-htmltoplaintext')(ngModule);
+
 }

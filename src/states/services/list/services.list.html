@@ -23,12 +23,9 @@
 
         <div class="grid mb+">
             <div class="grid-item 1/1 sm-1/2 lg-1/3"
-                 ng-repeat="service in ::vm.services track by service.id">
+                 ng-repeat="service in ::vm.services track by service.guid">
 
-                <ohs-service-card slug="{{ ::service.slug }}"
-                                  title="{{ ::service.title }}"
-                                  description="{{ ::service.lead }}"
-                                  thumbnail-image-url="{{ ::service.thumbnail_url }}">
+                <ohs-service-card model="::service">
                 </ohs-service-card>
 
             </div>

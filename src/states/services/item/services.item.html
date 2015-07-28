@@ -1,6 +1,6 @@
-<ohs-meta-group title="{{ ::vm.service.seo_title }} – {{ ::vm.service.lead }}"
-                description="{{ ::vm.service.search_description }}"
-                image="{{ ::vm.service.thumbnail_url }}">
+<ohs-meta-group title="{{ ::vm.service.title_long | htmlToPlaintext }} – {{ ::vm.service.lead }}"
+                description="{{ ::vm.service.description }}"
+                image="{{ ::vm.service.banner_image }}">
 </ohs-meta-group>
 
 
@@ -8,13 +8,13 @@
          vocab="http://schema.org/"
          typeof="NewsArticle">
 
-    <header class="bg--blue bg--overlay pt+++ pb+ mb+ z1" style="background-image: url({{ :: vm.service.banner_url }})">
+    <header class="bg--blue bg--overlay pt+++ pb+ mb+ z1" style="background-image: url({{ ::vm.service.banner_image }})">
         <div class="wrapper">
             <div class="grid">
                 <div class="grid-item 1/1 lg-2/3">
                     <div class="lg-mh++">
-                        <h1 view-title>
-                            {{ ::vm.service.seo_title }}
+                        <h1 view-title
+                            ng-bind-html="::vm.service.title_long">
                         </h1>
 
                         <p subtitle class="fz++ fwr m0">
@@ -24,7 +24,7 @@
                         <hr class="dark-blue 1/8 left mb mt++" />
 
                         <p class="m0"
-                           ng-bind-html="vm.service.intro">
+                           ng-bind-html="::vm.service.intro">
                         </p>
                     </div>
 
@@ -67,10 +67,6 @@
 
                             <p class="lh1">We're a UX &amp; Design agency that specialise in working with broadcasters and media organisations.</p>
 
-                            <!--<a href-->
-                            <!--ui-sref="main.about"-->
-                            <!--class="btn btn-link mb">Read about us</a>-->
-
                         </div>
 
 
@@ -83,13 +79,8 @@
     </header>
 
     <div id="main">
-        <div ng-repeat="section in ::vm.service.content_sections track by $index"
-             id="{{ ::section.slug }}"
-             class="service-page__content-section">
-
-            <ohs-content-renderer content="::section.body">
-            </ohs-content-renderer>
-        </div>
+        <ohs-content-renderer content="::vm.service.contents">
+        </ohs-content-renderer>
     </div>
 
 </article>

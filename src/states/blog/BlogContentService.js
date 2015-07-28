@@ -14,7 +14,7 @@ export default ngModule => {
             all() {
 
                 return $http.get(POSTS_LIST_URL).then(
-                    function (response) {
+                    (response) => {
                         return response.data.blogs;
                     }
                 );
@@ -50,7 +50,10 @@ export default ngModule => {
                         limit: QUANTITY
                     }
                 }).then(
-                    function (response) {
+                    (response) => {
+                        if (QUANTITY === 1) {
+                            return response.data.blogs[0];
+                        }
                         return response.data.blogs;
                     }
                 );
