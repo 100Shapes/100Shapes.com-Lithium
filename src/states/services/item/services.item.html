@@ -80,8 +80,38 @@
     </header>
 
     <div id="main">
+        <div class="wrapper lg-dn">
+
+            <div class="grid">
+                <div class="grid-item 1/1 tc">
+                    <h3>Make an enquiry today</h3>
+                </div>
+                <div class="grid-item 1/2">
+                    <a href="{{vm.company.phone.target}}"
+                       class="btn db btn-primary btn-round pv">
+
+                        <ohs-icon name="{{vm.company.phone.icon_sm}}"
+                                  class="fl mr- is-sm"></ohs-icon>
+
+                        Call us
+                    </a>
+                </div>
+                <div class="grid-item 1/2">
+                    <a href="{{vm.company.email.target}}"
+                       class="btn db btn-primary btn-round pv">
+
+                        <ohs-icon name="{{vm.company.email.icon_sm}}"
+                                  class="fl mr- is-sm"></ohs-icon>
+
+                        Email us
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <ohs-content-renderer content="::vm.service.contents">
         </ohs-content-renderer>
+
     </div>
 
 </article>
