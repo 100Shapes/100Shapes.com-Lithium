@@ -1,6 +1,6 @@
-<ohs-meta-group title="{{ ::vm.post.seo_title }} – {{ ::vm.post.lead }}"
-                description="{{ ::vm.post.search_description }}"
-                image="{{ ::vm.post.thumbnail_url }}">
+<ohs-meta-group title="{{ ::vm.post.title_long }} – {{ ::vm.post.lead }}"
+                description="{{ ::vm.post.description }}"
+                image="{{ ::vm.post.banner_image }}">
 </ohs-meta-group>
 
 <article class="blog-post"
@@ -16,25 +16,25 @@
                    <a href
                       ui-sref="main.blog.list"
                       class="fg--orange sm-dn">/blog/</a>
-                    {{ ::vm.post.category_title }}
+                    {{ ::vm.post.category }}
                 </span>
 
                 <h1 class="ffs mt"
                     property="headline"
                     view-title>
-                    {{ ::vm.post.seo_title }}
+                    {{ ::vm.post.title_long }}
                 </h1>
 
                 <p subtitle
                    property="alternativeHeadline"
                    class="fz++ fg--grey">
-                    {{ ::vm.post.lead }}
+                    {{ ::vm.post.subtitle }}
                 </p>
             </div>
 
             <div class="grid-item 1/1">
 
-                <img ng-src="{{ ::vm.post.banner_url }}"
+                <img ng-src="{{ ::vm.post.banner_image }}"
                      alt=""
                      class="box-round"/>
 
@@ -51,8 +51,8 @@
                             <span itemprop="name">{{ ::vm.post.author.name }}</span>
                         </p>
 
-                        <p itemprop="datePublished" content="{{ ::vm.post.posted_at | date: 'yyyy-mm-dd' }}">
-                            {{ ::vm.post.posted_at | date: 'd MMM yyyy' }}
+                        <p itemprop="datePublished" content="{{ ::vm.post.date | date: 'yyyy-mm-dd' }}">
+                            {{ ::vm.post.date | date: 'd MMM yyyy' }}
                         </p>
 
                     </div>
@@ -66,7 +66,7 @@
     </header>
 
     <div id="main">
-        <ohs-content-renderer content="::vm.post.body">
+        <ohs-content-renderer content="::vm.post.contents">
         </ohs-content-renderer>
     </div>
 

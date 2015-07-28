@@ -23,7 +23,7 @@ export default ngModule => {
 
             one(slug) {
 
-                const POSTS_DETAIL_URL = url.resolve(POSTS_LIST_URL, `${slug}`);
+                const POSTS_DETAIL_URL = url.resolve(API_BASE_URL, `blogs/${slug}/`);
 
                 return $http.get(POSTS_DETAIL_URL).then(
                     (response) => {

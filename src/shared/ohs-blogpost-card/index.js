@@ -7,10 +7,7 @@ module.exports = function(ngModule) {
         return {
             restrict: 'E',
             scope: {
-                slug: '@',
-                title: '@',
-                category: '@',
-                thumbnailImageUrl: '@'
+                model: '='
             },
             replace: true,
             template: require('./ohs-blogpost-card.html')
