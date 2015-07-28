@@ -18,7 +18,7 @@ export default ngModule => {
         // Central store of Company meta inf
         .constant('COMPANY_META', {
             phone: {
-                number: '+44 (0) 203 7738175',
+                number: '+44 203 7738175',
                 label: 'Call',
                 icon: 'line-phone',
                 icon_sm: 'line-sm-phone',
