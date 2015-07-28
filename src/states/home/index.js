@@ -17,11 +17,11 @@ module.exports = function(ngModule) {
                     resolve: {
 
                         posts: function(BlogContentService) {
-                            return BlogContentService.featured();
+                            return BlogContentService.featured(6);
                         },
 
                         services: function(ServiceContentService) {
-                            return ServiceContentService.featured();
+                            return ServiceContentService.featured(6);
                         }
                     }
                 });
