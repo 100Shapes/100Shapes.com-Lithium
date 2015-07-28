@@ -11,24 +11,25 @@
     <header class="bg--blue bg--overlay pt+++ pb+ mb+ z1" style="background-image: url({{ ::vm.service.banner_image }})">
         <div class="wrapper">
             <div class="grid">
-                <div class="grid-item 1/1 lg-2/3">
-                    <div class="lg-mh++">
-                        <h1 view-title
-                            ng-bind-html="::vm.service.title_long">
-                        </h1>
+                <i class="grid-item 1/12"></i>
+                <div class="grid-item 1/1 lg-1/2">
 
-                        <p subtitle class="fz++ fwr m0">
-                            {{ ::vm.service.lead }}
-                        </p>
+                    <h1 view-title
+                        ng-bind-html="::vm.service.title_long">
+                    </h1>
 
-                        <hr class="dark-blue 1/8 left mb mt++" />
+                    <p subtitle class="fz++ fwr m0">
+                        {{ ::vm.service.lead }}
+                    </p>
 
-                        <p class="m0"
-                           ng-bind-html="::vm.service.intro">
-                        </p>
-                    </div>
+                    <hr class="dark-blue 1/8 left mb mt++" />
+
+                    <p class="m0 fwl"
+                       ng-bind-html="::vm.service.intro">
+                    </p>
 
                 </div>
+                <i class="grid-item 1/12"></i>
                 <div class="grid-item 1/1 lg-1/3 mt++ lg-mt0">
 
                     <div class="box box-round bg--white p0 mb tc">
