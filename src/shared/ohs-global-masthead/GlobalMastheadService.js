@@ -17,6 +17,12 @@ module.exports = function(ngModule) {
                 this.isOpen = !this.isOpen;
             },
 
+            closeNav() {
+                if (this.isOpen === true) {
+                    this.toggleNav();
+                }
+            },
+
             resetTheme() {
                 this.theme = GLOBAL_MASTHEAD_THEMES.DEFAULT;
             }

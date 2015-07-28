@@ -7,10 +7,7 @@ module.exports = function(ngModule) {
         return {
             restrict: 'E',
             scope: {
-                slug: '@',
-                title: '@',
-                description: '@',
-                thumbnailImageUrl: '@'
+                model: '='
             },
             replace: true,
             template: require('./ohs-service-card.html')

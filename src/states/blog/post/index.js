@@ -14,7 +14,7 @@ export default ngModule => {
 
                         post: function(BlogContentService, $stateParams) {
                             let slug = $stateParams.slug;
-                            return BlogContentService.slug(slug);
+                            return BlogContentService.one(slug);
                         }
 
                     }

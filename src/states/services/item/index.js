@@ -15,7 +15,7 @@ export default ngModule => {
 
                         service: function(ServiceContentService, $stateParams) {
                             let slug = $stateParams.slug;
-                            return ServiceContentService.slug(slug);
+                            return ServiceContentService.one(slug);
                         }
 
                     }

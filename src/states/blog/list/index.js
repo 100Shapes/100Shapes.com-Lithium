@@ -20,9 +20,7 @@ export default ngModule => {
                         },
 
                         featuredPost: function(BlogContentService) {
-                            return BlogContentService.featured(1).then(function(items) {
-                                return items[0];
-                            });
+                            return BlogContentService.featured(1);
                         }
 
                     }
