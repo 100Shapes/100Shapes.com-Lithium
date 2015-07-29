@@ -64,12 +64,12 @@
                     <h2 class="mt0">Categories</h2>
 
                     <ol class="list-bare">
-                        <li ng-repeat="category in ::vm.categories track by category.title">
+                        <li ng-repeat="category in ::vm.categories track by category.name">
                             <h3 class="mb--">
                                 <a href
-                                   ng-click="vm.setCategoryFilter(category.id)"
+                                   ng-click="vm.setCategoryFilter(category.name)"
                                    class="fg--orange">
-                                    {{ ::category.title }}
+                                    {{ ::category.name }}
                                 </a>
                             </h3>
 

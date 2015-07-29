@@ -15,8 +15,9 @@ export default ngModule => {
                         },
 
                         categories: function(BlogContentService) {
-                            return {};
-                            return BlogContentService.categories();
+                            return BlogContentService.meta().then(function(response) {
+                                return response.categories;
+                            });
                         },
 
                         featuredPost: function(BlogContentService) {
@@ -25,7 +26,7 @@ export default ngModule => {
 
                     }
                 });
-            
+
         });
 
     //////////////////
@@ -43,7 +44,9 @@ export default ngModule => {
         vm.filter = {};
 
         vm.setCategoryFilter = function(categoryId) {
-            vm.filter = { 'category': categoryId };
+            vm.filter = {
+                'category': categoryId
+            };
             $stateParams.category = categoryId;
         }
 
@@ -52,5 +55,5 @@ export default ngModule => {
             $stateParams.category = null;
         }
     }
-    
+
 }

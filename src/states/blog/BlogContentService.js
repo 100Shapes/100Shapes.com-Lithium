@@ -7,7 +7,7 @@ export default ngModule => {
 
     function BlogContentService($http, API_BASE_URL, AUTHORS) {
 
-        const POSTS_LIST_URL = url.resolve(API_BASE_URL, 'blogs');
+        const POSTS_LIST_URL = url.resolve(API_BASE_URL, 'blog');
 
         const blogContentService =  {
 
@@ -15,7 +15,17 @@ export default ngModule => {
 
                 return $http.get(POSTS_LIST_URL).then(
                     (response) => {
-                        return response.data.blogs;
+                        return response.data.items;
+                    }
+                );
+
+            },
+
+            meta() {
+
+                return $http.get(POSTS_LIST_URL).then(
+                    (response) => {
+                        return response.data.meta;
                     }
                 );
 
@@ -23,7 +33,7 @@ export default ngModule => {
 
             one(slug) {
 
-                const POSTS_DETAIL_URL = url.resolve(API_BASE_URL, `blogs/${slug}/`);
+                const POSTS_DETAIL_URL = url.resolve(API_BASE_URL, `blog/${slug}/`);
 
                 return $http.get(POSTS_DETAIL_URL).then(
                     (response) => {
@@ -33,10 +43,6 @@ export default ngModule => {
                         return post;
                     }
                 );
-            },
-
-            categories() {
-                return {};
             },
 
             find_author(slug) {
@@ -52,9 +58,9 @@ export default ngModule => {
                 }).then(
                     (response) => {
                         if (QUANTITY === 1) {
-                            return response.data.blogs[0];
+                            return response.data.items[0];
                         }
-                        return response.data.blogs;
+                        return response.data.items;
                     }
                 );
             }
@@ -63,5 +69,5 @@ export default ngModule => {
         return blogContentService;
     }
 
-    
+
 }

@@ -15,7 +15,7 @@ export default ngModule => {
 
                 return $http.get(API_LIST_URL).then(
                     (response) => {
-                        return response.data.services;
+                        return response.data.items;
                     }
                 );
 
@@ -45,9 +45,9 @@ export default ngModule => {
                 ).then(
                     (response) => {
                         if (QUANTITY === 1) {
-                            return response.data.pages[0];
+                            return response.data.items[0];
                         }
-                        return response.data.pages;
+                        return response.data.items;
                     }
                 );
             }
@@ -58,5 +58,5 @@ export default ngModule => {
         return serviceContentService;
     }
 
-    
+
 }

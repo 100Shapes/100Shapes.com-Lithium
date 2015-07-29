@@ -17,23 +17,40 @@ module.exports = {
         chunkFilename: "modules/[chunkhash].js"
     },
 
-    module:  {
-        loaders: [
-            {test: /\.js$/,           loader: 'babel', exclude: /node_modules/},
-            {test: /\.css$/,          loader: 'style!css!autoprefixer-loader?browsers=last 2 version', exclude: /node_modules/ },
-            {test: /\.less$/,         loader: 'style!css!autoprefixer-loader?browsers=last 2 version!less', exclude: /node_modules/ },
-            {test: /\.html$/,         loader: 'html?attrs=img:src source:src', exclude: /node_modules/},
-            {test: /\.json$/,         loader: 'json', exclude: /node_modules/},
-            {
-                test: /\.(jpe?g|png|gif)$/i,
-                loaders: [
-                    'file?hash=sha512&digest=hex&name=[hash].[ext]',
-                    'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
-                ]
-            },
-            { test: /\.woff(2)?(-1enn7r)?$/, loader: "url-loader?limit=10000&minetype=application/font-woff" },
-            { test: /\.(ttf|eot|svg)?(-1enn7r)?(#iefix-1enn7r)?(-1enn7r#symphinity)$/, loader: "file-loader" }
-        ],
+    module: {
+        loaders: [{
+            test: /\.js$/,
+            loader: 'babel',
+            exclude: /node_modules/
+        }, {
+            test: /\.css$/,
+            loader: 'style!css!autoprefixer-loader?browsers=last 2 version',
+            exclude: /node_modules/
+        }, {
+            test: /\.less$/,
+            loader: 'style!css!autoprefixer-loader?browsers=last 2 version!less',
+            exclude: /node_modules/
+        }, {
+            test: /\.html$/,
+            loader: 'html?attrs=img:src source:src',
+            exclude: /node_modules/
+        }, {
+            test: /\.json$/,
+            loader: 'json',
+            exclude: /node_modules/
+        }, {
+            test: /\.(jpe?g|png|gif)$/i,
+            loaders: [
+                'file?hash=sha512&digest=hex&name=[hash].[ext]',
+                'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+            ]
+        }, {
+            test: /\.woff(2)?(-1enn7r)?$/,
+            loader: "url-loader?limit=10000&minetype=application/font-woff"
+        }, {
+            test: /\.(ttf|eot|svg)?(-1enn7r)?(#iefix-1enn7r)?(-1enn7r#symphinity)$/,
+            loader: "file-loader"
+        }],
 
         noParse: [
             path.join('node_modules', '/angular'),
@@ -55,7 +72,7 @@ module.exports = {
         }),
 
         new webpack.DefinePlugin({
-            __API_BASE_URL__: JSON.stringify(JSON.parse(process.env.API_BASE_URL || '"http://192.168.0.32:8000/api/v1/"')),
+            __API_BASE_URL__: JSON.stringify(JSON.parse(process.env.API_BASE_URL || '"http://proto.api.100shapes.com/"')),
             __DEV__: JSON.parse(process.env.DEV || true)
         })
 
