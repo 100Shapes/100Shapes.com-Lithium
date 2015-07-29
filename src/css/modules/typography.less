@@ -9,7 +9,10 @@ figcaption {
 }
 
 h1, .h1 {
-    line-height: 58.5 / @font-size-heading-1;
+    .screen-md-min({
+        font-size: unit(54.844, px) !important;
+        line-height: 1.2;
+    })
 }
 
 h2, .h2 {
@@ -36,15 +39,6 @@ p, li {
   .screen-md-min({
     font-size: unit(24.05, px) !important;
     line-height: 1.6;
-  })
-
-}
-
-fz\- {
-
-  .screen-md-min({
-    font-size: unit(24.05, px) !important;
-    line-height: 1.4;
   })
 
 }
@@ -110,4 +104,20 @@ h3, .h3 {
 
 .lh1 {
   line-height: 1;
+}
+
+
+.fz\+ {
+  .screen-md-min({
+    .to-rem(font-size, @font-size-xx-large, ~"!important");
+  })
+}
+
+fz\- {
+
+  .screen-md-min({
+    font-size: unit(24.05, px) !important;
+    line-height: 1.4;
+  })
+
 }
