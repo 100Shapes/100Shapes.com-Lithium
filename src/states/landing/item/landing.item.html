@@ -1,6 +1,6 @@
-<ohs-meta-group title="{{ ::vm.landing_page.title }} – {{ ::vm.landing_page.lead }}"
-                description="{{ ::vm.landing_page.search_description }}"
-                image="{{ ::vm.landing_page.thumbnail_url }}">
+<ohs-meta-group title="{{ ::vm.service.title_long | htmlToPlaintext }} – {{ ::vm.service.lead }}"
+                description="{{ ::vm.landing_page.description }}"
+                image="{{ ::vm.landing_page.banner_image }}">
 </ohs-meta-group>
 
 
@@ -9,7 +9,7 @@
          typeof="NewsArticle"
          id="main">
 
-    <header class="bg--blue pt++ pb mb+" style="background-image: url({{ :: vm.landing_page.banner_url }})">
+    <header class="bg--blue pt++ pb mb+" style="background-image: url({{ :: vm.landing_page.banner_image }})">
         <div class="wrapper">
             <div class="grid">
                 <div class="grid-item 1/1 lg-2/3 pr+">
@@ -31,7 +31,7 @@
 
         <div class="grid grid-align-center">
             <div class="grid-item 1/1 md-4/5">
-                <ohs-content-renderer content="::vm.landing_page.body">
+                <ohs-content-renderer content="::vm.landing_page.contents">
                 </ohs-content-renderer>
             </div>
         </div>

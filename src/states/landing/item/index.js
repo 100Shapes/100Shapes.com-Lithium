@@ -15,12 +15,12 @@ export default ngModule => {
 
                         landing_page: function(LandingContentService, $stateParams) {
                             let slug = $stateParams.slug;
-                            return LandingContentService.slug(slug);
+                            return LandingContentService.one(slug);
                         }
 
                     }
                 });
-            
+
         });
 
     //////////////////
@@ -33,5 +33,5 @@ export default ngModule => {
         vm.landing_page = landing_page;
 
     }
-    
+
 }
