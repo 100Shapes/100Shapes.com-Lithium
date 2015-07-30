@@ -5,7 +5,6 @@ require('angularjs-viewhead');
 require('angular-sanitize');
 require('angular-animate');
 require('angular-google-analytics');
-require('angular-scroll');
 require('angular-uuid');
 require('angular-climb');
 require('exports?window.Headroom!headroom');
@@ -21,7 +20,6 @@ const ngModule = angular.module('app', [
     'ui.router',
     'viewhead',
     'ngSanitize',
-    'duScroll',
     'angular-google-analytics',
     'angular-uuid',
     'headroom',
