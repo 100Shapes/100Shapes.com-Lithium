@@ -8,21 +8,23 @@
          vocab="http://schema.org/"
          typeof="NewsArticle">
 
-    <header class="bg--blue bg--overlay pt+++ pb+ mb+ z1" style="background-image: url({{ ::vm.service.banner_image }})">
+    <header class="bg--black pt+++ pb+ mb+ z1" style="background-image: url({{ ::vm.service.banner_image }})">
         <div class="wrapper">
             <div class="grid">
                 <i class="grid-item 1/12"></i>
                 <div class="grid-item 1/1 lg-1/2">
 
                     <h1 view-title
-                        ng-bind-html="::vm.service.title_long">
+                        ng-bind-html="::vm.service.title_long"
+                        itemprop="headline"
+                        class="tc lg-tl">
                     </h1>
 
-                    <p subtitle class="fz++ fwr m0">
+                    <p subtitle class="fz++ fwr m0 tc lg-tl">
                         {{ ::vm.service.lead }}
                     </p>
 
-                    <hr class="dark-blue 1/8 left mb mt++" />
+                    <hr class="white 1/8 lg-left mb mt lg-mt++" />
 
                     <p class="m0 fwl"
                        ng-bind-html="::vm.service.intro">
@@ -30,7 +32,7 @@
 
                 </div>
                 <i class="grid-item 1/12"></i>
-                <div class="grid-item 1/1 lg-1/3 mt++ lg-mt0">
+                <div class="grid-item 1/1 lg-1/3 mt++ lg-mt0 dn lg-dib">
 
                     <div class="box box-round bg--white p0 mb tc">
 
@@ -109,7 +111,8 @@
             </div>
         </div>
 
-        <ohs-content-renderer content="::vm.service.contents">
+        <ohs-content-renderer content="::vm.service.contents"
+                              itemprop="articleBody">
         </ohs-content-renderer>
 
     </div>
