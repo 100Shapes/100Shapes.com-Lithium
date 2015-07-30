@@ -61,6 +61,22 @@ export default ngModule => {
                         return response.data.items;
                     }
                 );
+            },
+
+            featured(QUANTITY = 4) {
+                return $http.get(POSTS_LIST_URL, {
+                    params: {
+                        featured: true,
+                        limit: QUANTITY
+                    }
+                }).then(
+                    (response) => {
+                        if (QUANTITY === 1) {
+                            return response.data.items[0];
+                        }
+                        return response.data.items;
+                    }
+                );
             }
         };
 
