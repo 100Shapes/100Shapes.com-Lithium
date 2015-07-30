@@ -1,33 +1,43 @@
+.wf-loading,
+.wf-inactive {
+
+  h1, h2, h3, h4, h5, h6, p, span, li {
+    background: @color-gray-lightest;
+    color: transparent !important;
+  }
+
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6, .hn
 [subtitle] {
-    hyphens: none;
-} 
+  hyphens: none;
+}
 
 figcaption {
-    .to-rem(margin-left, @figcaption-margin-top);
+  .to-rem(margin-left, @figcaption-margin-top);
 }
 
 h1, .h1 {
-    .screen-md-min({
-        font-size: unit(54.844, px) !important;
-        line-height: 1.2;
-    })
+  .screen-md-min({
+    font-size: unit(54.844, px) !important;
+    line-height: 1.2;
+  })
 }
 
 h2, .h2 {
-    .to-rem(margin-top, @spacing-double);
-    font-weight: @font-weight-regular;
+  .to-rem(margin-top, @spacing-double);
+  font-weight: @font-weight-regular;
 }
 
 h3, .h3 {
-    font-family: @font-family-serif;
-    font-style: italic;
-    color: @color-gray-light;
+  font-family: @font-family-serif;
+  font-style: italic;
+  color: @color-gray-light;
 
-    .screen-md-max({
-      .to-rem(font-size, @font-size);
-    });
+  .screen-md-max({
+    .to-rem(font-size, @font-size);
+  });
 }
 
 p, li {
@@ -76,12 +86,12 @@ h3, .h3 {
 
 
 .ffs {
-    font-family: @font-family-serif;
-    font-weight: normal;
+  font-family: @font-family-serif;
+  font-weight: normal;
 }
 
 .fsi {
-    font-style: italic;
+  font-style: italic;
 }
 
 .fwl {
@@ -89,11 +99,11 @@ h3, .h3 {
 }
 
 .fwm {
-    font-weight: @font-weight-medium;
+  font-weight: @font-weight-medium;
 }
 
 .fwr {
-    font-weight: @font-weight-regular;
+  font-weight: @font-weight-regular;
 }
 
 .cw {
