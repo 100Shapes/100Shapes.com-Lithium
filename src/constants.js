@@ -86,7 +86,7 @@ export default ngModule => {
                 profile: require('./img/profiles/trevor.jpg')
             },
             guest: {
-                name: 'Guest author',
+                name: 'guest author',
                 profile: require('./img/profiles/guest.jpg')
             }
         })
@@ -95,7 +95,7 @@ export default ngModule => {
         .constant('DEFAULT_MAILINGLIST_SIGNUP_CONFIG', {
             slim: false,
             headline: 'Join our subscribers',
-            intro: 'Regular news from our UX Strategists and Designers.'
+            intro: 'Regular news from our UX Consultants and Designers.'
         })
 
         .constant('CLIMB_FEED_ID', '55a4dac845284e58ac50ee1c')
