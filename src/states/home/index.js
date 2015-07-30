@@ -21,7 +21,7 @@ module.exports = function(ngModule) {
                         },
 
                         services: function(ServiceContentService) {
-                            return ServiceContentService.featured(6);
+                            return ServiceContentService.quantity(6);
                         }
                     }
                 });

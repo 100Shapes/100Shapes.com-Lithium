@@ -33,12 +33,11 @@ export default ngModule => {
             },
 
 
-            featured(QUANTITY = 6) {
+            quantity(QUANTITY = 6) {
 
                 return $http.get(API_LIST_URL,
                     {
                         params: {
-                            featured: true,
                             limit: QUANTITY
                         }
                     }
