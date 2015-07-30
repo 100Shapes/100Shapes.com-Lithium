@@ -49,12 +49,13 @@
 
                     <div class="db mv-- fz-">
 
-                        <p itemprop="author" itemscope itemtype="http://schema.org/Person" class="m0">
-                            <small class="ffs">by</small>
+                        <p itemprop="author" itemscope itemtype="http://schema.org/Person" class="m0 fz-">
+                            <span class="ffs">by</span>
                             <span itemprop="name">{{ ::vm.post.author.name }}</span>
                         </p>
 
-                        <p itemprop="datePublished"
+                        <p class="fz-"
+                           itemprop="datePublished"
                            content="{{ ::vm.post.date | date: 'yyyy-mm-dd' }}">
                             {{ ::vm.post.date | date: 'd MMM yyyy' }}
                         </p>
