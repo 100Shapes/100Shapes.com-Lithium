@@ -16,6 +16,7 @@
 
                     <h1 view-title
                         ng-bind-html="::vm.service.title_long"
+                        itemprop="headline"
                         class="tc lg-tl">
                     </h1>
 
@@ -110,7 +111,8 @@
             </div>
         </div>
 
-        <ohs-content-renderer content="::vm.service.contents">
+        <ohs-content-renderer content="::vm.service.contents"
+                              itemprop="articleBody">
         </ohs-content-renderer>
 
     </div>

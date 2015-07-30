@@ -20,7 +20,7 @@
                 </span>
 
                 <h1 class="ffs mt"
-                    property="headline"
+                    itemprop="headline"
                     view-title>
                     {{ ::vm.post.title_long }}
                 </h1>
@@ -51,7 +51,8 @@
                             <span itemprop="name">{{ ::vm.post.author.name }}</span>
                         </p>
 
-                        <p itemprop="datePublished" content="{{ ::vm.post.date | date: 'yyyy-mm-dd' }}">
+                        <p itemprop="datePublished"
+                           content="{{ ::vm.post.date | date: 'yyyy-mm-dd' }}">
                             {{ ::vm.post.date | date: 'd MMM yyyy' }}
                         </p>
 
