@@ -1,7 +1,6 @@
 export default ngModule => {
 
     const url = require('url');
-    const _ = require('lodash');
 
     ngModule.factory('BlogContentService', BlogContentService)
 

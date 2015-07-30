@@ -54,7 +54,6 @@ module.exports = {
 
         noParse: [
             path.join('node_modules', '/angular'),
-            path.join('node_modules', '/lodash'),
             path.join('node_modules', '/angular-ui-router'),
             path.join('node_modules', '/Cardinal')
         ]

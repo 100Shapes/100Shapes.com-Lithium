@@ -55,7 +55,6 @@
     "json-loader": "^0.5.2",
     "less": "^2.5.1",
     "less-loader": "^2.2.0",
-    "lodash": "^3.9.3",
     "ng-annotate-webpack-plugin": "^0.1.2",
     "node-libs-browser": "^0.5.2",
     "open": "0.0.5",
