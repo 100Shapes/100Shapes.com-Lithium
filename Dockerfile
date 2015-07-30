@@ -30,7 +30,7 @@ RUN npm install
 ADD . /home/app/
 
 ENV PRODUCTION True
-ENV API_BASE_URL '"http://api.100shapes.com/api/v1/"'
+ENV API_BASE_URL '"http://api.100shapes.com/"'
 
 RUN webpack -p
 
