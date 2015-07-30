@@ -17,7 +17,7 @@ module.exports = function(ngModule) {
                     resolve: {
 
                         posts: function(BlogContentService) {
-                            return BlogContentService.featured(6);
+                            return BlogContentService.quantity(6);
                         },
 
                         services: function(ServiceContentService) {

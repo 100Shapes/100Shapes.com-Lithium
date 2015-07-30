@@ -49,10 +49,9 @@ export default ngModule => {
                 return AUTHORS[slug];
             },
 
-            featured(QUANTITY = 4) {
+            quantity(QUANTITY = 4) {
                 return $http.get(POSTS_LIST_URL, {
                     params: {
-                        featured: true,
                         limit: QUANTITY
                     }
                 }).then(
