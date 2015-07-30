@@ -72,7 +72,7 @@ module.exports = {
         }),
 
         new webpack.DefinePlugin({
-            __API_BASE_URL__: JSON.stringify(JSON.parse(process.env.API_BASE_URL || '"http://proto.api.100shapes.com/"')),
+            __API_BASE_URL__: JSON.stringify(JSON.parse(process.env.API_BASE_URL || '"http://localhost:3000/"')),
             __DEV__: JSON.parse(process.env.DEV || true)
         })
 
