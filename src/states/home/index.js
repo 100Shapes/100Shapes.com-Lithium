@@ -15,7 +15,13 @@ module.exports = function(ngModule) {
                     resolve: {
 
                         posts: function(BlogContentService) {
-                            return BlogContentService.random(6);
+
+                            let queryParams = {
+                                limit: 6,
+                                random: true
+                            };
+
+                            return BlogContentService.query(queryParams);
                         },
 
                         services: function(ServiceContentService) {

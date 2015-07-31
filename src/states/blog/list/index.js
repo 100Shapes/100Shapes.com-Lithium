@@ -11,7 +11,7 @@ export default ngModule => {
                     resolve: {
 
                         posts: function(BlogContentService) {
-                            return BlogContentService.all();
+                            return BlogContentService.query();
                         },
 
                         categories: function(BlogContentService) {
@@ -20,8 +20,14 @@ export default ngModule => {
                             });
                         },
 
-                        featuredPost: function(BlogContentService) {
-                            return BlogContentService.featured(1);
+                        featured: function (BlogContentService) {
+
+                            let queryParams = {
+                                featured: true,
+                                limit: 1
+                            };
+
+                            return BlogContentService.query(queryParams);
                         }
 
                     }
@@ -33,12 +39,12 @@ export default ngModule => {
 
     ngModule.controller('BlogListCtrl', BlogListCtrl);
 
-    function BlogListCtrl(posts, categories, featuredPost, GlobalMastheadService, GLOBAL_MASTHEAD_THEMES, $stateParams) {
+    function BlogListCtrl(posts, categories, featured, GlobalMastheadService, GLOBAL_MASTHEAD_THEMES, $stateParams) {
         let vm = this;
 
         vm.posts = posts;
         vm.categories = categories;
-        vm.featured_post = featuredPost;
+        vm.featured = featured;
         GlobalMastheadService.theme = GLOBAL_MASTHEAD_THEMES.ORANGE;
 
         vm.filter = {};
@@ -48,7 +54,7 @@ export default ngModule => {
                 'category': categoryId
             };
             $stateParams.category = categoryId;
-        }
+        };
 
         vm.clearFilter = function() {
             vm.filter = {};

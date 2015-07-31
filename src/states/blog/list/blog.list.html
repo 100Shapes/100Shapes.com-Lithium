@@ -29,17 +29,18 @@
             <div class="grid-item 1/1 lg-2/3">
 
                 <a href
-                   ng-if="!vm.filter.category"
                    class="box-round mb- tc card card--blog"
-                   style="background-image: url('{{ ::vm.featured_post.square_image }}');"
-                   ui-sref="main.blog.post({ slug:vm.featured_post.slug })">
+                   ng-repeat="it in ::vm.featured | filter:vm.filter.category track by it.guid"
+                   ng-if="!vm.filter.category"
+                   style="background-image: url('{{ ::it.square_image }}');"
+                   ui-sref="main.blog.post({ slug:it.slug })">
 
                     <span class="card__label mb- mt0 h2 fz+ cw dn lg-db">
-                        {{ ::vm.featured_post.category }}
+                        {{ ::it.category }}
                     </span>
 
                     <h2 class="card__title h3 fz++">
-                        {{ ::vm.featured_post.title }}
+                        {{ ::it.title }}
                     </h2>
 
 
