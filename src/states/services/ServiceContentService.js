@@ -2,78 +2,12 @@ export default ngModule => {
 
     const url = require('url');
 
-    ngModule.factory('ServiceContentService', ServiceContentService)
+    ngModule.factory('ServiceContentService', ServiceContentService);
 
-    function ServiceContentService($http, API_BASE_URL) {
+    function ServiceContentService(ApiBaseService) {
 
-        const API_LIST_URL = url.resolve(API_BASE_URL, 'services');
-
-        const serviceContentService =  {
-
-            all() {
-
-                return $http.get(API_LIST_URL).then(
-                    (response) => {
-                        return response.data.items;
-                    }
-                );
-
-            },
-
-            one(slug) {
-
-                const POSTS_DETAIL_URL = url.resolve(API_LIST_URL, `/services/${slug}/`);
-
-                return $http.get(POSTS_DETAIL_URL).then(
-                    (response) => {
-                        return response.data;
-                    }
-                );
-            },
-
-
-            quantity(QUANTITY = 6) {
-
-                return $http.get(API_LIST_URL,
-                    {
-                        params: {
-                            limit: QUANTITY
-                        }
-                    }
-                ).then(
-                    (response) => {
-                        if (QUANTITY === 1) {
-                            return response.data.items[0];
-                        }
-                        return response.data.items;
-                    }
-                );
-            },
-
-            random(QUANTITY) {
-
-                return $http.get(API_LIST_URL,
-                    {
-                        params: {
-                            random: true,
-                            limit: QUANTITY
-                        }
-                    }
-                ).then(
-                    (response) => {
-                        if (QUANTITY === 1) {
-                            return response.data.items[0];
-                        }
-                        return response.data.items;
-                    }
-                );
-            }
-
-
-        };
+        let serviceContentService = new ApiBaseService('services');
 
         return serviceContentService;
     }
-
-
 }

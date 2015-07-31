@@ -1,6 +1,6 @@
 export default ngModule => {
 
-    require('./services.list.less')
+    require('./services.list.less');
 
     ngModule
         .config($stateProvider => {
@@ -13,7 +13,7 @@ export default ngModule => {
                     resolve: {
 
                         services: function(ServiceContentService) {
-                            return ServiceContentService.all();
+                            return ServiceContentService.query();
                         }
 
                     }

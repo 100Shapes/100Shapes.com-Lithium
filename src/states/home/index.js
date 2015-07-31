@@ -19,7 +19,13 @@ module.exports = function(ngModule) {
                         },
 
                         services: function(ServiceContentService) {
-                            return ServiceContentService.random(6);
+
+                            let queryParams = {
+                                limit: 3,
+                                random: true
+                            };
+
+                            return ServiceContentService.query(queryParams);
                         }
                     }
                 });
