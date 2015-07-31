@@ -48,6 +48,25 @@ export default ngModule => {
                         return response.data.items;
                     }
                 );
+            },
+
+            random(QUANTITY) {
+
+                return $http.get(API_LIST_URL,
+                    {
+                        params: {
+                            random: true,
+                            limit: QUANTITY
+                        }
+                    }
+                ).then(
+                    (response) => {
+                        if (QUANTITY === 1) {
+                            return response.data.items[0];
+                        }
+                        return response.data.items;
+                    }
+                );
             }
 
 

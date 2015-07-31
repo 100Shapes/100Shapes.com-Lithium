@@ -15,11 +15,11 @@ module.exports = function(ngModule) {
                     resolve: {
 
                         posts: function(BlogContentService) {
-                            return BlogContentService.quantity(6);
+                            return BlogContentService.random(6);
                         },
 
                         services: function(ServiceContentService) {
-                            return ServiceContentService.quantity(6);
+                            return ServiceContentService.random(6);
                         }
                     }
                 });

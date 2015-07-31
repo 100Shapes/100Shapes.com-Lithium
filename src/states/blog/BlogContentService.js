@@ -77,6 +77,22 @@ export default ngModule => {
                         return response.data.items;
                     }
                 );
+            },
+
+            random(quantity) {
+                return $http.get(POSTS_LIST_URL, {
+                    params: {
+                        random: true,
+                        limit: quantity
+                    }
+                }).then(
+                    (response) => {
+                        if (quantity === 1) {
+                            return response.data.items[0];
+                        }
+                        return response.data.items;
+                    }
+                );
             }
         };
 
