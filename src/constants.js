@@ -57,6 +57,11 @@ export default ngModule => {
                     icon: 'fill-dribbble',
                     target: 'https://dribbble.com/100shapes',
                     handle: '100shapes'
+                },
+                slideshare: {
+                    icon: 'fill-slideshare',
+                    target: 'http://www.slideshare.net/100shapes',
+                    handle: '100shapes'
                 }
             }
         })
