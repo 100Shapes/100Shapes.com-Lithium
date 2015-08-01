@@ -15,6 +15,7 @@ export default ngModule => {
 
                         landing_page: function(LandingContentService, $stateParams) {
                             let slug = $stateParams.slug;
+                            debugger;
                             return LandingContentService.one(slug);
                         }
 
@@ -27,11 +28,11 @@ export default ngModule => {
 
     ngModule.controller('LandingPageCtrl', LandingPageCtrl);
 
-    function LandingPageCtrl(landing_page) {
+    function LandingPageCtrl(landing_page, COMPANY_META) {
         let vm = this;
 
         vm.landing_page = landing_page;
-
+        vm.company = COMPANY_META;
     }
 
 }
