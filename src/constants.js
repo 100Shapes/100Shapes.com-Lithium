@@ -100,13 +100,10 @@ export default ngModule => {
         .constant('DEFAULT_MAILINGLIST_SIGNUP_CONFIG', {
             slim: false,
             headline: 'Join our subscribers',
-            intro: 'Regular news from our UX Consultants and Designers.'
+            intro: 'Regular design news &amp; updates from our UX&nbsp;Designers.'
         })
 
         .constant('CLIMB_FEED_ID', '55a4dac845284e58ac50ee1c')
 
-        //Scroll options
-        .value('duScrollDuration', 200)
-        .value('duScrollOffset', 300)
     ;
 };
