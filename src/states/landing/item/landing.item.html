@@ -6,6 +6,10 @@
 <meta property="image" content="{{ ::vm.landing_page.banner_image }}"/>
 <meta property="image" content="{{ ::vm.landing_page.square_image }}"/>
 
+<span view-title
+      class="dn"
+      ng-bind-template="{{ ::vm.landing_page.title_long | htmlToPlaintext }} | UX &amp; Design Agency | 100 Shapes">
+</span>
 
 
 <article class="service-page"
@@ -18,8 +22,7 @@
                 <i class="grid-item 1/12 dn xl-dib"></i>
                 <div class="grid-item 1/1 lg-1/2">
 
-                    <h1 view-title
-                        ng-bind-html="::vm.landing_page.title_long"
+                    <h1 ng-bind-html="::vm.landing_page.title_long"
                         itemprop="headline"
                         class="tc lg-tl">
                     </h1>

@@ -1,10 +1,16 @@
-<ohs-meta-group title="{{ ::vm.post.title_long }} – {{ ::vm.post.lead }}"
+<ohs-meta-group title="{{ ::vm.post.title_long }} – {{ ::vm.post.subtitle }}"
                 description="{{ ::vm.post.description }}"
                 image="{{ ::vm.post.banner_image }}">
 </ohs-meta-group>
 
 <meta property="image" content="{{ ::vm.post.banner_image }}" />
 <meta property="image" content="{{ ::vm.post.square_image }}" />
+
+<span view-title
+      class="dn"
+      ng-bind-template="{{ ::vm.post.title_long | htmlToPlaintext }} | 100 Shapes Blog">
+</span>
+
 
 <article class="blog-post"
          vocab="http://schema.org/"
@@ -24,8 +30,7 @@
                 </h6>
 
                 <h1 class="ffs mt"
-                    itemprop="headline"
-                    view-title>
+                    itemprop="headline">
                     {{ ::vm.post.title_long }}
                 </h1>
 
