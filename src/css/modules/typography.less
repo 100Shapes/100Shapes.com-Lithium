@@ -43,12 +43,17 @@ h1, .h1 {
 h2, .h2 {
   .to-rem(margin-top, @spacing-double);
   font-weight: @font-weight-regular;
+
+  .screen-md-min({ .to-rem(font-size, @font-size-xxxx-large); })
 }
 
 h3, .h3 {
   font-family: @font-family-serif;
   font-style: italic;
   color: @color-gray-light;
+
+  .screen-md-min({ .to-rem(font-size, @font-size-xxx-large); })
+
 }
 
 p, li {
