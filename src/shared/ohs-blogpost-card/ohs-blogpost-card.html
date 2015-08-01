@@ -3,11 +3,12 @@
    style="background-image: url('{{ ::model.square_image }}');"
    ui-sref="main.blog.post({ slug:model.slug })">
 
-    <h2 class="card__title h3 mb-">
+    <span class="card__label mt0 h2 fz- fg--grey dn lg-db"
+          ng-bind-html="::model.category">
+    </span>
+
+    <h2 class="card__title h3">
         {{ ::model.title }}
     </h2>
 
-    <span class="card__label m0 h2 fz+ cw dn lg-db">
-        {{ ::model.category }}
-    </span>
 </a>

@@ -35,8 +35,8 @@
                    style="background-image: url('{{ ::it.square_image }}');"
                    ui-sref="main.blog.post({ slug:it.slug })">
 
-                    <span class="card__label mb- mt0 h2 fz+ cw dn lg-db">
-                        {{ ::it.category }}
+                    <span class="card__label mb- mt0 h2 fz+ cw dn lg-db"
+                          ng-bind-html="::it.category">
                     </span>
 
                     <h2 class="card__title h3 fz++">
@@ -69,8 +69,8 @@
                             <h3 class="mb--">
                                 <a href
                                    ng-click="vm.setCategoryFilter(category.name)"
-                                   class="fg--orange">
-                                    {{ ::category.name }}
+                                   class="fg--orange"
+                                   ng-bind-html="::category.name">
                                 </a>
                             </h3>
 
