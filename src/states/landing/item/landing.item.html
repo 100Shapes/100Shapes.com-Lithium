@@ -3,26 +3,32 @@
                 image="{{ ::vm.landing_page.banner_image }}">
 </ohs-meta-group>
 
+<meta property="image" content="{{ ::vm.landing_page.banner_image }}"/>
+<meta property="image" content="{{ ::vm.landing_page.square_image }}"/>
+
+
 
 <article class="service-page"
          vocab="http://schema.org/"
          typeof="NewsArticle">
 
-    <header class="bg--blue bg--overlay pt+++ pb+ mb+ z1" style="background-image: url({{ ::vm.landing_page.banner_image }})">
+    <header class="bg--black pt+++ pb+ mb+ z1" style="background-image: url({{ ::vm.landing_page.banner_image }})">
         <div class="wrapper">
             <div class="grid">
-                <i class="grid-item 1/12"></i>
+                <i class="grid-item 1/12 dn xl-dib"></i>
                 <div class="grid-item 1/1 lg-1/2">
 
                     <h1 view-title
-                        ng-bind-html="::vm.landing_page.title_long">
+                        ng-bind-html="::vm.landing_page.title_long"
+                        itemprop="headline"
+                        class="tc lg-tl">
                     </h1>
 
-                    <p subtitle class="fz++ fwr m0">
+                    <p subtitle class="fz++ fwr m0 tc lg-tl">
                         {{ ::vm.landing_page.lead }}
                     </p>
 
-                    <hr class="dark-blue 1/8 left mb mt++" />
+                    <hr class="white 1/8 lg-left mb mt lg-mt++"/>
 
                     <p class="m0 fwl"
                        ng-bind-html="::vm.landing_page.intro">
@@ -30,7 +36,8 @@
 
                 </div>
                 <i class="grid-item 1/12"></i>
-                <div class="grid-item 1/1 lg-1/3 mt++ lg-mt0">
+
+                <div class="grid-item 5/12 xl-1/3 mt++ lg-mt0 dn lg-dib">
 
                     <div class="box box-round bg--white p0 mb tc">
 
@@ -44,7 +51,14 @@
                                 <ohs-icon name="{{vm.company.phone.icon_sm}}"
                                           class="fl mr- is-sm"></ohs-icon>
 
-                                {{ vm.company.phone.number }}
+                                <span class="sm-dn lg-dib xxl-dn">
+                                    Call us
+                                </span>
+
+                                <span class="dn xxl-dib">
+                                    {{ vm.company.phone.number }}
+                                </span>
+
 
                             </a>
 
@@ -54,13 +68,19 @@
                                 <ohs-icon name="{{vm.company.email.icon_sm}}"
                                           class="fl mr- is-sm"></ohs-icon>
 
-                                {{ vm.company.email.address }}
+                                <span class="sm-dn lg-dib xxl-dn">
+                                    Email us
+                                </span>
+
+                                <span class="dn xxl-dib">
+                                    {{ vm.company.email.address }}
+                                </span>
 
                             </a>
 
                         </div>
 
-                        <hr class="1/1 blue thin m0">
+                        <hr class="1/1 thin m0">
 
                         <div class="dib ph+ pv">
 
@@ -88,7 +108,7 @@
                 </div>
                 <div class="grid-item 1/2">
                     <a href="{{vm.company.phone.target}}"
-                       class="btn db btn-primary btn-round pv">
+                       class="btn db btn-round pv">
 
                         <ohs-icon name="{{vm.company.phone.icon_sm}}"
                                   class="fl mr- is-sm"></ohs-icon>
@@ -98,7 +118,7 @@
                 </div>
                 <div class="grid-item 1/2">
                     <a href="{{vm.company.email.target}}"
-                       class="btn db btn-primary btn-round pv">
+                       class="btn db btn-round pv">
 
                         <ohs-icon name="{{vm.company.email.icon_sm}}"
                                   class="fl mr- is-sm"></ohs-icon>
@@ -109,7 +129,8 @@
             </div>
         </div>
 
-        <ohs-content-renderer content="::vm.landing_page.contents">
+        <ohs-content-renderer content="::vm.landing_page.contents"
+                              itemprop="articleBody">
         </ohs-content-renderer>
 
     </div>
