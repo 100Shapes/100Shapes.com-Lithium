@@ -46,7 +46,14 @@
             }">
             <ohs-icon name="{{vm.company.email.icon_sm}}"
                       class="is-xs mr-"></ohs-icon>
-            {{vm.company.email.address}}
+
+            <span class="dn md-dib-only">
+                Email Us
+            </span>
+
+            <span class="dn lg-dib">
+                {{vm.company.email.address}}
+            </span>
 
         </a>
 
@@ -58,8 +65,14 @@
             }">
             <ohs-icon name="{{vm.company.phone.icon_sm}}"
                       class="is-xs mr-"></ohs-icon>
-            {{vm.company.phone.number}}
 
+            <span class="dn md-dib-only">
+                Call Us
+            </span>
+
+            <span class="dn lg-dib">
+                {{vm.company.phone.number}}
+            </span>
         </a>
 
     </div>
