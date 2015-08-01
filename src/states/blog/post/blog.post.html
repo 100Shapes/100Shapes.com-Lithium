@@ -15,12 +15,13 @@
         <div class="grid grid-align-center">
             <div class="grid-item 1/1 md-5/6 lg-4/5 tc mb">
 
-                <span class="h4 mb">
+                <h6 class="mb">
                    <a href
                       ui-sref="main.blog.list"
                       class="fg--orange sm-dn">/blog/</a>
-                    {{ ::vm.post.category }}
-                </span>
+                    <span ng-bind-html="::vm.post.category">
+                    </span>
+                </h6>
 
                 <h1 class="ffs mt"
                     itemprop="headline"
