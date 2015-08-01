@@ -40,7 +40,7 @@
 
         <a href="{{ vm.company.email.target }}"
            ga-track-event="['header-closed','make-contact', 'email']"
-           class="btn pv- fr dn md-dib vam fwl"
+           class="btn btn-link pv- fr dn md-dib vam fwl"
            ng-class="{
                 'vh': vm.GlobalMastheadService.isOpen
             }">
@@ -51,7 +51,7 @@
                 Email Us
             </span>
 
-            <span class="dn lg-dib">
+            <span class="dn xl-dib">
                 {{vm.company.email.address}}
             </span>
 
@@ -59,7 +59,7 @@
 
         <a href="{{ vm.company.phone.target }}"
            ga-track-event="['header-closed','make-contact', 'phone']"
-           class="btn pv- fr dn md-dib vam fwl"
+           class="btn btn-link pv- fr dn md-dib vam fwl"
            ng-class="{
                 'vh': vm.GlobalMastheadService.isOpen
             }">
@@ -70,7 +70,7 @@
                 Call Us
             </span>
 
-            <span class="dn lg-dib">
+            <span class="dn xl-dib">
                 {{vm.company.phone.number}}
             </span>
         </a>
