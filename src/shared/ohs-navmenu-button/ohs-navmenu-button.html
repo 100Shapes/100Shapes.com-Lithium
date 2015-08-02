@@ -1,10 +1,9 @@
 <button class="ohs-navmenu-button btn btn-link"
         ng-click="GlobalMastheadService.toggleNav()"
         ng-class="{ 'ohs-navmenu-button--open' : GlobalMastheadService.isOpen,
-                    'ohs-navmenu-button--closed' : !GlobalMastheadService.isOpen,
-                    'vh': shouldHide
+                    'ohs-navmenu-button--closed' : !GlobalMastheadService.isOpen
                   }"
-        ga-track-event="['nav-icon','toggled', 'menu']">
+        ga-track-event="['nav-button','toggled', 'menu']">
     <span class="menu-icon"></span>
     <span class="vh">Toggle nav</span>
 </button>

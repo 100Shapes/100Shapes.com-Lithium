@@ -7,17 +7,11 @@ export default ngModule => {
     function ohsNavmenuButton(GlobalMastheadService) {
         return {
             restrict: 'E',
-            scope: {
-                shouldHide: '&?'
-            },
+            scope: true,
             replace: true,
             template: require('./ohs-navmenu-button.html'),
             link: function($scope, elem, attrs) {
                 $scope.GlobalMastheadService = GlobalMastheadService;
-
-                if (!attrs['should-hide']) {
-                    $scope.shouldHide = false;
-                }
             }
         };
     }
