@@ -92,7 +92,7 @@ export default ngModule => {
             },
             guest: {
                 name: 'guest author',
-                profile: require('./img/profiles/guest.jpg')
+                profile: require('./img/profiles/guest.png')
             }
         })
 
