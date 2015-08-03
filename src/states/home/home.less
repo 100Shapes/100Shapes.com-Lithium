@@ -8,28 +8,3 @@
   color: @color-white;
   opacity: 0.8;
 }
-
-.home__header__title {
-  z-index: 2;
-  position: relative;
-  overflow: hidden;
-
-  &:after {
-    z-index: -1;
-    position: absolute;
-    width: 100%;
-    content: "Specialist UX & Design for broadcasters.";
-    font-family: @font-family-serif;
-    top: 0;
-    left: 0;
-    color: @color-blue-dark;
-    font-style: italic;
-    .to-rem(font-size, 125.08);
-    .to-rem(line-height, 132.9525);
-
-    .screen-lg-max({
-      display: none;
-    })
-  }
-}
-
