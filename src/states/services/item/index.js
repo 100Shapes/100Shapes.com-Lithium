@@ -1,6 +1,5 @@
 export default ngModule => {
 
-    require('./services.item.less');
     const angular = require('angular');
 
     ngModule
