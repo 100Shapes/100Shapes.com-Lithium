@@ -12,17 +12,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: 50%;
-  background-position-y: 50%;
+  background-position-y: 0%;
 
   text-decoration: none !important;
   .to-rem(margin-bottom, @grid-gutter-base);
   padding: 10%;
 
-  .screen-md-max({
-    height: 151px;
-    padding: 5%;
+  .screen-md-max({ .to-rem(height, @spacing-quadruple); padding: 8%
   });
-
 
   &:after {
     .transition();
@@ -64,6 +61,8 @@
 
 
 .card--blog {
+
+  .screen-md-max({ .to-rem(height, @spacing-base * 6); });
 
   .no-touch &:hover {
     &:after {
