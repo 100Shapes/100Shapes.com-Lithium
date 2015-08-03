@@ -50,9 +50,10 @@ h2, .h2 {
 h3, .h3 {
   font-family: @font-family-serif;
   font-style: italic;
-  color: @color-gray-light;
+  color: @color-gray-darkest;
+  .to-rem(margin-bottom, @spacing-fourth);
 
-  .screen-md-min({ .to-rem(font-size, @font-size-xxx-large); })
+  .screen-md-min({ .to-rem(font-size, @font-size-xx-large); })
 
 }
 
@@ -66,8 +67,8 @@ b, strong {
   font-weight: @font-weight-medium;
 }
 
-h1, h2, h4
-.h1, .h2, h4 {
+h1, h2, h3,
+.h1, .h2, .h3 {
 
   .bg--orange &,
   .bg--blue &,
@@ -76,12 +77,6 @@ h1, h2, h4
     color: @color-white;
   }
 
-}
-
-h3, .h3 {
-  .bg--blue & {
-    color: #C0D1FF;
-  }
 }
 
 .bg--orange,
