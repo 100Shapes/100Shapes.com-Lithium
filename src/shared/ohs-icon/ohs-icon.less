@@ -19,12 +19,10 @@
 
 svg {
 	symbol {
-		&[id|=line] { // seperate line and fills
+	  &[id|=line] {
 			stroke: currentColor;
 			fill: none;
 			path, g.path, g {
-				// stroke-dasharray: 250;
-				// stroke-dashoffset: 250;
 				stroke: currentColor;
 				stroke-linecap: round;
 				stroke-linejoin: round;
@@ -33,18 +31,12 @@ svg {
 			}
 	    }
 
-	    &[id|=fill] { // seperate line and fills
+	  &[id|=fill] {
 			fill: currentColor;
 			path, g.path, g {
 				fill: currentColor;
 
 			}
 	    }
-
-	    &[id|=pictogram] { // seperate line and fills
-	    	// dont change colour
-	    }
-
-
 	}
 }
