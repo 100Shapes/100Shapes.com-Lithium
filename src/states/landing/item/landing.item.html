@@ -27,8 +27,9 @@
                         class="tc lg-tl">
                     </h1>
 
-                    <p subtitle class="fz++ fwr m0 tc lg-tl">
-                        {{ ::vm.landing_page.lead }}
+                    <p subtitle
+                       class="fz++ fwr m0 tc lg-tl"
+                       ng-bind-html="::vm.landing_page.lead">
                     </p>
 
                     <hr class="white 1/8 lg-left mb mt lg-mt++"/>
@@ -52,7 +53,7 @@
                                class="btn db btn-primary btn-round btn-lg tl mb mh">
 
                                 <ohs-icon name="{{vm.company.phone.icon_sm}}"
-                                          class="fl mr is-sm"></ohs-icon>
+                                          class="fl mr- is-sm"></ohs-icon>
 
                                 <span class="sm-dn lg-dib xxl-dn">
                                     Call us
@@ -69,7 +70,7 @@
                                class="btn db btn-primary btn-round btn-lg tl mb mh">
 
                                 <ohs-icon name="{{vm.company.email.icon_sm}}"
-                                          class="fl mr is-sm"></ohs-icon>
+                                          class="fl mr- is-sm"></ohs-icon>
 
                                 <span class="sm-dn lg-dib xxl-dn">
                                     Email us
@@ -87,9 +88,9 @@
 
                         <div class="dib ph+ pv">
 
-                            <h4 class="mt fz+">About 100 Shapes</h4>
+                            <h4 class="mt fz+ mb-">About 100 Shapes</h4>
 
-                            <p class="lh1">We're a UX &amp; Design agency, based in London, that specialises in working
+                            <p class="fz-">We're a UX &amp; Design agency, based in London, that specialises in working
                                 with broadcasters and media organisations.</p>
 
                         </div>
