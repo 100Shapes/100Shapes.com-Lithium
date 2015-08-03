@@ -15,7 +15,6 @@ export default ngModule => {
 
                         landing_page: function(LandingContentService, $stateParams) {
                             let slug = $stateParams.slug;
-                            debugger;
                             return LandingContentService.one(slug);
                         }
 
