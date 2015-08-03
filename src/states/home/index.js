@@ -2,8 +2,6 @@ module.exports = function(ngModule) {
 
     require('./home.less');
 
-    /////////////
-    
     ngModule
         .config(function($stateProvider) {
         
