@@ -16,7 +16,7 @@
          vocab="http://schema.org/"
          typeof="NewsArticle">
 
-    <header class="bg--black pt+++ pb+ mb+ z1" style="background-image: url({{ ::vm.service.banner_image }})">
+    <header class="bg--black pt+++ pb+ md-mb+ z1" style="background-image: url({{ ::vm.service.banner_image }})">
         <div class="wrapper">
             <div class="grid">
                 <i class="grid-item 1/12 dn xl-dib"></i>
@@ -30,12 +30,11 @@
                     <p subtitle
                        class="fz++ fwr m0 tc lg-tl"
                        ng-bind-html="::vm.service.lead">
-
                     </p>
 
                     <hr class="white 1/8 lg-left mb mt lg-mt++" />
 
-                    <p class="m0 fwl"
+                    <p class="m0 fwl tc lg-tl"
                        ng-bind-html="::vm.service.intro">
                     </p>
 
