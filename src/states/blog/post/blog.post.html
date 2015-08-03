@@ -1,4 +1,4 @@
-<ohs-meta-group title="{{ ::vm.post.title_long }} – {{ ::vm.post.subtitle }}"
+<ohs-meta-group title="{{ ::vm.post.title_long | htmlToPlaintext }} – {{ ::vm.post.subtitle | htmlToPlaintext }}"
                 description="{{ ::vm.post.description }}"
                 image="{{ ::vm.post.banner_image }}">
 </ohs-meta-group>
@@ -29,15 +29,15 @@
                     </span>
                 </span>
 
-                <h1 class="ffs mt"
-                    itemprop="headline">
-                    {{ ::vm.post.title_long }}
+                <h1 class="ffs mt mb-"
+                    itemprop="headline"
+                    ng-bind-html="::vm.post.title_long">
                 </h1>
 
                 <p subtitle
                    property="alternativeHeadline"
-                   class="fz+ fg--grey">
-                    {{ ::vm.post.subtitle }}
+                   class="fz+ fg--grey"
+                   ng-bind-html="::vm.post.subtitle">
                 </p>
             </div>
 

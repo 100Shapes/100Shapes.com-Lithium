@@ -1,4 +1,4 @@
-<ohs-meta-group title="{{ ::vm.service.title_long | htmlToPlaintext }} – {{ ::vm.service.lead }}"
+<ohs-meta-group title="{{ ::vm.service.title_long | htmlToPlaintext }} – {{ ::vm.service.lead | htmlToPlaintext }}"
                 description="{{ ::vm.service.description }}"
                 image="{{ ::vm.service.banner_image }}">
 </ohs-meta-group>
@@ -27,8 +27,10 @@
                         class="tc lg-tl">
                     </h1>
 
-                    <p subtitle class="fz++ fwr m0 tc lg-tl">
-                        {{ ::vm.service.lead }}
+                    <p subtitle
+                       class="fz++ fwr m0 tc lg-tl"
+                       ng-bind-html="::vm.service.lead">
+
                     </p>
 
                     <hr class="white 1/8 lg-left mb mt lg-mt++" />
