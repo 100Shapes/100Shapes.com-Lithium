@@ -98,7 +98,8 @@ module.exports = {
     },
 
     externals: {
-        headroom: 'Headroom'
+        headroom: 'Headroom',
+        angular: 'angular'
     },
 
     resolve: {
