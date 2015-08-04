@@ -57,14 +57,15 @@
 }
 
 .ohs-global-masthead--fat.ohs-global-masthead--transparent {
-  background-color: transparent;
+
+  .screen-md-min({ background-color: transparent; })
+
 }
 
 .ohs-global-masthead--fat,
 .ohs-global-masthead--thin.ohs-global-masthead--open,
 .ohs-global-masthead--thin:hover {
-  .to-rem(padding-top, @spacing-base);
-  .to-rem(padding-bottom, @spacing-base);
+  .screen-md-min({ .to-rem(padding-top, @spacing-base); .to-rem(padding-bottom, @spacing-base); });
 }
 
 .ohs-global-masthead--thin {
