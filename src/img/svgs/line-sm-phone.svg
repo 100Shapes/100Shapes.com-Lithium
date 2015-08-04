@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="30px" height="25px" viewBox="0 0 30 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
-    <title>line-sm-phone</title>
+<svg width="33px" height="33px" viewBox="0 0 33 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>line-phone</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Styles" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="line-sm-phone" sketch:type="MSArtboardGroup" stroke="#215CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M13,12 L13,10 L17,10 L17,12 L22,12 L27,18 L27,24 L3,24 L3,18 L8,12 L13,12 Z M15,21.6441738 C16.9329966,21.6441738 18.5,20.0771704 18.5,18.1441738 C18.5,16.2111772 16.9329966,14.6441738 15,14.6441738 C13.0670034,14.6441738 11.5,16.2111772 11.5,18.1441738 C11.5,20.0771704 13.0670034,21.6441738 15,21.6441738 Z M8.29650402,6.60299187 C8.31034879,8.68286764 8.33773747,10.0270769 4.49248412,10.0428466 C0.64723077,10.0586163 1.02260942,8.08544258 1,6 C0.992264144,3.74343488 6.4315145,0.949790363 15.0000003,1 C23.5725219,1.06908698 29.0481212,3.83908778 29,6 C29.0417509,8.63514153 29.5129927,9.98069923 25.5650876,10.0202757 C21.6171825,10.0598521 21.6361636,8.60802077 21.6233191,6.52689079 C21.6121946,5.07345226 15,5 15,5 C15,5 8.28588757,5.15006133 8.29650402,6.60299187 Z" id="phone" sketch:type="MSShapeGroup"></path>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="line-phone" sketch:type="MSLayerGroup" transform="translate(2.000000, 1.000000)" stroke-width="2" stroke="#215CFF">
+            <g id="Styles" sketch:type="MSShapeGroup">
+                <g id="Icons">
+                    <path d="M20.4627057,21.751562 C22.4081097,19.8073042 23.6070052,18.1107074 27.8976013,21.5600375 C32.1858406,25.0060657 28.8905882,27.3053046 27.0043878,29.1884727 C24.8306677,31.3655324 16.7228505,29.3028686 8.71079587,21.2906765 C0.694967662,13.2747105 -1.36459301,5.16887904 0.811249532,2.99488572 C2.69745001,1.1067644 4.99358508,-2.18453437 8.43979029,2.10283388 C11.8878809,6.39138164 10.1955599,7.59242029 8.24803337,9.53691415 C6.88992936,10.8969278 9.72642719,14.3339928 12.6954784,17.303096 C15.6645296,20.2721996 19.1046044,23.1106321 20.4627057,21.751562 L20.4627057,21.751562 Z" id="line-phone"></path>
+                </g>
+            </g>
         </g>
     </g>
 </svg>
