@@ -5,7 +5,7 @@ module.exports = function(callback) {
 
     svgconfig               = {
         shape               : {
-            meta            : 'src/img/icons/icons.yml'
+            meta            : 'src/img/svgs/icons.yml'
         },
         mode                : {
             symbol          : {
@@ -17,8 +17,8 @@ module.exports = function(callback) {
     };
 
     // compiled the .svgs
-    return gulp.src('*.svg', {cwd: 'src/img/icons'})
+    return gulp.src('*.svg', {cwd: 'src/img/svgs'})
         .pipe(svgSprite(svgconfig))
-        .pipe(gulp.dest('src/img/icons'));
+        .pipe(gulp.dest('src/img/svgs'));
        
 };
