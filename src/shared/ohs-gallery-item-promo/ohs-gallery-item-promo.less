@@ -1,0 +1,24 @@
+@import "~css/vars";
+@import "~Cardinal/base/mixins/to-rem.less";
+
+.ohs-gallery-item-promo {
+  background-color: @color-black;
+  position: relative;
+
+  > img {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.ohs-gallery-item-promo__content {
+  position: absolute;
+  color: @color-white;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
