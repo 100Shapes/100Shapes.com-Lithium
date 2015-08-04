@@ -17,6 +17,7 @@ export default ngModule => {
     require('./ohs-blogpost-card')(ngModule);
     require('./ohs-social-card')(ngModule);
     require('./ohs-filter-htmltoplaintext')(ngModule);
+    require('./ohs-gallery-item-promo')(ngModule);
     require('./ApiBaseService')(ngModule);
 
 }
