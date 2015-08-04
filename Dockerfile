@@ -9,13 +9,12 @@ CMD ["/sbin/my_init"]
 
 #   Build system and git.
 RUN /pd_build/utilities.sh
+RUN /pd_build/python.sh
 RUN /pd_build/nodejs.sh
 
 RUN apt-get update && apt-get install -y -o Dpkg::Options::="--force-confold" passenger nginx-extras
 
 RUN curl -sLo /usr/local/bin/ep https://github.com/kreuzwerker/envplate/releases/download/v0.0.7/ep-linux && chmod +x /usr/local/bin/ep
-
-ADD package.json /home/app/
 
 WORKDIR /home/app/
 
@@ -24,6 +23,8 @@ RUN npm install -g npm
 RUN npm install -g webpack
 
 RUN npm install imagemin@^3.2.0
+
+ADD package.json /home/app/
 
 RUN npm install
 
