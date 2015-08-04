@@ -33,7 +33,7 @@ ENV API_BASE_URL '"http://api.100shapes.com/"'
 
 RUN webpack -p
 
-ENV VIRTUAL_HOST proto.100shapes.com
+ENV VIRTUAL_HOST www.100shapes.com
 ENV PRERENDER_TOKEN 00000000000000
 
 # Enable nginx
