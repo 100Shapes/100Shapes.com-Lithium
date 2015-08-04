@@ -4,7 +4,7 @@ module.exports = function(ngModule) {
 
     ngModule
         .config(function($stateProvider) {
-        
+
             $stateProvider
                 .state('main.home', {
                     url: '/',
@@ -25,7 +25,7 @@ module.exports = function(ngModule) {
                         services: function(ServiceContentService) {
 
                             let queryParams = {
-                                limit: 3,
+                                limit: 4,
                                 random: true
                             };
 
