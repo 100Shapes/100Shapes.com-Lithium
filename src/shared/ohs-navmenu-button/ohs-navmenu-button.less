@@ -101,6 +101,19 @@
   &.ohs-navmenu-button--open .menu-icon {
     .hamburger-animation();
   }
+
+  &.ohs-navmenu-button--open:hover .menu-icon {
+    background-color: transparent;
+  }
+
+  &:hover {
+    .menu-icon,
+    .menu-icon:after,
+    .menu-icon:before {
+      background-color: @color-yellow;
+    }
+  }
+
 }
 
 .ohs-navmenu-button--hidden {
