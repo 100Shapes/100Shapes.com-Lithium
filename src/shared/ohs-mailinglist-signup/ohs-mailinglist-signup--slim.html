@@ -9,12 +9,12 @@
 
         <p class="grid-item 1/1 lg-1/2 mb- lg-m0"
            ng-bind-html="config.intro"></p>
-        
+
         <div class="grid-item 1/2 lg-1/6">
 
             <label for="mce-NAME"
                    class="form-label vh">Name</label>
-    
+
             <input type="text"
                    value=""
                    name="NAME"
@@ -24,11 +24,11 @@
 
         </div>
 
-        <div class="grid-item 1/2 lg-1/6">   
-        
+        <div class="grid-item 1/2 lg-1/6">
+
             <label for="mce-EMAIL"
                    class="form-label vh">Email Address</label>
-            
+
             <input type="email"
                    value=""
                    name="EMAIL"
@@ -40,19 +40,20 @@
 
         <div class="grid-item 1/1 lg-1/6 mt lg-m0">
             <input type="submit"
+                   ga-track-event="['mailing-list-signup','slim', 'item']" 
                    value="Subscribe"
                    name="subscribe"
                    id="mc-embedded-subscribe"
                    class="btn btn-primary btn-round"/>
         </div>
-            
+
         <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
         <div style="position: absolute; left: -5000px;">
             <input type="text" name="b_1fed8ca99f8c2af5c40d35bac_6e793f2d82" tabindex="-1" value="">
         </div>
-        
-       
-        
-    
+
+
+
+
     </form>
 </div>
