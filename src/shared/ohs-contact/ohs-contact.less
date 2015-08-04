@@ -15,15 +15,19 @@
 }
 
 .ohs-contact .ohs-icon {
-    .to-rem(width, 40);
-    .to-rem(height, 40);
+  .to-rem(width, 40);
+  .to-rem(height, 40);
 }
 
-.no-touch .ohs-contact a:hover {
-  color: @color-yellow !important;
+.ohs-contact a:hover {
+  color: @color-orange !important;
 
-  .ohs-global-masthead--orange & {
+  .no-touch .ohs-global-masthead--orange & {
     color: @color-orange-dark !important;
+  }
+
+  .no-touch .ohs-global-masthead--blue & {
+    color: @color-yellow !important;
   }
 }
 
@@ -33,10 +37,10 @@
 }
 
 .ohs-contact--slim {
-	.btn {
-		.to-rem(padding, @spacing-fourth @spacing-half);
-	}
-	.ohs-contact__label {
-		display: none;
-	}
+  .btn {
+    .to-rem(padding, @spacing-fourth @spacing-half);
+  }
+  .ohs-contact__label {
+    display: none;
+  }
 }

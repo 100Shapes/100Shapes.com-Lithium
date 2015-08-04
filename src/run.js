@@ -16,6 +16,18 @@ export default ngModule => {
             }
         })
 
+        // Set mobile-safari
+        .run(function () {
+
+            function isMobileSafari() {
+                return navigator.userAgent.match(/(iPod|iPhone|iPad)/) && navigator.userAgent.match(/AppleWebKit/)
+            }
+
+            if (!isMobileSafari()) {
+                document.documentElement.className += " no-mob-safari";
+            }
+        })
+
         .run(function(Analytics, uuid) {
             Analytics.set('&uid', uuid.v4());
         })
