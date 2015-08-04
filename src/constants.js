@@ -100,7 +100,7 @@ export default ngModule => {
         .constant('DEFAULT_MAILINGLIST_SIGNUP_CONFIG', {
             slim: false,
             headline: 'Join our subscribers',
-            intro: `Get tips, informed advice and updates from our UX strategists and designers.`
+            intro: `Get regular UX advice from our experts`
         })
 
         .constant('CLIMB_FEED_ID', '55a4dac845284e58ac50ee1c')
