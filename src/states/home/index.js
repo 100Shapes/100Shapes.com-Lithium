@@ -25,7 +25,7 @@ module.exports = function(ngModule) {
                         services: function(ServiceContentService) {
 
                             let queryParams = {
-                                limit: 4,
+                                limit: 3,
                                 random: true
                             };
 
