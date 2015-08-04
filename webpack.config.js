@@ -70,24 +70,16 @@ module.exports = {
             favicon: "src/img/favicon.ico"
         }),
 
-        new webpack.DefinePlugin({
-            __API_BASE_URL__: JSON.stringify(JSON.parse(process.env.API_BASE_URL || '"http://localhost:3000/"')),
-            __DEV__: JSON.parse(process.env.DEV || true)
-        })
-
         //new webpack.optimize.UglifyJsPlugin({
         //    output: {
         //        comments: false
         //    }
-        //})
+        //}),
 
-        // new webpack.ProvidePlugin({
-        //   $: 'jquery',
-        //   jQuery: 'jquery',
-        //   'window.jQuery': 'jquery',
-        //   'root.jQuery': 'jquery'
-        // })
-
+        new webpack.DefinePlugin({
+            __API_BASE_URL__: JSON.stringify(JSON.parse(process.env.API_BASE_URL || '"http://localhost:3000/"')),
+            __DEV__: JSON.parse(process.env.DEV || true)
+        })
     ],
 
     devtool: 'eval',
