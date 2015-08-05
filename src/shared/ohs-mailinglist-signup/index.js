@@ -11,7 +11,8 @@ module.exports = function(ngModule) {
         return {
             restrict: 'E',
             scope: {},
-            replace: true,    
+            controller: 'OhsMailinglistSignupCtrl as vm',
+            replace: true,
             link($scope, elem, attrs) {
 
                 let default_config = angular.copy(DEFAULT_MAILINGLIST_SIGNUP_CONFIG);
@@ -36,5 +37,13 @@ module.exports = function(ngModule) {
 
             }
         };
+    }
+
+    ngModule.controller('OhsMailinglistSignupCtrl', OhsMailinglistSignupCtrl);
+
+    function OhsMailinglistSignupCtrl($location) {
+        let vm = this;
+
+        vm.$location = $location;
     }
 };

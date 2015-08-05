@@ -40,7 +40,7 @@
 
         <div class="grid-item 1/1 lg-1/6 mt lg-m0">
             <input type="submit"
-                   ga-track-event="['mailing-list-signup','slim', 'item']" 
+                   ga-track-event="['mailing-list-signup', 'submit', '{{ vm.$location.url() }}--slim']"
                    value="Subscribe"
                    name="subscribe"
                    id="mc-embedded-subscribe"
