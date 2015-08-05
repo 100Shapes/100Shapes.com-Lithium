@@ -36,25 +36,6 @@
             </div>
 
             <div class="grid-item 1/1 xl-2/3">
-
-                <a href
-                   class="box-round mb- tc card card--blog"
-                   ng-repeat="it in ::vm.featured | filter:vm.filter.category track by it.guid"
-                   ng-if="!vm.filter.category"
-                   style="background-image: url('{{ ::it.square_image }}');"
-                   ui-sref="main.blog.post({ slug:it.slug })">
-
-                    <span class="card__label mb- mt0 h2 fz+ cw dn lg-db"
-                          ng-bind-html="::it.category">
-                    </span>
-
-                    <h2 class="card__title h3 fz++">
-                        {{ ::it.title }}
-                    </h2>
-
-
-                </a>
-
                 <div class="grid">
                     <div class="grid-item 1/1 sm-1/2"
                          ng-repeat="post in vm.posts | filter:vm.filter track by post.guid">
@@ -64,8 +45,6 @@
 
                     </div>
                 </div>
-
-
             </div>
 
             <aside class="grid-item 1/1 xl-1/3 dn xl-dib">
