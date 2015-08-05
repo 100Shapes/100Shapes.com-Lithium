@@ -85,6 +85,7 @@
             <li class="mv+ mh xs-db sm-di md-db">
                 <a href
                    ui-sref="main.home"
+                   ga-track-event="['global-nav', 'home', '{{ vm.$location.url() }}']"
                    ui-sref-active="ohs-global-masthead__nav__list--active"
                    class="dib">Home</a>
             </li>
@@ -92,6 +93,7 @@
             <li class="mv+ mh xs-db sm-di md-db">
                 <a href
                    ui-sref="main.services.list"
+                   ga-track-event="['global-nav', 'services', '{{ vm.$location.url() }}']"
                    ui-sref-active="ohs-global-masthead__nav__list--active"
                    class="dib">Design Services</a>
             </li>
@@ -99,6 +101,7 @@
             <li class="mv+ mh xs-db sm-di md-db">
                 <a href
                    ui-sref="main.blog.list"
+                   ga-track-event="['global-nav', 'blog', '{{ vm.$location.url() }}']"
                    ui-sref-active="ohs-global-masthead__nav__list--active"
                    class="dib">Blog</a>
             </li>

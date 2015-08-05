@@ -28,7 +28,7 @@ module.exports = function(ngModule) {
 
     ngModule.controller('OhsGlobalMastheadCtrl', OhsGlobalMastheadCtrl);
 
-    function OhsGlobalMastheadCtrl(COMPANY_META, GlobalMastheadService, $rootScope, GLOBAL_MASTHEAD_THEMES, $state) {
+    function OhsGlobalMastheadCtrl(COMPANY_META, GlobalMastheadService, $rootScope, GLOBAL_MASTHEAD_THEMES, $state, $location) {
         let vm = this;
 
         vm.company = COMPANY_META;
@@ -36,6 +36,7 @@ module.exports = function(ngModule) {
         vm.themes = GLOBAL_MASTHEAD_THEMES;
 
         vm.$state = $state;
+        vm.$location = $location;
 
         $rootScope.$on('$stateChangeSuccess', () => {
             GlobalMastheadService.closeNav();
