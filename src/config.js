@@ -8,13 +8,11 @@ export default ngModule => {
         })
 
         // Enable HTML5 mode
-        //.config(function($locationProvider) {
-        //    $locationProvider.html5Mode(true);
-        //})
+        .config(function ($locationProvider, $provide) {
 
-        // Use HTML5 pushstate (nice URLs)
-        .config(function($locationProvider) {
-            $locationProvider.hashPrefix('!');
+            $locationProvider
+                .html5Mode(true)
+                .hashPrefix('!');
         })
 
         // Analytics
