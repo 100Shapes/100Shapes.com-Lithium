@@ -1,5 +1,6 @@
 @import "~css/vars";
 @import "~Cardinal/base/mixins/to-rem.less";
+@import "~Cardinal/base/mixins/media-queries.less";
 
 .ohs-icon {
     .to-rem(width, 60);
@@ -15,6 +16,8 @@
   .to-rem(width, 20);
   .to-rem(height, 20);
   margin-bottom: 4px;
+
+  .screen-md({ .to-rem(width, 30); .to-rem(height, 30); margin-bottom: 2px; });
 }
 
 svg {
