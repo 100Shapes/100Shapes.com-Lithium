@@ -25,6 +25,8 @@ export default ngModule => {
 
             if (!isMobileSafari()) {
                 document.documentElement.className += " no-mob-safari";
+            } else {
+                document.documentElement.className += " mob-safari";
             }
         })
 
