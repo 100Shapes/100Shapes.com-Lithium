@@ -103,7 +103,7 @@ export default ngModule => {
             intro: `Get regular UX advice from our experts`
         })
 
-        .constant('CLIMB_FEED_ID', '55a4dac845284e58ac50ee1c')
+        .constant('CLIMB_FEED_ID', '55c1e00845284e26681c4929')
 
     ;
 };
