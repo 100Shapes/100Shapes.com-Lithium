@@ -12,10 +12,20 @@ module.exports = function(ngModule) {
             scope: {
                 location: '@?'
             },
+            controller: 'OhsContactCtrl as vm',
+            bindToController: true,
             template: require('./ohs-contact.html'),
-            link: function(scope) {
-                scope.meta = COMPANY_META;
+            link: function ($scope) {
+                $scope.meta = COMPANY_META;
             }
         };
+    }
+
+    ngModule.controller('OhsContactCtrl', OhsContactCtrl);
+
+    function OhsContactCtrl($location) {
+        let vm = this;
+
+        vm.$location = $location;
     }
 };
