@@ -17,6 +17,7 @@ module.exports = function(callback) {
         publicPath: myConfig.output.publicPath,
         contentBase: myConfig.devServer.contentBase,
         host: myConfig.devServer.host,
+        hot: true,
         stats: {
             colors: true
         }
@@ -24,7 +25,7 @@ module.exports = function(callback) {
 
     server.use('/', function(req, res) {
         res.sendFile(path.join(__dirname, '../src/index.html'));
-    })
+    });
 
     server.listen(8080, "0.0.0.0", function(err) {
         if(err) throw new gutil.PluginError("webpack-dev-server", err);
