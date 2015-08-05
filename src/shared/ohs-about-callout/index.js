@@ -7,8 +7,18 @@ module.exports = function(ngModule) {
         return {
             restrict: 'E',
             replace: true,
-            template: require('./ohs-about-callout.html')
+            template: require('./ohs-about-callout.html'),
+            controller: 'OhsAboutCalloutCtrl as vm',
+            bindToController: true
         };
+    }
+
+    ngModule.controller('OhsAboutCalloutCtrl', OhsAboutCalloutCtrl);
+
+    function OhsAboutCalloutCtrl($location) {
+        let vm = this;
+
+        vm.$location = $location;
     }
 
 };
