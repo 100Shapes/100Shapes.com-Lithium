@@ -9,7 +9,7 @@ require('angular-uuid');
 require('angular-climb');
 require('exports?window.Headroom!headroom');
 require('headroom.js/dist/angular.headroom');
-
+require('polyfill-function-prototype-bind');
 
 
 // Styles
