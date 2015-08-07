@@ -8,7 +8,7 @@ export default ngModule => {
 
         function ApiBaseService(objectType) {
             this.objectType = objectType;
-            this.LIST_URL = url.resolve(API_BASE_URL, `${objectType}`);
+            this.LIST_URL = url.resolve(API_BASE_URL, `/${objectType}`);
         }
 
         ApiBaseService.prototype.query = function (params) {
