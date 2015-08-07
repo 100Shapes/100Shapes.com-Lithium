@@ -13,35 +13,31 @@ RUN /pd_build/python.sh
 RUN /pd_build/nodejs.sh
 
 RUN apt-get update && apt-get install -y -o Dpkg::Options::="--force-confold" passenger nginx-extras
-
 RUN curl -sLo /usr/local/bin/ep https://github.com/kreuzwerker/envplate/releases/download/v0.0.7/ep-linux && chmod +x /usr/local/bin/ep
 
-WORKDIR /home/app/
-
 RUN npm install -g npm
-
 RUN npm install -g webpack
 
-ADD package.json /home/app/
+RUN mkdir -p /etc/my_init.d
+ADD update-content.sh /etc/my_init.d/update-content.sh
 
-RUN npm install
+ENV BRANCH stage
+ENV GIT_URL https://github.com/100Shapes/100Shapes.com-Lithium.git
 
-ADD . /home/app/
-
-ENV PRODUCTION True
-ENV API_BASE_URL '"http://api.100shapes.com/"'
+ENV API_BASE_URL http://api.100shapes.com/
 
 RUN webpack -p
 
 ENV VIRTUAL_HOST www.100shapes.com
 ENV PRERENDER_TOKEN 00000000000000
 
+RUN ["/etc/my_init.d/update-content.sh", "fresh"]
+ADD update-content.sh /etc/my_init.d/update-content.sh
+
 # Enable nginx
 RUN rm -f /etc/service/nginx/down
 RUN rm /etc/nginx/sites-enabled/default
 ADD nginx.conf /etc/nginx/sites-enabled/nginx.conf
-
-RUN ep /etc/nginx/sites-enabled/nginx.conf
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
