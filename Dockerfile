@@ -25,9 +25,6 @@ ENV BRANCH stage
 ENV GIT_URL https://github.com/100Shapes/100Shapes.com-Lithium.git
 
 ENV API_BASE_URL http://api.100shapes.com/
-
-RUN webpack -p
-
 ENV VIRTUAL_HOST www.100shapes.com
 ENV PRERENDER_TOKEN 00000000000000
 
