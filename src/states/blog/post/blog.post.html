@@ -3,8 +3,9 @@
                 image="{{ ::vm.post.banner_image }}">
 </ohs-meta-group>
 
-<meta property="image" content="{{ ::vm.post.banner_image }}" />
-<meta property="image" content="{{ ::vm.post.square_image }}" />
+<meta view-head
+      property="image"
+      content="{{ ::vm.post.square_image }}"/>
 
 <span view-title
       class="dn"

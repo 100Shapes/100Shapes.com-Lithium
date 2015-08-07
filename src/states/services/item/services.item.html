@@ -3,8 +3,9 @@
                 image="{{ ::vm.service.banner_image }}">
 </ohs-meta-group>
 
-<meta property="image" content="{{ ::vm.service.banner_image }}" />
-<meta property="image" content="{{ ::vm.service.square_image }}" />
+<meta view-head
+      property="image"
+      content="{{ ::vm.service.square_image }}"/>
 
 <span view-title
       class="dn"
