@@ -49,7 +49,9 @@ module.exports = function(ngModule) {
         vm.site_name = SITE_NAME;
 
         ClimbFactory.getFeed(CLIMB_FEED_ID).then(function(items) {
-            vm.social = items.slice(0, 5);
+
+            let numberOfItems = 5;
+            vm.social = items.slice(0, numberOfItems);
         });
 
         GlobalMastheadService.theme = `${GLOBAL_MASTHEAD_THEMES.BLUE} ${GLOBAL_MASTHEAD_THEMES.TRANSPARENT}`;
