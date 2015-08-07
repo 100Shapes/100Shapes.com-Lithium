@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "Injecting Enviroment Variables"
-ep /pd_build/pull-content.sh
+ep /pd_build/clone-content.sh
 
 echo "Doing fresh clone"
 rm -r /home/app

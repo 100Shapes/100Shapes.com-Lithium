@@ -1,7 +1,7 @@
 #!/bin/sh
 echo "Injecting Enviroment Variables"
-ep /etc/my_init.d/update-content.sh
 ep /etc/nginx/sites-enabled/nginx.conf
+ep /etc/my_init.d/pull-content.sh
 
 cd /home/app/
 echo "Pulling content from branch: ${BRANCH:-master}@${GIT_URL}"
