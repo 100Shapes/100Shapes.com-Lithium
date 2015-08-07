@@ -26,9 +26,11 @@ ENV PRERENDER_TOKEN 00000000000000
 
 RUN mkdir -p /etc/my_init.d
 ADD clone-content.sh /pd_build/clone-content.sh
+RUN ep /pd_build/clone-content.sh
 RUN /pd_build/clone-content.sh
 
 ADD pull-content.sh /etc/my_init.d/pull-content.sh
+RUN ep /pd_build/pull-content.sh
 
 # Enable nginx
 RUN rm -f /etc/service/nginx/down

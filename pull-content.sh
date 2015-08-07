@@ -1,6 +1,5 @@
 #!/bin/sh
 echo "Injecting Enviroment Variables"
-ep /etc/my_init.d/update-content.sh
 ep /etc/nginx/sites-enabled/nginx.conf
 
 cd /home/app/
