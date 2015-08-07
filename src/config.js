@@ -18,11 +18,10 @@ export default ngModule => {
         // Analytics
         // Config options: https://github.com/revolunet/angular-google-analytics#example
         .config(function (AnalyticsProvider, uuidProvider) {
-            //Real analytics code #5
-            AnalyticsProvider.setAccount('UA-27923958-14');
+            AnalyticsProvider.setAccount('UA-27923958-13');
             AnalyticsProvider.useAnalytics(true);
             AnalyticsProvider.setPageEvent('$stateChangeSuccess');
-            // AnalyticsProvider.useEnhancedLinkAttribution(true);
+            AnalyticsProvider.useEnhancedLinkAttribution(true);
         })
 
     ;
