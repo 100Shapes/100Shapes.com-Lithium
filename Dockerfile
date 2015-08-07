@@ -21,7 +21,7 @@ RUN npm install -g webpack
 ENV BRANCH production
 ENV GIT_URL https://github.com/100Shapes/100Shapes.com-Lithium.git
 ENV VIRTUAL_HOST www.100shapes.com
-ENV API_BASE_URL http://api.100shapes.com/
+ENV API_BASE_URL http://api.100shapes.com
 ENV PRERENDER_TOKEN 00000000000000
 
 RUN mkdir -p /etc/my_init.d
