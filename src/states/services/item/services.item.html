@@ -3,19 +3,27 @@
                 image="{{ ::vm.service.banner_image }}">
 </ohs-meta-group>
 
-<meta view-head
-      property="image"
-      content="{{ ::vm.service.square_image }}"/>
-
 <span view-title
       class="dn"
       ng-bind-template="{{ ::vm.service.title_long | htmlToPlaintext }} | UX &amp; Design services | 100 Shapes">
 </span>
 
+<meta view-head
+      property="image"
+      content="{{ ::vm.service.square_image }}"/>
 
 <article class="service-page"
          vocab="http://schema.org/"
-         typeof="NewsArticle">
+         typeof="Service">
+
+    <span class="dn"
+          ng-bind="::vm.service.description"
+          property="description">
+    </span>
+
+    <meta property="image"
+          class="dn"
+          content="{{ ::vm.service.square }}"/>
 
     <header class="bg--black pt++ md-pt+++ pb+ md-mb+ z1"
             style="background-image: url({{ ::vm.service.banner_image }})">
@@ -25,12 +33,13 @@
                 <div class="grid-item 1/1 lg-1/2">
 
                     <h1 ng-bind-html="::vm.service.title_long"
-                        itemprop="headline"
+                        property="name"
                         class="tc lg-tl">
                     </h1>
 
                     <p subtitle
                        class="fz++ fwr m0 tc lg-tl"
+                       property="alternateName"
                        ng-bind-html="::vm.service.lead">
                     </p>
 
