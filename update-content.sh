@@ -1,7 +1,6 @@
 #!/bin/sh
 
 echo "Injecting Enviroment Variables"
-ep /etc/nginx/sites-enabled/nginx.conf
 ep /etc/my_init.d/update-content.sh
 
 
@@ -10,6 +9,7 @@ if [ $1 = "fresh" ]; then
     echo "Cloning content from branch: ${BRANCH:-master}@${GIT_URL}"
     git clone --depth 1 -b ${BRANCH:-master} ${GIT_URL} /home/app
 else
+    ep /etc/nginx/sites-enabled/nginx.conf
     cd /home/app/
     # echo "Clearing old Content"
     # rm -r home/app/content
@@ -18,6 +18,7 @@ else
 fi
 
 echo "Running npm install"
+cd /home/app/
 npm install
 echo "Running webpack"
 webpack -p
