@@ -13,7 +13,7 @@ export default ngModule => {
         })
 
         // Site name
-        .constant('SITE_NAME', '100 Shapes – UX & Design for broadcast media')
+        .constant('SITE_NAME', '100 Shapes – User experience (UX) & Design for broadcasters and media brands')
 
         // Central store of Company meta inf
         .constant('COMPANY_META', {

@@ -3,8 +3,9 @@
                 image="{{ ::vm.landing_page.banner_image }}">
 </ohs-meta-group>
 
-<meta property="image" content="{{ ::vm.landing_page.banner_image }}"/>
-<meta property="image" content="{{ ::vm.landing_page.square_image }}"/>
+<meta view-head
+      property="image"
+      content="{{ ::vm.landing_page.square_image }}"/>
 
 <span view-title
       class="dn"
