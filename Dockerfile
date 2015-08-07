@@ -21,7 +21,7 @@ RUN npm install -g webpack
 RUN mkdir -p /etc/my_init.d
 ADD update-content.sh /etc/my_init.d/update-content.sh
 
-ENV BRANCH updating
+ENV BRANCH stage
 ENV GIT_URL https://github.com/100Shapes/100Shapes.com-Lithium.git
 
 ENV API_BASE_URL '"http://api.100shapes.com/"'
@@ -29,6 +29,7 @@ ENV VIRTUAL_HOST www.100shapes.com
 ENV PRERENDER_TOKEN 00000000000000
 
 RUN ["/etc/my_init.d/update-content.sh", "fresh"]
+ADD update-content.sh /etc/my_init.d/update-content.sh
 
 # Enable nginx
 RUN rm -f /etc/service/nginx/down
