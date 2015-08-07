@@ -31,6 +31,7 @@ RUN /pd_build/clone-content.sh
 
 ADD pull-content.sh /etc/my_init.d/pull-content.sh
 RUN ep /etc/my_init.d/pull-content.sh
+RUN chmod u+x /etc/my_init.d/pull-content.sh
 
 # Enable nginx
 RUN rm -f /etc/service/nginx/down
