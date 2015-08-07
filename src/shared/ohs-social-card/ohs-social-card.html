@@ -1,21 +1,21 @@
-<a href="{{ ::url }}"
+<a href="{{ ::model.link }}"
    class="box-round box-border card card--social tl"
    ng-class="{
-       'card--social--with-img': thumbnailImageUrl
+       'card--social--with-img': model.image.url
    }"
-   style="background-image: url('{{ ::thumbnailImageUrl }}');">
+   style="background-image: url('{{ ::model.image.url }}');">
 
     <p class="fsi md-fz m0 ffs card__description"
-       ng-bind-html="message">
+       ng-bind-html="::model.message">
     </p>
 
     <span class="card--social__profile dn lg-dib">
 
         <img class="profile profile--sm mr--"
-             ng-src="{{ ::profileImageUrl }}"
-             alt="Profile picture of {{ ::username }}"/>
+             ng-src="{{ ::model.author.picture }}"
+             alt="Profile picture of {{ ::model.username }}"/>
 
-        @{{ ::username }}
+        @{{ ::model.author.username }}
     </span>
 
 

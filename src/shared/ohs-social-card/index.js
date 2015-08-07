@@ -7,11 +7,7 @@ module.exports = function(ngModule) {
         return {
             restrict: 'E',
             scope: {
-                message: '@',
-                username: '@',
-                profileImageUrl: '@',
-                url: '@',
-                thumbnailImageUrl: '@'
+                model: '='
             },
             replace: true,
             template: require('./ohs-social-card.html')

@@ -145,11 +145,7 @@
                 <div class="grid-item 1/1 sm-1/2 lg-1/3"
                      ng-repeat="it in vm.social track by it.id">
 
-                    <ohs-social-card message="{{ ::it.message }}"
-                                     url="{{ ::it.link }}"
-                                     username="{{ ::it.author.username }}"
-                                     profile-image-url="{{ ::it.author.picture }}"
-                                     thumbnail-image-url="{{ ::it.image.url }}">
+                    <ohs-social-card model="::it">
                     </ohs-social-card>
 
                 </div>
