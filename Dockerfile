@@ -21,7 +21,7 @@ RUN npm install -g webpack
 RUN mkdir -p /etc/my_init.d
 ADD update-content.sh /etc/my_init.d/update-content.sh
 
-ENV BRANCH stage
+ENV BRANCH production
 ENV GIT_URL https://github.com/100Shapes/100Shapes.com-Lithium.git
 
 ENV API_BASE_URL http://api.100shapes.com/
