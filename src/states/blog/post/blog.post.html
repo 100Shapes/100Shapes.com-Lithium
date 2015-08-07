@@ -3,19 +3,33 @@
                 image="{{ ::vm.post.banner_image }}">
 </ohs-meta-group>
 
-<meta view-head
-      property="image"
-      content="{{ ::vm.post.square_image }}"/>
-
 <span view-title
       class="dn"
       ng-bind-template="{{ ::vm.post.title_long | htmlToPlaintext }} | 100 Shapes Blog">
 </span>
 
+<meta view-head
+      property="image"
+      content="{{ ::vm.post.square_image }}"/>
 
 <article class="blog-post"
          vocab="http://schema.org/"
-         typeof="NewsArticle">
+         typeof="BlogPosting">
+
+    <span class="dn"
+          ng-bind="::vm.post.description"
+          property="description">
+    </span>
+
+    <meta property="image"
+          class="dn"
+          content="{{ ::vm.post.banner_image }}"/>
+
+    <span class="dn"
+       property="datePublished"
+       content="{{ ::vm.post.date | date: 'yyyy-MM-dd' }}">
+        {{ ::vm.post.date | date: 'd MMM yyyy' }}
+    </span>
 
     <header class="wrapper pt+ md-pt+++">
 
@@ -31,7 +45,7 @@
                 </span>
 
                 <h1 class="ffs mt mb-"
-                    itemprop="headline"
+                    property="headline"
                     ng-bind-html="::vm.post.title_long">
                 </h1>
 
@@ -48,22 +62,26 @@
                      alt=""
                      class="box-round"/>
 
-                <div class="blog-post__meta tc posr">
+                <div property="author"
+                     vocab="http://schema.org/"
+                     typeof="Person"
+                     class="blog-post__meta tc posr">
 
                     <img class="profile dib"
+                         property="image"
                          ng-src="{{ ::vm.post.author.profile }}"
                          alt="Profile picture of {{ ::vm.post.author.name }}"/>
 
                     <div class="db mv-- fz-">
 
-                        <p itemprop="author" itemscope itemtype="http://schema.org/Person" class="m0 fz-">
+                        <p class="m0 fz-">
                             <span class="ffs">by</span>
-                            <span itemprop="name">{{ ::vm.post.author.name }}</span>
+                            <span property="name">{{ ::vm.post.author.name }}</span>
+                            <span property="email"
+                                  class="dn">{{ ::vm.post.author.email }}</span>
                         </p>
 
-                        <p class="fz-"
-                           itemprop="datePublished"
-                           content="{{ ::vm.post.date | date: 'yyyy-MM-dd' }}">
+                        <p class="fz-">
                             {{ ::vm.post.date | date: 'd MMM yyyy' }}
                         </p>
 
@@ -78,6 +96,7 @@
     </header>
 
     <div id="main"
+         property="articleBody"
          class="mb++">
         <ohs-content-renderer content="::vm.post.contents">
         </ohs-content-renderer>
