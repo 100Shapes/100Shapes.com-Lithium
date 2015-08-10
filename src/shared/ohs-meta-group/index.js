@@ -3,7 +3,7 @@ module.exports = function(ngModule) {
     ngModule
         .directive('ohsMetaGroup', ohsMetaGroup);
 
-    function ohsMetaGroup(COMPANY_META, DEFAULT_SOCIAL_IMAGE) {
+    function ohsMetaGroup(COMPANY_META, DEFAULT_SOCIAL_IMAGE, $location) {
         return {
             restrict: 'E',
             scope: {
@@ -29,6 +29,7 @@ module.exports = function(ngModule) {
                     $scope.image = DEFAULT_SOCIAL_IMAGE;
                 }
                 $scope.site_name = COMPANY_META.site.name;
+                $scope.$location = $location;
             }
         };
     }
