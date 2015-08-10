@@ -23,6 +23,7 @@ export default ngModule => {
             AnalyticsProvider.useEnhancedLinkAttribution(true);
             AnalyticsProvider.ignoreFirstPageLoad(false);
             AnalyticsProvider.trackPages(false);
+            AnalyticsProvider.delayScriptTag(true);
         })
 
    ;

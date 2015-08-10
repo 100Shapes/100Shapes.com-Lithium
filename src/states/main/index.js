@@ -1,7 +1,7 @@
 export default ngModule => {
 
     ngModule.config($stateProvider => {
-        
+
         $stateProvider
             .state('main', {
                 url: '',
@@ -16,20 +16,34 @@ export default ngModule => {
 
     ngModule.controller('MainCtrl', MainCtrl);
 
-    function MainCtrl($window, $rootScope, Analytics, $location, $timeout) {
+    function MainCtrl($window, $rootScope, Analytics, $location, $timeout, $localStorage) {
+
+        let vm = this;
+
+        vm.$storage = $localStorage.$default({
+            analytics_tracking: true
+        });
 
         $window.prerenderReady = true;
 
-        $timeout(() => {
+
+        // Initial run
+
+        if (vm.$storage.analytics_tracking) {
+            Analytics.createAnalyticsScriptTag();
             trackPage();
-        });
+        }
 
         $rootScope.$on('$stateChangeSuccess', () => {
-            trackPage();
+            if (vm.$storage.analytics_tracking) {
+                trackPage();
+            }
         });
 
         function trackPage() {
-            Analytics.trackPage($location.absUrl());
+            $timeout(() => {
+                Analytics.trackPage($location.absUrl());
+            });
         }
     }
 

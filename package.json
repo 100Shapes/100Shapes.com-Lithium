@@ -55,6 +55,7 @@
     "less-loader": "^2.2.0",
     "lodash": "^3.10.0",
     "ng-annotate-webpack-plugin": "^0.1.2",
+    "ngstorage": "^0.3.6",
     "node-libs-browser": "^0.5.2",
     "open": "0.0.5",
     "polyfill-function-prototype-bind": "0.0.1",
