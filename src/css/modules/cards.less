@@ -81,6 +81,18 @@
 
   a {
     color: @color-yellow;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 200px;
+    vertical-align: bottom;
+    padding: 0;
+    margin: 0;
+  }
+
+  .card__description {
+    overflow: hidden;
   }
 
   .no-touch &:hover {

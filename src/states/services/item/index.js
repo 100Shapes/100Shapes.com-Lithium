@@ -26,11 +26,12 @@ export default ngModule => {
 
     ngModule.controller('ServicesItemCtrl', ServicesItemCtrl);
 
-    function ServicesItemCtrl(service, COMPANY_META, GlobalMastheadService, GLOBAL_MASTHEAD_THEMES) {
+    function ServicesItemCtrl(service, COMPANY_META, GlobalMastheadService, GLOBAL_MASTHEAD_THEMES, $location) {
         let vm = this;
 
         vm.service = service;
         vm.company = COMPANY_META;
+        vm.$location = $location;
 
         GlobalMastheadService.theme = `${GLOBAL_MASTHEAD_THEMES.TRANSPARENT} ${GLOBAL_MASTHEAD_THEMES.BLUE}`;
     }

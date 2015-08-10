@@ -12,13 +12,10 @@ export default ngModule => {
             ORANGE: 'ohs-global-masthead--orange'
         })
 
-        // Site name
-        .constant('SITE_NAME', '100 Shapes – User experience (UX) & Design for broadcasters and media brands')
-
         // Central store of Company meta inf
         .constant('COMPANY_META', {
             phone: {
-                number: '+44 203 7738175',
+                number: '+44-203-7738175',
                 label: 'Call',
                 icon: 'line-phone',
                 icon_sm: 'line-sm-phone',
@@ -36,6 +33,10 @@ export default ngModule => {
                 label: 'Find us',
                 icon: 'line-map_marker',
                 target: 'https://goo.gl/maps/jVuhA'
+            },
+            site: {
+                address: 'http://www.100shapes.com',
+                name: '100 Shapes – User experience (UX) & Design for broadcasters and media brands'
             },
             social: {
                 twitter: {
@@ -63,7 +64,8 @@ export default ngModule => {
                     target: 'http://www.slideshare.net/100shapes',
                     handle: '100shapes'
                 }
-            }
+            },
+            logo: require('./img/100shapes-logo.png')
         })
 
         .constant('DEFAULT_SOCIAL_IMAGE', require('./img/shared-social-media-image.png'))
