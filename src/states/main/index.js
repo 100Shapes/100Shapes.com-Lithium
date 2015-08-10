@@ -20,13 +20,17 @@ export default ngModule => {
 
         $window.prerenderReady = true;
 
-        $timeout(function() {
-            Analytics.trackPage($location.$$url);
+        $timeout(() => {
+            trackPage();
         });
 
-        $rootScope.$on('$stateChangeSuccess', function(){
-            Analytics.trackPage($location.$$url);
+        $rootScope.$on('$stateChangeSuccess', () => {
+            trackPage();
         });
+
+        function trackPage() {
+            Analytics.trackPage($location.absUrl());
+        }
     }
 
 }
