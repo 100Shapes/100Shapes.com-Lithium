@@ -1,5 +1,7 @@
 module.exports = function(ngModule) {
 
+    const url = require('url');
+
     ngModule
         .directive('ohsMetaGroup', ohsMetaGroup);
 
@@ -17,7 +19,7 @@ module.exports = function(ngModule) {
             template: require('./ohs-meta-group.html'),
             link: function ($scope, elem, attrs) {
                 if (!attrs.creator) {
-                    $scope.creator = COMPANY_META.social.twitter.handle;
+                    attrs.creator = COMPANY_META.social.twitter.handle;
                 }
                 if (!attrs.title) {
                     throw new Error(`Please specify a 'title' attribute`);
@@ -26,7 +28,7 @@ module.exports = function(ngModule) {
                     throw new Error(`Please specify a 'description' attribute`);
                 }
                 if (!attrs.image) {
-                    $scope.image = DEFAULT_SOCIAL_IMAGE;
+                    attrs.image = url.resolve($location.absUrl(), DEFAULT_SOCIAL_IMAGE);
                 }
                 $scope.site_name = COMPANY_META.site.name;
                 $scope.$location = $location;
