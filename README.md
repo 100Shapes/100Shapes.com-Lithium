@@ -3,6 +3,13 @@ This project is the "Lithium" release of the [100 Shapes site](http://www.100sha
 
 We've built it under an open MIT licence so you can pick it apart and use the ideas in your own projects.
 
+## About Us
+
+We're a User experience (UX) & design agency based in London, UK. We specialise in working with broadcasters and media brands like the BBC & ITV.
+
+If you think you can help us build things for these types of organisations, give us a shout.
+
+
 ## Questions/Issues
 
 Ping us: [@100shapes](https://twitter.com/100shapes), email [hi@100shapes.com](mailto:hi@100shapes.com), or make an issue.
