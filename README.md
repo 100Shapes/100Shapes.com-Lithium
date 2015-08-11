@@ -3,6 +3,11 @@ This project is the "Lithium" release of the [100 Shapes site](http://www.100sha
 
 We've built it under an open MIT licence so you can pick it apart and use the ideas in your own projects.
 
+## Questions/Issues
+
+Ping us: [@100shapes](https://twitter.com/100shapes), email [hi@100shapes.com](mailto:hi@100shapes.com), or make an issue.
+
+
 ## Tech
 
 Here's the tech you'll find here:
@@ -43,10 +48,6 @@ We leverage docker to run the app using a base image from [Phusion – Passenger
 ### Prerender.io
 
 SEO was kind of a big thing. [Prerender.io](https://prerender.io/) made it _no big thing_.
-
-## Issues
-
-[@100shapes](https://twitter.com/100shapes) or email [hi@100shapes.com](mailto:hi@100shapes.com).
 
 ## "Lithium"?
 Instead of versioning our projects with numbers, we use the atomic number in the periodic table – it's just a thing we do.
