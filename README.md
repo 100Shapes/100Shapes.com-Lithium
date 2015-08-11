@@ -1,11 +1,11 @@
 # 100Shapes.com "Lithium"
 This project is the "Lithium" release of the [100 Shapes site](http://www.100shapes.com/ "UX & Design services for broadcasters").
 
-We've built it under an open MIT licence so you can pick it apart and use some of the ideas in your own project.
+We've built it under an open MIT licence so you can pick it apart and use the ideas in your own projects.
 
 ## Tech
 
-Here's some of the tech you'll find here:
+Here's the tech you'll find here:
 
 - Webpack
 - Babel + ES6
@@ -16,7 +16,7 @@ Here's some of the tech you'll find here:
 - Prerender.io
 
 ### Webpack
-Webpack does all the *tooling* for the project. See the webpack.config.js file for tips here.
+Webpack does all the *tooling* for the project. See the [webpack.config.js](./webpack.config.js) file for tips here.
 
 Key points:
 
@@ -34,15 +34,15 @@ The site is an Angular app. We wanted to see how Angular fitted with a content-d
 
 ### LESSCSS + CardinalCSS
 
-[CardinalCSS](http://cardinalcss.com/) is an incredible library that changed the way we wrote CSS. Using micro-styles, we found we were no longer needed to create CSS modules files. See the CSS directory and the individual `.less` files within the directives. 
+[CardinalCSS](http://cardinalcss.com/) is an incredible library that changed the way we wrote CSS. Using micro-styles, we found there was no longer a need to make lots of  css modules files to create CSS modules files and concatenate them together. See the [CSS directory](./src/css) and the individual `.less` files within the directives i.e. [ohs-contact.less](./src/shared/ohs-contact/ohs-contact.less).
 
 ### Docker + NGINX
 
-We leverage docker to run the app using a base image from Phusion – Passenger.
+We leverage docker to run the app using a base image from [Phusion – Passenger](https://github.com/phusion/passenger-docker).
 
 ### Prerender.io
 
-SEO was kind of a big thing. Prerender made it "no big thing".
+SEO was kind of a big thing. [Prerender.io](https://prerender.io/) made it _no big thing_.
 
 ## Issues
 
