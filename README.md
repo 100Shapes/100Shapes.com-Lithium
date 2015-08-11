@@ -27,7 +27,7 @@ Key points:
 
 - `DefinePlugin` to set up our `API_BASE_URL` (an environment variable we pass in on the server)
 - `noParse` set up to save on build time
-- `HtmlWebpackPlugin` 
+- `HtmlWebpackPlugin` to take a base `index.html` template and wire it up with webpack
 
 ### Babel + ES6
 
@@ -39,7 +39,7 @@ The site is an Angular app. We wanted to see how Angular fitted with a content-d
 
 ### LESSCSS + CardinalCSS
 
-[CardinalCSS](http://cardinalcss.com/) is an incredible library that changed the way we wrote CSS. Using micro-styles, we found there was no longer a need to make lots of  css modules files to create CSS modules files and concatenate them together. See the [CSS directory](./src/css) and the individual `.less` files within the directives i.e. [ohs-contact.less](./src/shared/ohs-contact/ohs-contact.less).
+[CardinalCSS](http://cardinalcss.com/) is an incredible library that changed the way we wrote CSS. Using micro-styles, we found there was no longer a need to make lots of css modules files and concatenate them all together. See the [CSS directory](./src/css) and the individual `.less` files within the directives i.e. [ohs-contact.less](./src/shared/ohs-contact/ohs-contact.less).
 
 ### Docker + NGINX
 
