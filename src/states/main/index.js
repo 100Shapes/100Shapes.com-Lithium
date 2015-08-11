@@ -26,7 +26,6 @@ export default ngModule => {
 
         $window.prerenderReady = true;
 
-
         // Initial run
 
         if (vm.$storage.analytics_tracking) {
@@ -42,7 +41,7 @@ export default ngModule => {
 
         function trackPage() {
             $timeout(() => {
-                Analytics.trackPage($location.absUrl());
+                Analytics.trackPage($location.url());
             });
         }
     }
