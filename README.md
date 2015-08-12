@@ -1,12 +1,15 @@
 # 100Shapes.com "Lithium"
-This project is the "Lithium" release of the [100 Shapes site](http://www.100shapes.com/ "UX & Design services for broadcasters").
+This project is the "Lithium" release of the [100 Shapes site](http://www.100shapes.com/?utm_source=github&utm_medium=intro&utm_campaign=Tech
+ "UX & Design services for broadcasters").
 
 We've built it under an open MIT licence so you can pick it apart and use the ideas in your own projects.
 
-[![100 Shapes homepage](screen.png?raw=true "100 Shapes Homepage")](http://www.100shapes.com/ "UX & Design services for broadcasters | 100 Shapes")
+[![100 Shapes homepage](screen.png?raw=true "100 Shapes Homepage")](http://www.100shapes.com/?utm_source=github&utm_medium=screen&utm_campaign=Tech
+ "UX & Design services for broadcasters | 100 Shapes")
 
 
-[![100 Shapes blog post page](screen2.png?raw=true "100 Shapes Blog item page")](http://www.100shapes.com/blog/the-evolution-of-interactive-experiences/ "The evolution of interactive experiences | 100 Shapes blog")
+[![100 Shapes blog post page](screen2.png?raw=true "100 Shapes Blog item page")](http://www.100shapes.com/blog/the-evolution-of-interactive-experiences/?utm_source=github&utm_medium=screen2&utm_campaign=Tech
+ "The evolution of interactive experiences | 100 Shapes blog")
 
 ## About Us
 
