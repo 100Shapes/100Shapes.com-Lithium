@@ -4,6 +4,19 @@ export default ngModule => {
 
         // Redirect to playlist.list
         .config(function($urlRouterProvider) {
+
+            $urlRouterProvider.rule(function($injector, $location) {
+
+                let path = $location.path();
+                let hasTrailingSlash = path[path.length-1] === '/';
+
+                if(!hasTrailingSlash) {
+                    let newPath = path.concat('/');
+                    return newPath;
+                }
+
+            });
+
             $urlRouterProvider.otherwise('/');
         })
 
