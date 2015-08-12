@@ -1,6 +1,6 @@
 export default ngModule => {
 
-    require('./blog.post.less')
+    require('./blog.post.less');
 
     ngModule
         .config($stateProvider => {
@@ -15,6 +15,15 @@ export default ngModule => {
                         post: function(BlogContentService, $stateParams) {
                             let slug = $stateParams.slug;
                             return BlogContentService.one(slug);
+                        },
+
+                        more_posts: function(BlogContentService, post) {
+                            const params = {
+                                limit: 3,
+                                random: true
+                            };
+
+                            return BlogContentService.query(params);
                         }
 
                     }
@@ -26,10 +35,11 @@ export default ngModule => {
 
     ngModule.controller('BlogPostCtrl', BlogPostCtrl);
 
-    function BlogPostCtrl(post, GlobalMastheadService, GLOBAL_MASTHEAD_THEMES) {
+    function BlogPostCtrl(post, more_posts, GlobalMastheadService, GLOBAL_MASTHEAD_THEMES) {
         let vm = this;
 
         vm.post = post;
+        vm.more_posts = more_posts;
         GlobalMastheadService.theme = `${GLOBAL_MASTHEAD_THEMES.ORANGE}`;
     }
     
