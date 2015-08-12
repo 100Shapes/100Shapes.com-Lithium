@@ -14,7 +14,12 @@ export default ngModule => {
 
                         service: function(ServiceContentService, $stateParams) {
                             let slug = $stateParams.slug;
-                            return ServiceContentService.one(slug);
+                            return ServiceContentService.one(slug).then((result) => {
+                                if (!result) {
+                                    // TODO: Redirect
+                                }
+                                return result;
+                            });
                         }
 
                     }
