@@ -7,13 +7,19 @@ export default ngModule => {
 
             $urlRouterProvider.rule(function($injector, $location) {
 
-                let path = $location.path();
-                let hasTrailingSlash = path[path.length-1] === '/';
+                let path = $location.url();
 
-                if(!hasTrailingSlash) {
-                    let newPath = path.concat('/');
-                    return newPath;
+                if (path[path.length - 1] === '/' || path.indexOf('/?') > -1) {
+                    return;
                 }
+
+                if (path.indexOf('?') > -1) {
+                    return path.replace('?', '/?');
+                }
+
+                let newPath = path + '/';
+
+                return newPath;
 
             });
 
