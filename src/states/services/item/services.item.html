@@ -61,6 +61,7 @@
                             <p>Make an enquiry today</p>
 
                             <a href="{{vm.company.phone.target}}"
+                               ga-track-event="['contact', 'call', '{{ vm.$location.url() }}--header']"
                                class="btn db btn-primary btn-round btn-lg tl mb mh">
 
                                 <ohs-icon name="{{vm.company.phone.icon_sm}}"
@@ -78,6 +79,7 @@
                             </a>
 
                             <a href="{{vm.company.email.target}}"
+                               ga-track-event="['contact', 'email', '{{ vm.$location.url() }}--header']"
                                class="btn db btn-primary btn-round btn-lg tl mb mh">
 
                                 <ohs-icon name="{{vm.company.email.icon_sm}}"

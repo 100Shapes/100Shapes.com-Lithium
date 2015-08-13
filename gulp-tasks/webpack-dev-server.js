@@ -17,13 +17,14 @@ module.exports = function(callback) {
         publicPath: myConfig.output.publicPath,
         contentBase: myConfig.devServer.contentBase,
         host: myConfig.devServer.host,
+        historyApiFallback: true,
         hot: true,
         stats: {
             colors: true
         }
     });
 
-    server.use('/', function(req, res) {
+    server.use('/*', function(req, res) {
         res.sendFile(path.join(__dirname, '../src/index.html'));
     });
 

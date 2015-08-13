@@ -1,4 +1,5 @@
 #!/bin/sh
+
 echo "Doing fresh clone"
 rm -r /home/app
 echo "Cloning content from branch: ${BRANCH:-master}@${GIT_URL}"

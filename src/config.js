@@ -20,9 +20,11 @@ export default ngModule => {
         .config(function (AnalyticsProvider, uuidProvider) {
             AnalyticsProvider.setAccount('UA-27923958-13');
             AnalyticsProvider.useAnalytics(true);
-            AnalyticsProvider.setPageEvent('$stateChangeSuccess');
             AnalyticsProvider.useEnhancedLinkAttribution(true);
+            AnalyticsProvider.ignoreFirstPageLoad(false);
+            AnalyticsProvider.trackPages(false);
+            AnalyticsProvider.delayScriptTag(true);
         })
 
-    ;
+   ;
 }
