@@ -1,0 +1,13 @@
+@import "~css/vars";
+@import "~Cardinal/base/mixins/to-rem.less";
+
+.ohs-blogpost-callout-image {
+
+    display: inline-block;
+    overflow: hidden;
+    text-align: right;
+
+    width: 100%;
+    .to-rem(height, @spacing-triple);
+    border-radius: unit(@border-radius-base, px);
+}
