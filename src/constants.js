@@ -105,6 +105,10 @@ export default ngModule => {
             intro: `Get regular UX advice from our experts.`
         })
 
+        .constant('DEFAULT_BLOGPOST_CALLOUT_CONFIG', {
+            message: `Recommended read`
+        })
+
         .constant('CLIMB_FEED_ID', '55c1e00845284e26681c4929')
 
     ;

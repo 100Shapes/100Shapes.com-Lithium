@@ -1,0 +1,23 @@
+<aside class="ohs-blogpost-callout p- box box-round tc">
+
+    <h4 ng-bind="::intro"
+        class="fwr mb-"></h4>
+
+    <div class="grid grid-align-center gutter-half">
+        <div class="grid-item 1/2">
+            <a href
+               ui-sref="main.blog.post({ slug:model.slug })">
+                <span class="ohs-blogpost-callout-image">
+                    <img ng-src="{{ ::model.square_image }}" alt=""/>
+                </span>
+            </a>
+        </div>
+        <div class="grid-item 1/2 tl">
+            <a href
+               class="fz- ffs fsi"
+               ng-bind-html="::model.title"
+               ui-sref="main.blog.post({ slug:model.slug })">
+            </a>
+        </div>
+    </div>
+</aside>

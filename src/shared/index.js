@@ -18,6 +18,7 @@ export default ngModule => {
     require('./ohs-filter-htmltoplaintext')(ngModule);
     require('./ohs-gallery-item-promo')(ngModule);
     require('./ohs-video-embed')(ngModule);
+    require('./ohs-blogpost-callout')(ngModule);
     require('./ApiBaseService')(ngModule);
 
 }
