@@ -1,5 +1,15 @@
 module.exports = function(ngModule) {
 
+    /**********
+
+     <ohs-blogpost-callout config="::{
+        slug: 'make-adverts-interactive',
+        message: 'Well worth the read next'
+    }">
+    </ohs-blogpost-callout>
+
+     **********/
+
     require('./ohs-blogpost-callout.less');
     const angular = require('angular');
 

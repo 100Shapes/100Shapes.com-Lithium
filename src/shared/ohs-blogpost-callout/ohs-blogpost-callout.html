@@ -6,10 +6,11 @@
     <div class="grid grid-align-center gutter-half">
         <div class="grid-item 1/2">
             <a href
-               ui-sref="main.blog.post({ slug:vm.model.slug })">
-                <span class="ohs-blogpost-callout-image">
-                    <img ng-src="{{ ::vm.model.square_image }}" alt=""/>
-                </span>
+               ui-sref="main.blog.post({ slug:vm.model.slug })"
+               class="ohs-blogpost-callout-imagelink">
+
+                <img ng-src="{{ ::vm.model.square_image }}" alt=""/>
+
             </a>
         </div>
         <div class="grid-item 1/2 tl">
