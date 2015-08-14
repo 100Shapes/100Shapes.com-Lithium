@@ -20,6 +20,15 @@ export default ngModule => {
                                 }
                                 return result;
                             });
+                        },
+
+                        more_services: function(ServiceContentService) {
+                            const params = {
+                                limit: 3,
+                                random: true
+                            };
+
+                            return ServiceContentService.query(params);
                         }
 
                     }
@@ -31,12 +40,13 @@ export default ngModule => {
 
     ngModule.controller('ServicesItemCtrl', ServicesItemCtrl);
 
-    function ServicesItemCtrl(service, COMPANY_META, GlobalMastheadService, GLOBAL_MASTHEAD_THEMES, $location) {
+    function ServicesItemCtrl(service, more_services, COMPANY_META, GlobalMastheadService, GLOBAL_MASTHEAD_THEMES, $location) {
         let vm = this;
 
         vm.service = service;
         vm.company = COMPANY_META;
         vm.$location = $location;
+        vm.more_services = more_services;
 
         GlobalMastheadService.theme = `${GLOBAL_MASTHEAD_THEMES.TRANSPARENT} ${GLOBAL_MASTHEAD_THEMES.BLUE}`;
     }
