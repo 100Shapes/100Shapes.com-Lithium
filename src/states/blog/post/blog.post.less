@@ -8,3 +8,19 @@
 
   .screen-md-max({ top: -30px; })
 }
+
+.social-icons__icon {
+    border: 1px solid;
+    border-radius: 60px;
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    svg {
+        .to-rem(width, 20) !important;
+        .to-rem(height, 20) !important;
+        margin: 0 !important;
+    }
+    &:hover {
+        color: @color-yellow;
+    }
+}

@@ -28,19 +28,20 @@ export default ngModule => {
 
                     }
                 });
-            
+
         });
 
     //////////////////
 
     ngModule.controller('BlogPostCtrl', BlogPostCtrl);
 
-    function BlogPostCtrl(post, more_posts, GlobalMastheadService, GLOBAL_MASTHEAD_THEMES) {
+    function BlogPostCtrl(post, more_posts, GlobalMastheadService, GLOBAL_MASTHEAD_THEMES, $location) {
         let vm = this;
 
         vm.post = post;
         vm.more_posts = more_posts;
         GlobalMastheadService.theme = `${GLOBAL_MASTHEAD_THEMES.ORANGE}`;
+        vm.$location = $location;
     }
-    
+
 }
