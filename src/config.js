@@ -23,7 +23,10 @@ export default ngModule => {
 
             });
 
-            $urlRouterProvider.otherwise('/');
+            $urlRouterProvider.otherwise(function ($injector, $location) {
+                $injector.invoke(['$state', function ($state) { $state.go('404'); }]);
+                return true;
+            });
         })
 
         // Enable HTML5 mode

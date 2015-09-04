@@ -5,5 +5,5 @@ export default ngModule => {
     require('./services')(ngModule);
     require('./home')(ngModule);
     require('./landing')(ngModule);
-
+    require('./404')(ngModule);
 }
