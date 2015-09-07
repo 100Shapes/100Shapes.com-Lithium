@@ -24,10 +24,10 @@
   "homepage": "https://github.com/100Shapes/100Shapes.com-Lithium#readme",
   "devDependencies": {
     "Cardinal": "git+https://github.com/cbracco/cardinal.git#eea6e3757cd8a0bf1bdfab6f96512ea05630b7da",
-    "angular-animate": "^1.4.1",
+    "angular-animate": "1.4.1",
     "angular-climb": "^1.0.2",
     "angular-google-analytics": "0.0.15",
-    "angular-sanitize": "^1.4.1",
+    "angular-sanitize": "1.4.1",
     "angular-ui-router": "^0.2.15",
     "angular-uuid": "0.0.2",
     "angularjs-viewhead": "git+https://github.com/apparentlymart/angularjs-viewhead.git#6d39f4a895624ff54cc7ba9a52aba7f93645fea6",
