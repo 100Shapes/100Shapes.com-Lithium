@@ -6,6 +6,7 @@ require('angular-sanitize');
 require('angular-animate');
 require('angular-google-analytics');
 require('angular-uuid');
+require('ngstorage');
 require('angular-climb');
 require('exports?window.Headroom!headroom');
 require('headroom.js/dist/angular.headroom');
@@ -24,7 +25,8 @@ const ngModule = angular.module('app', [
     'angular-uuid',
     'headroom',
     'angular-climb',
-    'ngAnimate'
+    'ngAnimate',
+    'ngStorage'
 ]);
 
 require('./config')(ngModule);

@@ -75,7 +75,7 @@
                     <div class="db mv-- fz-">
 
                         <p class="m0 fz-">
-                            <span class="ffs">by</span>
+                            <span class="ffs fsi">by</span>
                             <span property="name">{{ ::vm.post.author.name }}</span>
                             <span property="email"
                                   class="dn">{{ ::vm.post.author.email }}</span>
@@ -97,10 +97,52 @@
 
     <div id="main"
          property="articleBody"
-         class="mb++">
+         class="mb+">
         <ohs-content-renderer content="::vm.post.contents">
         </ohs-content-renderer>
     </div>
+
+    <aside class="wrapper">
+        <div class="grid">
+            <div class="grid-item 1/1 tc">
+                <h4 class="h2 mt0 fz++">Know someone who’ll enjoy this article? Share it.</h4>
+            </div>
+            <div class="grid-item 1/1 tc">
+                <ul class='list-inline social-icons'>
+                    <li>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ ::vm.$location.absUrl() }}" class="social-icons__icon vam m-">
+                            <ohs-icon name="fill-facebook" class="is-xs"></ohs-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/intent/tweet?url={{ ::vm.$location.absUrl() }}" class="social-icons__icon vam m-">
+                            <ohs-icon name="fill-twitter" class="is-xs"></ohs-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ ::vm.$location.absUrl() }}&title={{ ::vm.post.title_long | htmlToPlaintext }}&summary=&source=http://www.100shapes.com" class="social-icons__icon vam m-">
+                            <ohs-icon name="fill-linkedin" class="is-xs"></ohs-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <aside class="wrapper">
+        <div class="grid mb++">
+            <div class="grid-item 1/1 tc">
+                <h2 class="h4">More from our broadcast media blog</h2>
+            </div>
+            <div class="grid-item 1/1 sm-1/2 lg-1/3"
+                 ng-repeat="post in ::vm.more_posts track by post.guid">
+
+                <ohs-blogpost-card model="::post">
+                </ohs-blogpost-card>
+
+            </div>
+        </div>
+    </aside>
 
 
 </article>

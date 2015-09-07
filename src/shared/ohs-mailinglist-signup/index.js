@@ -13,10 +13,19 @@ module.exports = function(ngModule) {
             scope: {},
             controller: 'OhsMailinglistSignupCtrl as vm',
             replace: true,
+            template(tElem, tAttrs) {
+
+                let config = $parse(tAttrs.config)();
+
+                if (config && config.slim) {
+                    return require('./ohs-mailinglist-signup--slim.html');
+                }
+
+                return require('./ohs-mailinglist-signup.html');
+            },
             link($scope, elem, attrs) {
 
                 let default_config = angular.copy(DEFAULT_MAILINGLIST_SIGNUP_CONFIG);
-                let template = require('./ohs-mailinglist-signup.html');
 
                 if (!attrs.config) {
                     $scope.config = default_config
@@ -24,16 +33,6 @@ module.exports = function(ngModule) {
                     const local_config = $parse(attrs.config)();
                     $scope.config = angular.extend(default_config, local_config);
                 }
-
-                if ($scope.config.slim) {
-                    template = require('./ohs-mailinglist-signup--slim.html');
-                }
-
-                let e = $compile(template)($scope);
-                let classes = elem.attr('class');
-                e.addClass(classes);
-
-                elem.replaceWith(e);
 
             }
         };

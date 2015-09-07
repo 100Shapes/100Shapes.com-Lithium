@@ -1,0 +1,33 @@
+@import "~css/vars";
+@import "~Cardinal/base/mixins/to-rem";
+@import "~css/mixins/transitions";
+
+.ohs-blogpost-callout-imagelink {
+    text-align: right;
+
+    width: 100%;
+    .to-rem(height, @spacing-triple);
+    position: relative;
+    z-index: 1;
+    display: block;
+    border-radius: unit(@border-radius-base, px);
+    overflow: hidden;
+
+    &:after {
+        .transition();
+        content: ' ';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        top: 0;
+        left: 0;
+    }
+
+    .no-touch &:hover {
+        &:after {
+            background-color: fade(@color-orange, 75%);
+        }
+    }
+}
+

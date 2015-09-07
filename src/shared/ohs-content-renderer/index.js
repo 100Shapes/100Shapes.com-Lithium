@@ -8,7 +8,7 @@ module.exports = function(ngModule) {
             restrict: 'E',
             replace: true,
             scope: {
-                content: '=',
+                content: '='
             },
             link: function ($scope, elem) {
 
