@@ -29,10 +29,10 @@ export default ngModule => {
                 target: 'mailto:hello@100shapes.com'
             },
             location: {
-                address: 'W1T 4EL, London UK',
+                address: 'NW1 8NP, London UK',
                 label: 'Find us',
                 icon: 'line-map_marker',
-                target: 'https://goo.gl/maps/jVuhA'
+                target: 'https://goo.gl/FKaD7G'
             },
             site: {
                 address: 'http://www.100shapes.com',
